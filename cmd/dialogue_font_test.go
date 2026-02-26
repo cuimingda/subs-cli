@@ -37,7 +37,7 @@ func TestDialogueFontsCommand_Success(t *testing.T) {
 	var out bytes.Buffer
 	rootCmd.SetOut(&out)
 	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "fonts"})
+	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
 
 	if err := rootCmd.Execute(); err != nil {
 		t.Fatalf("rootCmd.Execute() error = %v", err)
@@ -53,6 +53,35 @@ func TestDialogueFontsCommand_Success(t *testing.T) {
 	}
 	if lines[1] != "sub/child.ass: Calibri,Helvetica" {
 		t.Fatalf("line2 = %q, want sub/child.ass: Calibri,Helvetica", lines[1])
+	}
+}
+
+func TestDialogueFontCommand_Help(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	var out bytes.Buffer
+	rootCmd.SetOut(&out)
+	rootCmd.SetErr(&bytes.Buffer{})
+	rootCmd.SetArgs([]string{"dialogue", "font"})
+
+	if err := rootCmd.Execute(); err != nil {
+		t.Fatalf("rootCmd.Execute() error = %v", err)
+	}
+
+	output := out.String()
+	if !strings.Contains(output, "Available Commands:") {
+		t.Fatalf("output = %q, want to contain Available Commands", output)
 	}
 }
 
@@ -77,7 +106,7 @@ func TestDialogueFontsCommand_NoFonts(t *testing.T) {
 	var out bytes.Buffer
 	rootCmd.SetOut(&out)
 	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "fonts"})
+	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
 
 	if err := rootCmd.Execute(); err != nil {
 		t.Fatalf("rootCmd.Execute() error = %v", err)
@@ -106,7 +135,7 @@ func TestDialogueFontsCommand_NoAssFiles(t *testing.T) {
 	var out bytes.Buffer
 	rootCmd.SetOut(&out)
 	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "fonts"})
+	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
 
 	if err := rootCmd.Execute(); err != nil {
 		t.Fatalf("rootCmd.Execute() error = %v", err)
@@ -120,7 +149,7 @@ func TestDialogueFontsCommand_NoAssFiles(t *testing.T) {
 func TestDialogueFontsCommand_RejectsArgs(t *testing.T) {
 	rootCmd.SetOut(&bytes.Buffer{})
 	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "fonts", "extra"})
+	rootCmd.SetArgs([]string{"dialogue", "font", "list", "extra"})
 
 	if err := rootCmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")

@@ -17,8 +17,17 @@ var dialogueCmd = &cobra.Command{
 	},
 }
 
-var dialogueFontsCmd = &cobra.Command{
-	Use:   "fonts",
+var dialogueFontCmd = &cobra.Command{
+	Use:   "font",
+	Short: "ASS font operations",
+	Args:  cobra.NoArgs,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return cmd.Help()
+	},
+}
+
+var dialogueFontListCmd = &cobra.Command{
+	Use:   "list",
 	Short: "List fonts used by \\fn tags in ASS files",
 	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -44,5 +53,6 @@ var dialogueFontsCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(dialogueCmd)
-	dialogueCmd.AddCommand(dialogueFontsCmd)
+	dialogueCmd.AddCommand(dialogueFontCmd)
+	dialogueFontCmd.AddCommand(dialogueFontListCmd)
 }
