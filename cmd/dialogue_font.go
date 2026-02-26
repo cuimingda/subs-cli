@@ -51,8 +51,32 @@ var dialogueFontListCmd = &cobra.Command{
 	},
 }
 
+var dialogueFontPruneCmd = &cobra.Command{
+	Use:   "prune",
+	Short: "Remove \\fn font tags from ASS files",
+	Args:  cobra.NoArgs,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		result, err := subtitles.PruneDialogueFontTagsFromAssFiles()
+		if err != nil {
+			return err
+		}
+
+		if _, err := fmt.Fprintf(
+			cmd.OutOrStdout(),
+			"Pruned %d font tags in %d files.\n",
+			result.RemovedTags,
+			result.TotalAssFiles,
+		); err != nil {
+			return err
+		}
+
+		return nil
+	},
+}
+
 func init() {
 	rootCmd.AddCommand(dialogueCmd)
 	dialogueCmd.AddCommand(dialogueFontCmd)
 	dialogueFontCmd.AddCommand(dialogueFontListCmd)
+	dialogueFontCmd.AddCommand(dialogueFontPruneCmd)
 }
