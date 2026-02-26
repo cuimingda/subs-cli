@@ -36,12 +36,17 @@ None identified.
 - Mitigation: At minimum, document that the tool may alter permission bits and provide a `--preserve-perms` option.
 
 ### 3) Non-atomic in-place rewrites increase corruption risk
-- Location: `internal/subtitles/reset.go:69`, `internal/subtitles/style_fonts.go:253`, `internal/subtitles/dialogue_fonts.go:67`
+- Status: **Fixed**
+- Location: `internal/subtitles/file_write.go`, `internal/subtitles/reset.go:69`, `internal/subtitles/style_fonts.go:253`, `internal/subtitles/dialogue_fonts.go:67`
 - Impact: The code writes converted content directly back to the original path. Process interruption (crash/power loss) can leave files partially written, which can result in data loss. In hostile local environments, this also increases overwrite risk.
 - Fix:
-  - Write to a temp file in the same directory, `fsync`, then atomically `os.Rename`.
+  - Replaced direct `os.WriteFile` calls with atomic write flow:
+    - write to temp file in the same directory,
+    - fsync temp file,
+    - rename over target.
+  - This ensures either old file or fully written new file is visible.
   - Keep a `.bak` or checksum strategy for recoverability when running bulk operations.
-- Mitigation: Provide dry-run and backup options before bulk edits.
+  - Provide dry-run and backup options before bulk edits.
 
 ## Low severity
 
