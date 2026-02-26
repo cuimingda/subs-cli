@@ -53,6 +53,9 @@ func PruneDialogueFontTagsFromAssFiles() (DialogueFontPruneResult, error) {
 
 	for _, file := range files {
 		result.TotalAssFiles++
+		if err := validateSubtitleFileSize(file); err != nil {
+			return DialogueFontPruneResult{}, err
+		}
 
 		content, err := os.ReadFile(file)
 		if err != nil {
@@ -64,7 +67,7 @@ func PruneDialogueFontTagsFromAssFiles() (DialogueFontPruneResult, error) {
 			continue
 		}
 
-		if err := os.WriteFile(file, []byte(prunedContent), 0o644); err != nil {
+		if err := writeFilePreserveMode(file, []byte(prunedContent)); err != nil {
 			return DialogueFontPruneResult{}, err
 		}
 		result.RemovedTags += removedTags
@@ -100,6 +103,10 @@ func listCurrentDirAssFiles() ([]string, error) {
 }
 
 func listDialogueFontsInAssFile(path string) ([]string, error) {
+	if err := validateSubtitleFileSize(path); err != nil {
+		return nil, err
+	}
+
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err

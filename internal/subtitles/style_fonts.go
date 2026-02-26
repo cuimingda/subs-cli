@@ -250,7 +250,7 @@ func resetStyleFontsInAssFile(path string) (int, error) {
 	}
 
 	returned := strings.Join(out, "\n")
-	if err := os.WriteFile(path, []byte(returned), 0o644); err != nil {
+	if err := writeFilePreserveMode(path, []byte(returned)); err != nil {
 		return 0, err
 	}
 
@@ -258,6 +258,10 @@ func resetStyleFontsInAssFile(path string) (int, error) {
 }
 
 func readAssText(path string) (string, error) {
+	if err := validateSubtitleFileSize(path); err != nil {
+		return "", err
+	}
+
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return "", err

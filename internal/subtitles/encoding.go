@@ -50,6 +50,10 @@ func EnsureCurrentDirAssFilesUTF8(files []string) error {
 func ensureFilesUTF8(files []string) error {
 	nonUTF8 := make([]string, 0)
 	for _, file := range files {
+		if err := validateSubtitleFileSize(file); err != nil {
+			return err
+		}
+
 		content, err := os.ReadFile(file)
 		if err != nil {
 			return err
@@ -78,6 +82,10 @@ func ensureFilesUTF8(files []string) error {
 }
 
 func detectFileEncoding(file string) string {
+	if err := validateSubtitleFileSize(file); err != nil {
+		return UnknownEncoding
+	}
+
 	content, err := os.ReadFile(file)
 	if err != nil || len(content) == 0 {
 		return UnknownEncoding

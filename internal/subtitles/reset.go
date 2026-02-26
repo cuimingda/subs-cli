@@ -43,6 +43,10 @@ func ResetCurrentDirSubtitleFilesToUTF8() (ResetResult, error) {
 }
 
 func resetFileToUTF8(file string) (bool, error) {
+	if err := validateSubtitleFileSize(file); err != nil {
+		return false, err
+	}
+
 	content, err := os.ReadFile(file)
 	if err != nil {
 		return false, err
@@ -66,7 +70,7 @@ func resetFileToUTF8(file string) (bool, error) {
 		return false, nil
 	}
 
-	if err := os.WriteFile(file, converted, 0o644); err != nil {
+	if err := writeFilePreserveMode(file, converted); err != nil {
 		return false, err
 	}
 
