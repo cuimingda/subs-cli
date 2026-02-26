@@ -10,6 +10,8 @@ It works only on `.srt` and `.ass` files and is intentionally non-recursive: onl
 - Inspect detected encodings
 - Convert subtitle encodings to UTF-8
 - Inspect or edit ASS style and dialogue font information
+- Search/rename subtitle files by TV episode tag (`SxxEyy`) against local video files
+- Move subtitle files in batch to system trash
 
 ## Installation
 
@@ -48,6 +50,10 @@ Use `--help` on any command to view its subcommands.
   - `font`
     - `list`
     - `reset`
+- `file`
+  - `search`
+  - `rename`
+  - `rm`
 
 ## Commands
 
@@ -179,6 +185,62 @@ Reset X font names in Y file(s).
 
 - `X` is the number of font names replaced.
 - `Y` is the number of `.ass` files that were updated.
+
+### `subs file`
+
+Container command for subtitle filename operations.
+
+#### `subs file search`
+
+Search current-directory video files (`.mkv` then `.mp4`) by episode tag in subtitle filenames (`SxxEyy`, exact uppercase six-char format, two digits each side).
+
+- If no episode tag is found, output: `subtitle.ext => ignore` (`ignore` marked in red).
+- If no matching video is found, output: `subtitle.ext => not found` (`not found` marked in red).
+- If a matching video with identical basename is found, output: `subtitle.ext => video.ext (same)` (`same` marked in green).
+- Otherwise output: `subtitle.ext => video.ext (found)`.
+
+```bash
+subs file search
+```
+
+#### `subs file rename`
+
+Same discovery rules as `subs file search`, but when a match is found and the basenames are different, rename the subtitle file to `<video-basename>.<subtitle-extension>` and output:
+
+```text
+old-subtitle.ext => new-subtitle.ext (renamed)
+```
+
+If no episode tag is found or no matching video exists, behavior/output matches `subs file search`.
+
+```bash
+subs file rename
+```
+
+#### `subs file rm`
+
+Remove all subtitle files (`.srt`, `.ass`) in the **current directory only** (no subdirectories). Before deletion, the command prompts for confirmation and defaults to not deleting.
+
+```text
+This will remove all subtitle files in current directory (srt/ass). Continue? [y/N]:
+```
+
+When confirmed with `y`/`yes`, files are moved to the system trash:
+
+- macOS: `~/.Trash`
+- Linux: `~/.local/share/Trash/files` (or `$XDG_DATA_HOME/Trash/files` when set)
+
+On Windows, this command currently reports unsupported platform for trash operation.
+
+```bash
+subs file rm
+```
+
+To provide confirmation input non-interactively in scripts, pipe in `y`:
+
+```bash
+printf 'y\n' | subs file rm
+```
 
 ## Behavior Rules
 
