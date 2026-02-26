@@ -2,8 +2,10 @@ package subtitles
 
 import (
 	"errors"
+	"fmt"
 	"os"
 	"strings"
+	"unicode/utf8"
 
 	"github.com/saintfish/chardet"
 )
@@ -14,6 +16,8 @@ type FileEncoding struct {
 	FileName string
 	Encoding string
 }
+
+const nonUTF8Instruction = "Please run `subs encoding reset` to convert subtitle files to UTF-8 first."
 
 var detectTextEncoding = defaultDetectTextEncoding
 
@@ -33,6 +37,44 @@ func ListCurrentDirSubtitleFileEncodings() ([]FileEncoding, error) {
 	}
 
 	return encodings, nil
+}
+
+func EnsureCurrentDirAssFilesUTF8(files []string) error {
+	if len(files) == 0 {
+		return nil
+	}
+
+	return ensureFilesUTF8(files)
+}
+
+func ensureFilesUTF8(files []string) error {
+	nonUTF8 := make([]string, 0)
+	for _, file := range files {
+		content, err := os.ReadFile(file)
+		if err != nil {
+			return err
+		}
+
+		if utf8.Valid(content) {
+			continue
+		}
+
+		encoding := strings.ToUpper(detectFileEncoding(file))
+		if encoding == "" || encoding == UnknownEncoding {
+			nonUTF8 = append(nonUTF8, fmt.Sprintf("%s (UNKNOWN)", file))
+			continue
+		}
+
+		if encoding != "UTF-8" {
+			nonUTF8 = append(nonUTF8, fmt.Sprintf("%s (%s)", file, encoding))
+		}
+	}
+
+	if len(nonUTF8) == 0 {
+		return nil
+	}
+
+	return fmt.Errorf("%s. %s", strings.Join(nonUTF8, ", "), nonUTF8Instruction)
 }
 
 func detectFileEncoding(file string) string {

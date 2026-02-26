@@ -3,6 +3,7 @@ package subtitles
 import (
 	"errors"
 	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 )
@@ -113,5 +114,59 @@ func TestListCurrentDirSubtitleFileEncodings_UnknownOnDetectorError(t *testing.T
 	}
 	if got[0].Encoding != UnknownEncoding {
 		t.Fatalf("encoding = %q, want %q", got[0].Encoding, UnknownEncoding)
+	}
+}
+
+func TestEnsureCurrentDirAssFilesUTF8_AllowsUTF8(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile("a.ass", []byte("UTF-8 text"), 0o644); err != nil {
+		t.Fatalf("write a.ass failed: %v", err)
+	}
+
+	if err := EnsureCurrentDirAssFilesUTF8([]string{"a.ass"}); err != nil {
+		t.Fatalf("EnsureCurrentDirAssFilesUTF8() error = %v", err)
+	}
+}
+
+func TestEnsureCurrentDirAssFilesUTF8_RejectsNonUTF8(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "..", "data", "foobar.ass"))
+	if err != nil {
+		t.Fatalf("read sample file failed: %v", err)
+	}
+	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
+		t.Fatalf("write foobar.ass failed: %v", err)
+	}
+
+	err = EnsureCurrentDirAssFilesUTF8([]string{"foobar.ass"})
+	if err == nil {
+		t.Fatalf("expected non-UTF-8 error, got nil")
+	}
+	if !strings.Contains(err.Error(), "Please run `subs encoding reset`") {
+		t.Fatalf("error = %q, want contains suggestion", err)
 	}
 }

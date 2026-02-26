@@ -1,6 +1,7 @@
 package subtitles
 
 import (
+	"fmt"
 	"os"
 	"sort"
 	"strings"
@@ -262,17 +263,11 @@ func readAssText(path string) (string, error) {
 		return "", err
 	}
 
-	if utf8.Valid(content) {
-		return string(content), nil
+	if !utf8.Valid(content) {
+		return "", fmt.Errorf("%s is not UTF-8: Please run `subs encoding reset` to convert subtitle files to UTF-8 first.", path)
 	}
 
-	encoding := detectFileEncoding(path)
-	converted, err := convertToUTF8(content, encoding)
-	if err != nil {
-		return "", err
-	}
-
-	return string(converted), nil
+	return string(content), nil
 }
 
 func readAssFileLines(path string) ([]string, error) {

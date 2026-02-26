@@ -4,6 +4,7 @@ import (
 	"os"
 	"path/filepath"
 	"reflect"
+	"strings"
 	"testing"
 )
 
@@ -173,19 +174,15 @@ func TestListStyleFontsByAssFiles_FromUTF16File(t *testing.T) {
 		t.Fatalf("write foobar.ass failed: %v", err)
 	}
 
-	got, err := ListStyleFontsByAssFiles()
-	if err != nil {
-		t.Fatalf("ListStyleFontsByAssFiles() error = %v", err)
+	err = func() error {
+		_, err := ListStyleFontsByAssFiles()
+		return err
+	}()
+	if err == nil {
+		t.Fatalf("expected non UTF-8 file detection error, got success")
 	}
-
-	want := []AssStyleFonts{
-		{
-			FileName: "foobar.ass",
-			Fonts:    []string{"微軟雅黑", "方正黑體_GBK"},
-		},
-	}
-	if !reflect.DeepEqual(got, want) {
-		t.Fatalf("ListStyleFontsByAssFiles() = %+v, want %+v", got, want)
+	if !strings.Contains(err.Error(), "Please run `subs encoding reset`") {
+		t.Fatalf("error = %q, want contains command hint", err)
 	}
 }
 

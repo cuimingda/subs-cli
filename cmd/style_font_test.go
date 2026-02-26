@@ -73,14 +73,12 @@ func TestStyleFontListCommand_UTF16File(t *testing.T) {
 	rootCmd.SetErr(&bytes.Buffer{})
 	rootCmd.SetArgs([]string{"style", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	execErr := rootCmd.Execute()
+	if execErr == nil {
+		t.Fatalf("expected error for non UTF-8 file, got nil")
 	}
-
-	output := strings.TrimSpace(out.String())
-	want := "foobar.ass: 微軟雅黑,方正黑體_GBK"
-	if output != want {
-		t.Fatalf("output = %q, want %q", output, want)
+	if !strings.Contains(execErr.Error(), "Please run `subs encoding reset`") {
+		t.Fatalf("error = %q, want contains `Please run `subs encoding reset`", execErr)
 	}
 }
 

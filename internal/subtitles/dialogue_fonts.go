@@ -92,6 +92,10 @@ func listCurrentDirAssFiles() ([]string, error) {
 		files = append(files, entry.Name())
 	}
 
+	if err := EnsureCurrentDirAssFilesUTF8(files); err != nil {
+		return nil, err
+	}
+
 	return files, nil
 }
 
