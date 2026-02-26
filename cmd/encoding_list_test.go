@@ -11,13 +11,14 @@ import (
 )
 
 func TestEncodingCommand_ShowsHelp(t *testing.T) {
+	cmd := NewRootCmd()
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"encoding"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"encoding"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := out.String()
@@ -30,16 +31,18 @@ func TestEncodingCommand_ShowsHelp(t *testing.T) {
 }
 
 func TestEncodingCommand_RejectsArgs(t *testing.T) {
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"encoding", "extra"})
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"encoding", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
 
 func TestEncodingListCommand_Success(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -61,12 +64,12 @@ func TestEncodingListCommand_Success(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"encoding", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"encoding", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	lines := strings.Split(strings.TrimSpace(out.String()), "\n")
@@ -82,16 +85,18 @@ func TestEncodingListCommand_Success(t *testing.T) {
 }
 
 func TestEncodingListCommand_RejectsArgs(t *testing.T) {
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"encoding", "list", "extra"})
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"encoding", "list", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
 
 func TestEncodingListCommand_NoSubtitleFiles(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -105,11 +110,11 @@ func TestEncodingListCommand_NoSubtitleFiles(t *testing.T) {
 		_ = os.Chdir(originalDir)
 	})
 
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"encoding", "list"})
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"encoding", "list"})
 
-	err = rootCmd.Execute()
+	err = cmd.Execute()
 	if !errors.Is(err, subtitles.ErrNoSubtitleFiles) {
 		t.Fatalf("expected ErrNoSubtitleFiles, got %v", err)
 	}

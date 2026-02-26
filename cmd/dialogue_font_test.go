@@ -9,6 +9,7 @@ import (
 )
 
 func TestDialogueFontsCommand_Success(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -30,12 +31,12 @@ func TestDialogueFontsCommand_Success(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	lines := strings.Split(strings.TrimSpace(out.String()), "\n")
@@ -52,6 +53,7 @@ func TestDialogueFontsCommand_Success(t *testing.T) {
 }
 
 func TestDialogueFontCommand_Help(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -66,12 +68,12 @@ func TestDialogueFontCommand_Help(t *testing.T) {
 	})
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := out.String()
@@ -81,6 +83,7 @@ func TestDialogueFontCommand_Help(t *testing.T) {
 }
 
 func TestDialogueFontListCommand_UTF16File(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -103,11 +106,11 @@ func TestDialogueFontListCommand_UTF16File(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "list"})
 
-	execErr := rootCmd.Execute()
+	execErr := cmd.Execute()
 	if execErr == nil {
 		t.Fatalf("expected error for non UTF-8 file, got nil")
 	}
@@ -117,6 +120,7 @@ func TestDialogueFontListCommand_UTF16File(t *testing.T) {
 }
 
 func TestDialogueFontPruneCommand_UTF16File(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -139,11 +143,11 @@ func TestDialogueFontPruneCommand_UTF16File(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "prune"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "prune"})
 
-	execErr := rootCmd.Execute()
+	execErr := cmd.Execute()
 	if execErr == nil {
 		t.Fatalf("expected error for non UTF-8 file, got nil")
 	}
@@ -153,6 +157,7 @@ func TestDialogueFontPruneCommand_UTF16File(t *testing.T) {
 }
 
 func TestDialogueFontsCommand_NoFonts(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -171,12 +176,12 @@ func TestDialogueFontsCommand_NoFonts(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := strings.TrimSuffix(out.String(), "\n")
@@ -186,6 +191,7 @@ func TestDialogueFontsCommand_NoFonts(t *testing.T) {
 }
 
 func TestDialogueFontsCommand_NoAssFiles(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -200,12 +206,12 @@ func TestDialogueFontsCommand_NoAssFiles(t *testing.T) {
 	})
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	if strings.TrimSpace(out.String()) != "" {
@@ -214,16 +220,18 @@ func TestDialogueFontsCommand_NoAssFiles(t *testing.T) {
 }
 
 func TestDialogueFontsCommand_RejectsArgs(t *testing.T) {
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "list", "extra"})
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "list", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
 
 func TestDialogueFontPruneCommand_Success(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -245,12 +253,12 @@ func TestDialogueFontPruneCommand_Success(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "prune"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "prune"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := out.String()
@@ -272,6 +280,7 @@ func TestDialogueFontPruneCommand_Success(t *testing.T) {
 }
 
 func TestDialogueFontPruneCommand_NoFontTags(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -290,12 +299,12 @@ func TestDialogueFontPruneCommand_NoFontTags(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "prune"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "prune"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := out.String()
@@ -305,16 +314,18 @@ func TestDialogueFontPruneCommand_NoFontTags(t *testing.T) {
 }
 
 func TestDialogueFontPruneCommand_RejectsArgs(t *testing.T) {
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "prune", "extra"})
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "prune", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
 
 func TestDialogueFontPruneCommand_RepeatedRun(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -333,20 +344,20 @@ func TestDialogueFontPruneCommand_RepeatedRun(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"dialogue", "font", "prune"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"dialogue", "font", "prune"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 	if !strings.Contains(out.String(), "Pruned 2 font tags in 1 files.") {
 		t.Fatalf("first run output = %q, want removed summary", out.String())
 	}
 
 	out.Reset()
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 	if !strings.Contains(out.String(), "Pruned 0 font tags in 1 files.") {
 		t.Fatalf("second run output = %q, want no-tag summary", out.String())

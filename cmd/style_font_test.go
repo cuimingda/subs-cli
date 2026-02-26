@@ -9,6 +9,7 @@ import (
 )
 
 func TestStyleFontListCommand_Success(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -31,12 +32,12 @@ func TestStyleFontListCommand_Success(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := strings.TrimSpace(out.String())
@@ -47,6 +48,7 @@ func TestStyleFontListCommand_Success(t *testing.T) {
 }
 
 func TestStyleFontListCommand_UTF16File(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -69,11 +71,11 @@ func TestStyleFontListCommand_UTF16File(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "list"})
 
-	execErr := rootCmd.Execute()
+	execErr := cmd.Execute()
 	if execErr == nil {
 		t.Fatalf("expected error for non UTF-8 file, got nil")
 	}
@@ -83,6 +85,7 @@ func TestStyleFontListCommand_UTF16File(t *testing.T) {
 }
 
 func TestStyleFontListCommand_HelpOnStyleAndFont(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -97,12 +100,12 @@ func TestStyleFontListCommand_HelpOnStyleAndFont(t *testing.T) {
 	})
 
 	var styleOut bytes.Buffer
-	rootCmd.SetOut(&styleOut)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style"})
+	cmd.SetOut(&styleOut)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	if !strings.Contains(styleOut.String(), "Available Commands:") {
@@ -110,12 +113,12 @@ func TestStyleFontListCommand_HelpOnStyleAndFont(t *testing.T) {
 	}
 
 	var fontOut bytes.Buffer
-	rootCmd.SetOut(&fontOut)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font"})
+	cmd.SetOut(&fontOut)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	if !strings.Contains(fontOut.String(), "Available Commands:") {
@@ -124,6 +127,7 @@ func TestStyleFontListCommand_HelpOnStyleAndFont(t *testing.T) {
 }
 
 func TestStyleFontListCommand_NoFonts(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -142,12 +146,12 @@ func TestStyleFontListCommand_NoFonts(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := strings.TrimSpace(out.String())
@@ -157,6 +161,7 @@ func TestStyleFontListCommand_NoFonts(t *testing.T) {
 }
 
 func TestStyleFontListCommand_BOMAndSpacedHeaders(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -179,12 +184,12 @@ func TestStyleFontListCommand_BOMAndSpacedHeaders(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "list"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "list"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := strings.TrimSpace(out.String())
@@ -194,16 +199,18 @@ func TestStyleFontListCommand_BOMAndSpacedHeaders(t *testing.T) {
 }
 
 func TestStyleFontListCommand_RejectsArgs(t *testing.T) {
-	rootCmd.SetOut(&bytes.Buffer{})
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "list", "extra"})
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "list", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
 
 func TestStyleFontResetCommand_Success(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -226,12 +233,12 @@ func TestStyleFontResetCommand_Success(t *testing.T) {
 	}
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "reset"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "reset"})
 
-	if err := rootCmd.Execute(); err != nil {
-		t.Fatalf("rootCmd.Execute() error = %v", err)
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
 	}
 
 	output := out.String()
@@ -250,6 +257,7 @@ func TestStyleFontResetCommand_Success(t *testing.T) {
 }
 
 func TestStyleFontResetCommand_NoArgsForParent(t *testing.T) {
+	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
 	if err != nil {
@@ -264,11 +272,11 @@ func TestStyleFontResetCommand_NoArgsForParent(t *testing.T) {
 	})
 
 	var out bytes.Buffer
-	rootCmd.SetOut(&out)
-	rootCmd.SetErr(&bytes.Buffer{})
-	rootCmd.SetArgs([]string{"style", "font", "reset", "extra"})
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"style", "font", "reset", "extra"})
 
-	if err := rootCmd.Execute(); err == nil {
+	if err := cmd.Execute(); err == nil {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
