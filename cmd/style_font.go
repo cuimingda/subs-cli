@@ -51,8 +51,29 @@ var styleFontListCmd = &cobra.Command{
 	},
 }
 
+var styleFontResetCmd = &cobra.Command{
+	Use:   "reset",
+	Short: "Reset [V4+ Styles] font names to Microsoft YaHei in ASS files",
+	Args:  cobra.NoArgs,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		result, err := subtitles.ResetCurrentDirAssStyleFontsToMicrosoftYaHei()
+		if err != nil {
+			return err
+		}
+
+		_, err = fmt.Fprintf(
+			cmd.OutOrStdout(),
+			"Reset %d font names in %d file(s).\n",
+			result.UpdatedFonts,
+			result.UpdatedFiles,
+		)
+		return err
+	},
+}
+
 func init() {
 	rootCmd.AddCommand(styleCmd)
 	styleCmd.AddCommand(styleFontCmd)
 	styleFontCmd.AddCommand(styleFontListCmd)
+	styleFontCmd.AddCommand(styleFontResetCmd)
 }

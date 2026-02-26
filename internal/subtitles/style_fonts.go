@@ -12,6 +12,12 @@ type AssStyleFonts struct {
 	Fonts    []string
 }
 
+type AssStyleFontResetResult struct {
+	TotalAssFiles int
+	UpdatedFiles  int
+	UpdatedFonts  int
+}
+
 func ListStyleFontsByAssFiles() ([]AssStyleFonts, error) {
 	results := make([]AssStyleFonts, 0)
 	files, err := listCurrentDirAssFiles()
@@ -124,4 +130,103 @@ func parseFormatForFontIndex(line string) int {
 
 func splitAssStyleFields(value string) []string {
 	return strings.Split(value, ",")
+}
+
+func ResetCurrentDirAssStyleFontsToMicrosoftYaHei() (AssStyleFontResetResult, error) {
+	result := AssStyleFontResetResult{}
+	files, err := listCurrentDirAssFiles()
+	if err != nil {
+		return AssStyleFontResetResult{}, err
+	}
+
+	result.TotalAssFiles = len(files)
+
+	for _, file := range files {
+		updatedStyles, err := resetStyleFontsInAssFile(file)
+		if err != nil {
+			return AssStyleFontResetResult{}, err
+		}
+		if updatedStyles > 0 {
+			result.UpdatedFiles++
+			result.UpdatedFonts += updatedStyles
+		}
+	}
+
+	return result, nil
+}
+
+func resetStyleFontsInAssFile(path string) (int, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return 0, err
+	}
+
+	lines := strings.Split(string(content), "\n")
+	out := make([]string, 0, len(lines))
+
+	inStylesSection := false
+	fontNameIndex := -1
+	updated := 0
+
+	for _, line := range lines {
+		rawLine := strings.TrimRight(line, "\r")
+		trimmed := strings.TrimSpace(rawLine)
+
+		if trimmed == "[V4+ Styles]" {
+			inStylesSection = true
+			fontNameIndex = -1
+			out = append(out, rawLine)
+			continue
+		}
+
+		if !inStylesSection {
+			out = append(out, rawLine)
+			continue
+		}
+
+		if strings.HasPrefix(trimmed, "[") && trimmed != "[V4+ Styles]" {
+			inStylesSection = false
+			out = append(out, rawLine)
+			continue
+		}
+
+		lower := strings.ToLower(trimmed)
+		if strings.HasPrefix(lower, "format:") {
+			fontNameIndex = parseFormatForFontIndex(trimmed)
+			out = append(out, rawLine)
+			continue
+		}
+
+		if !strings.HasPrefix(lower, "style:") || fontNameIndex < 0 {
+			out = append(out, rawLine)
+			continue
+		}
+
+		rest := strings.TrimSpace(rawLine[len("Style:"):])
+		columns := splitAssStyleFields(rest)
+		if fontNameIndex >= len(columns) {
+			out = append(out, rawLine)
+			continue
+		}
+
+		if strings.TrimSpace(columns[fontNameIndex]) == "Microsoft YaHei" {
+			out = append(out, rawLine)
+			continue
+		}
+
+		columns[fontNameIndex] = "Microsoft YaHei"
+		out = append(out, "Style: "+strings.Join(columns, ","))
+		updated++
+	}
+
+	if updated == 0 {
+		return 0, nil
+	}
+
+	returned := strings.Join(out, "\n")
+	if err := os.WriteFile(path, []byte(returned), 0o644); err != nil {
+		return 0, err
+	}
+
+	return updated, nil
 }

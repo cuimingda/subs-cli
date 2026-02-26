@@ -151,3 +151,126 @@ func TestListStyleFontsByAssFiles_IgnoresSubdirectories(t *testing.T) {
 		t.Fatalf("ListStyleFontsByAssFiles() = %+v, want %+v", got, want)
 	}
 }
+
+func TestResetCurrentDirAssStyleFontsToMicrosoftYaHei(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"font-reset.ass",
+		[]byte("[V4+ Styles]\nFormat: Name, Fontname, Fontsize\nStyle: Default,Arial,22\nStyle: Logo,SimHei,20\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write font-reset.ass failed: %v", err)
+	}
+
+	result, err := ResetCurrentDirAssStyleFontsToMicrosoftYaHei()
+	if err != nil {
+		t.Fatalf("ResetCurrentDirAssStyleFontsToMicrosoftYaHei() error = %v", err)
+	}
+
+	if result.TotalAssFiles != 1 {
+		t.Fatalf("total files = %d, want 1", result.TotalAssFiles)
+	}
+	if result.UpdatedFiles != 1 {
+		t.Fatalf("updated files = %d, want 1", result.UpdatedFiles)
+	}
+	if result.UpdatedFonts != 2 {
+		t.Fatalf("updated fonts = %d, want 2", result.UpdatedFonts)
+	}
+
+	gotContent, err := os.ReadFile("font-reset.ass")
+	if err != nil {
+		t.Fatalf("read file failed: %v", err)
+	}
+	expected := "[V4+ Styles]\nFormat: Name, Fontname, Fontsize\nStyle: Default,Microsoft YaHei,22\nStyle: Logo,Microsoft YaHei,20\n"
+	if string(gotContent) != expected {
+		t.Fatalf("content = %q, want %q", string(gotContent), expected)
+	}
+}
+
+func TestResetCurrentDirAssStyleFontsToMicrosoftYaHei_UsesFontnameColumnFromReorderedFormat(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"reordered-ass.ass",
+		[]byte("[V4+ Styles]\nFormat: Name, Fontsize, Fontname, Bold\nStyle: Default,22,Arial,0\nStyle: Logo,20,SimHei,0\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write reordered-ass.ass failed: %v", err)
+	}
+
+	result, err := ResetCurrentDirAssStyleFontsToMicrosoftYaHei()
+	if err != nil {
+		t.Fatalf("ResetCurrentDirAssStyleFontsToMicrosoftYaHei() error = %v", err)
+	}
+
+	if result.UpdatedFonts != 2 {
+		t.Fatalf("updated fonts = %d, want 2", result.UpdatedFonts)
+	}
+
+	gotContent, err := os.ReadFile("reordered-ass.ass")
+	if err != nil {
+		t.Fatalf("read file failed: %v", err)
+	}
+	expected := "[V4+ Styles]\nFormat: Name, Fontsize, Fontname, Bold\nStyle: Default,22,Microsoft YaHei,0\nStyle: Logo,20,Microsoft YaHei,0\n"
+	if string(gotContent) != expected {
+		t.Fatalf("content = %q, want %q", string(gotContent), expected)
+	}
+}
+
+func TestResetCurrentDirAssStyleFontsToMicrosoftYaHei_NoChangesWhenAlreadySet(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"already.ass",
+		[]byte("[V4+ Styles]\nFormat: Name, Fontname, Fontsize\nStyle: Default,Microsoft YaHei,22\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write already.ass failed: %v", err)
+	}
+
+	result, err := ResetCurrentDirAssStyleFontsToMicrosoftYaHei()
+	if err != nil {
+		t.Fatalf("ResetCurrentDirAssStyleFontsToMicrosoftYaHei() error = %v", err)
+	}
+
+	if result.UpdatedFonts != 0 {
+		t.Fatalf("updated fonts = %d, want 0", result.UpdatedFonts)
+	}
+	if result.UpdatedFiles != 0 {
+		t.Fatalf("updated files = %d, want 0", result.UpdatedFiles)
+	}
+}
