@@ -11,6 +11,7 @@ import (
 	"golang.org/x/text/encoding"
 	"golang.org/x/text/encoding/charmap"
 	"golang.org/x/text/encoding/simplifiedchinese"
+	unicodeenc "golang.org/x/text/encoding/unicode"
 	"golang.org/x/text/transform"
 )
 
@@ -105,6 +106,18 @@ func decoderByEncoding(encoding string) (encoding.Encoding, error) {
 		return simplifiedchinese.GB18030, nil
 	case "GB-18030":
 		return simplifiedchinese.GB18030, nil
+	case "UTF-16":
+		return unicodeenc.UTF16(unicodeenc.LittleEndian, unicodeenc.UseBOM), nil
+	case "UTF-16LE":
+		return unicodeenc.UTF16(unicodeenc.LittleEndian, unicodeenc.UseBOM), nil
+	case "UTF-16BE":
+		return unicodeenc.UTF16(unicodeenc.BigEndian, unicodeenc.UseBOM), nil
+	case "UTF16":
+		return unicodeenc.UTF16(unicodeenc.LittleEndian, unicodeenc.UseBOM), nil
+	case "UTF16LE":
+		return unicodeenc.UTF16(unicodeenc.LittleEndian, unicodeenc.UseBOM), nil
+	case "UTF16BE":
+		return unicodeenc.UTF16(unicodeenc.BigEndian, unicodeenc.UseBOM), nil
 	case "ANSI", "WINDOWS-1252", "WINDOWS1252":
 		return charmap.Windows1252, nil
 	case "ISO-8859-1", "ISO-8859", "ISO8859-1", "LATIN1":

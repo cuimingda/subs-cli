@@ -113,6 +113,82 @@ func TestListStyleFontsByAssFiles_NoFontname(t *testing.T) {
 	}
 }
 
+func TestListStyleFontsByAssFiles_WithFormatSpacingAndBOM(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"bom.ass",
+		[]byte("\ufeff[V4+ Styles]\nFormat : Name , Fontname , Fontsize\nStyle : Default ,微軟雅黑,22\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write bom.ass failed: %v", err)
+	}
+
+	got, err := ListStyleFontsByAssFiles()
+	if err != nil {
+		t.Fatalf("ListStyleFontsByAssFiles() error = %v", err)
+	}
+
+	want := []AssStyleFonts{
+		{
+			FileName: "bom.ass",
+			Fonts:    []string{"微軟雅黑"},
+		},
+	}
+	if !reflect.DeepEqual(got, want) {
+		t.Fatalf("ListStyleFontsByAssFiles() = %+v, want %+v", got, want)
+	}
+}
+
+func TestListStyleFontsByAssFiles_FromUTF16File(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "..", "data", "foobar.ass"))
+	if err != nil {
+		t.Fatalf("read sample file failed: %v", err)
+	}
+	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
+		t.Fatalf("write foobar.ass failed: %v", err)
+	}
+
+	got, err := ListStyleFontsByAssFiles()
+	if err != nil {
+		t.Fatalf("ListStyleFontsByAssFiles() error = %v", err)
+	}
+
+	want := []AssStyleFonts{
+		{
+			FileName: "foobar.ass",
+			Fonts:    []string{"微軟雅黑", "方正黑體_GBK"},
+		},
+	}
+	if !reflect.DeepEqual(got, want) {
+		t.Fatalf("ListStyleFontsByAssFiles() = %+v, want %+v", got, want)
+	}
+}
+
 func TestListStyleFontsByAssFiles_IgnoresSubdirectories(t *testing.T) {
 	tmpDir := t.TempDir()
 	originalDir, err := os.Getwd()
@@ -235,6 +311,47 @@ func TestResetCurrentDirAssStyleFontsToMicrosoftYaHei_UsesFontnameColumnFromReor
 		t.Fatalf("read file failed: %v", err)
 	}
 	expected := "[V4+ Styles]\nFormat: Name, Fontsize, Fontname, Bold\nStyle: Default,22,Microsoft YaHei,0\nStyle: Logo,20,Microsoft YaHei,0\n"
+	if string(gotContent) != expected {
+		t.Fatalf("content = %q, want %q", string(gotContent), expected)
+	}
+}
+
+func TestResetCurrentDirAssStyleFontsToMicrosoftYaHei_WithSpacingAndBOM(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"spaced-bom.ass",
+		[]byte("\ufeff[V4+ Styles]\nFormat : Name, Fontsize , Fontname , Bold\nStyle : Default,22,Arial,0\nStyle:LOGO,20,方正黑體_GBK,0\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write spaced-bom.ass failed: %v", err)
+	}
+
+	result, err := ResetCurrentDirAssStyleFontsToMicrosoftYaHei()
+	if err != nil {
+		t.Fatalf("ResetCurrentDirAssStyleFontsToMicrosoftYaHei() error = %v", err)
+	}
+
+	if result.UpdatedFonts != 2 {
+		t.Fatalf("updated fonts = %d, want 2", result.UpdatedFonts)
+	}
+
+	gotContent, err := os.ReadFile("spaced-bom.ass")
+	if err != nil {
+		t.Fatalf("read file failed: %v", err)
+	}
+	expected := "\ufeff[V4+ Styles]\nFormat : Name, Fontsize , Fontname , Bold\nStyle: Default,22,Microsoft YaHei,0\nStyle: LOGO,20,Microsoft YaHei,0\n"
 	if string(gotContent) != expected {
 		t.Fatalf("content = %q, want %q", string(gotContent), expected)
 	}

@@ -1,10 +1,10 @@
 package subtitles
 
 import (
-	"bufio"
 	"os"
 	"sort"
 	"strings"
+	"unicode/utf8"
 )
 
 type AssStyleFonts struct {
@@ -45,23 +45,19 @@ func ListStyleFontsByAssFiles() ([]AssStyleFonts, error) {
 }
 
 func listStyleFontsInAssFile(path string) ([]string, error) {
-	file, err := os.Open(path)
+	lines, err := readAssFileLines(path)
 	if err != nil {
 		return nil, err
 	}
-	defer func() {
-		_ = file.Close()
-	}()
 
 	fontSet := make(map[string]struct{})
 	fonts := make([]string, 0)
-	scanner := bufio.NewScanner(file)
 
 	inStylesSection := false
 	fontNameIndex := -1
 
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
+	for _, line := range lines {
+		line = trimASSLine(strings.TrimRight(line, "\r"))
 		if len(line) == 0 {
 			continue
 		}
@@ -81,16 +77,19 @@ func listStyleFontsInAssFile(path string) ([]string, error) {
 		}
 
 		lower := strings.ToLower(line)
-		if strings.HasPrefix(lower, "format:") {
+		if strings.HasPrefix(lower, "format") {
 			fontNameIndex = parseFormatForFontIndex(line)
 			continue
 		}
 
-		if !strings.HasPrefix(lower, "style:") || fontNameIndex < 0 {
+		if !strings.HasPrefix(lower, "style") || fontNameIndex < 0 {
 			continue
 		}
 
-		styleName := strings.TrimSpace(line[len("Style:"):])
+		styleName := strings.TrimSpace(extractASSCommandData(line, "style"))
+		if styleName == "" {
+			continue
+		}
 		columns := splitAssStyleFields(styleName)
 		if fontNameIndex >= len(columns) {
 			continue
@@ -109,15 +108,15 @@ func listStyleFontsInAssFile(path string) ([]string, error) {
 		fonts = append(fonts, fontName)
 	}
 
-	if err := scanner.Err(); err != nil {
-		return nil, err
-	}
-
 	return fonts, nil
 }
 
 func parseFormatForFontIndex(line string) int {
-	prefixRemoved := strings.TrimSpace(strings.TrimPrefix(strings.ToLower(line), "format:"))
+	prefixRemoved := strings.TrimSpace(extractASSCommandData(line, "format"))
+	if len(prefixRemoved) == 0 {
+		return -1
+	}
+
 	formatFields := splitAssStyleFields(prefixRemoved)
 	for idx, field := range formatFields {
 		if strings.EqualFold(strings.TrimSpace(field), "Fontname") {
@@ -130,6 +129,28 @@ func parseFormatForFontIndex(line string) int {
 
 func splitAssStyleFields(value string) []string {
 	return strings.Split(value, ",")
+}
+
+func trimASSLine(line string) string {
+	line = strings.TrimSpace(line)
+	line = strings.TrimPrefix(line, "\ufeff")
+	return line
+}
+
+func extractASSCommandData(line, command string) string {
+	lower := strings.ToLower(line)
+	command = strings.ToLower(command)
+	prefixIndex := strings.Index(lower, command)
+	if prefixIndex < 0 {
+		return ""
+	}
+
+	lineAfterPrefix := line[prefixIndex+len(command):]
+	lineAfterPrefix = strings.TrimSpace(lineAfterPrefix)
+	if strings.HasPrefix(lineAfterPrefix, ":") {
+		lineAfterPrefix = strings.TrimSpace(strings.TrimPrefix(lineAfterPrefix, ":"))
+	}
+	return lineAfterPrefix
 }
 
 func ResetCurrentDirAssStyleFontsToMicrosoftYaHei() (AssStyleFontResetResult, error) {
@@ -156,12 +177,12 @@ func ResetCurrentDirAssStyleFontsToMicrosoftYaHei() (AssStyleFontResetResult, er
 }
 
 func resetStyleFontsInAssFile(path string) (int, error) {
-	content, err := os.ReadFile(path)
+	content, err := readAssText(path)
 	if err != nil {
 		return 0, err
 	}
 
-	lines := strings.Split(string(content), "\n")
+	lines := strings.Split(content, "\n")
 	out := make([]string, 0, len(lines))
 
 	inStylesSection := false
@@ -170,7 +191,7 @@ func resetStyleFontsInAssFile(path string) (int, error) {
 
 	for _, line := range lines {
 		rawLine := strings.TrimRight(line, "\r")
-		trimmed := strings.TrimSpace(rawLine)
+		trimmed := trimASSLine(rawLine)
 
 		if trimmed == "[V4+ Styles]" {
 			inStylesSection = true
@@ -191,18 +212,22 @@ func resetStyleFontsInAssFile(path string) (int, error) {
 		}
 
 		lower := strings.ToLower(trimmed)
-		if strings.HasPrefix(lower, "format:") {
+		if strings.HasPrefix(lower, "format") {
 			fontNameIndex = parseFormatForFontIndex(trimmed)
 			out = append(out, rawLine)
 			continue
 		}
 
-		if !strings.HasPrefix(lower, "style:") || fontNameIndex < 0 {
+		if !strings.HasPrefix(lower, "style") || fontNameIndex < 0 {
 			out = append(out, rawLine)
 			continue
 		}
 
-		rest := strings.TrimSpace(rawLine[len("Style:"):])
+		rest := strings.TrimSpace(extractASSCommandData(trimmed, "style"))
+		if rest == "" {
+			out = append(out, rawLine)
+			continue
+		}
 		columns := splitAssStyleFields(rest)
 		if fontNameIndex >= len(columns) {
 			out = append(out, rawLine)
@@ -229,4 +254,32 @@ func resetStyleFontsInAssFile(path string) (int, error) {
 	}
 
 	return updated, nil
+}
+
+func readAssText(path string) (string, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return "", err
+	}
+
+	if utf8.Valid(content) {
+		return string(content), nil
+	}
+
+	encoding := detectFileEncoding(path)
+	converted, err := convertToUTF8(content, encoding)
+	if err != nil {
+		return "", err
+	}
+
+	return string(converted), nil
+}
+
+func readAssFileLines(path string) ([]string, error) {
+	content, err := readAssText(path)
+	if err != nil {
+		return nil, err
+	}
+
+	return strings.Split(content, "\n"), nil
 }

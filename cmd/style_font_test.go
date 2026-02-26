@@ -3,6 +3,7 @@ package cmd
 import (
 	"bytes"
 	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 )
@@ -40,6 +41,44 @@ func TestStyleFontListCommand_Success(t *testing.T) {
 
 	output := strings.TrimSpace(out.String())
 	want := "fonts.ass: Microsoft YaHei,SimHei"
+	if output != want {
+		t.Fatalf("output = %q, want %q", output, want)
+	}
+}
+
+func TestStyleFontListCommand_UTF16File(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "data", "foobar.ass"))
+	if err != nil {
+		t.Fatalf("read sample file failed: %v", err)
+	}
+	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
+		t.Fatalf("write foobar.ass failed: %v", err)
+	}
+
+	var out bytes.Buffer
+	rootCmd.SetOut(&out)
+	rootCmd.SetErr(&bytes.Buffer{})
+	rootCmd.SetArgs([]string{"style", "font", "list"})
+
+	if err := rootCmd.Execute(); err != nil {
+		t.Fatalf("rootCmd.Execute() error = %v", err)
+	}
+
+	output := strings.TrimSpace(out.String())
+	want := "foobar.ass: 微軟雅黑,方正黑體_GBK"
 	if output != want {
 		t.Fatalf("output = %q, want %q", output, want)
 	}
@@ -116,6 +155,43 @@ func TestStyleFontListCommand_NoFonts(t *testing.T) {
 	output := strings.TrimSpace(out.String())
 	if output != "not-found-fonts.ass: None" {
 		t.Fatalf("output = %q, want not-found-fonts.ass: None", output)
+	}
+}
+
+func TestStyleFontListCommand_BOMAndSpacedHeaders(t *testing.T) {
+	tmpDir := t.TempDir()
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("getwd failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+	t.Cleanup(func() {
+		_ = os.Chdir(originalDir)
+	})
+
+	if err := os.WriteFile(
+		"bom.ass",
+		[]byte("\ufeff[V4+ Styles]\nFormat : Name , Fontname , Fontsize\nStyle : Default ,微軟雅黑,22\nStyle : LOGO,方正黑體_GBK,20\n"),
+		0o644,
+	); err != nil {
+		t.Fatalf("write bom.ass failed: %v", err)
+	}
+
+	var out bytes.Buffer
+	rootCmd.SetOut(&out)
+	rootCmd.SetErr(&bytes.Buffer{})
+	rootCmd.SetArgs([]string{"style", "font", "list"})
+
+	if err := rootCmd.Execute(); err != nil {
+		t.Fatalf("rootCmd.Execute() error = %v", err)
+	}
+
+	output := strings.TrimSpace(out.String())
+	if output != "bom.ass: 微軟雅黑,方正黑體_GBK" {
+		t.Fatalf("output = %q, want bom.ass: 微軟雅黑,方正黑體_GBK", output)
 	}
 }
 
