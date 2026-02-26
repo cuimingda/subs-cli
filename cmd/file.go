@@ -10,21 +10,20 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func NewFilenameCmd() *cobra.Command {
-	filenameCmd := &cobra.Command{
-		Use:   "filename",
-		Short: "Operations on subtitle filenames",
+func NewFileCmd() *cobra.Command {
+	fileCmd := &cobra.Command{
+		Use:   "file",
+		Short: "Operations on subtitle files",
 		Args:  cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return cmd.Help()
 		},
 	}
 
-	filenameSearchCmd := &cobra.Command{
-		Use:     "seach",
-		Aliases: []string{"search"},
-		Short:   "Search for current directory videos that match subtitle episode tags",
-		Args:    cobra.NoArgs,
+	fileSearchCmd := &cobra.Command{
+		Use:   "search",
+		Short: "Search for current directory videos that match subtitle episode tags",
+		Args:  cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			subtitleFiles, err := subtitles.ListCurrentDirSubtitleFiles()
 			if err != nil {
@@ -74,8 +73,8 @@ func NewFilenameCmd() *cobra.Command {
 		},
 	}
 
-	filenameFixCmd := &cobra.Command{
-		Use:   "fix",
+	fileRenameCmd := &cobra.Command{
+		Use:   "rename",
 		Short: "Rename subtitle files according to matching video files",
 		Args:  cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -132,10 +131,10 @@ func NewFilenameCmd() *cobra.Command {
 		},
 	}
 
-	filenameCmd.AddCommand(filenameSearchCmd)
-	filenameCmd.AddCommand(filenameFixCmd)
+	fileCmd.AddCommand(fileSearchCmd)
+	fileCmd.AddCommand(fileRenameCmd)
 
-	return filenameCmd
+	return fileCmd
 }
 
 func colorize(text, color string) string {
