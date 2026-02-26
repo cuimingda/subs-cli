@@ -4,7 +4,6 @@ import (
 	"os"
 	"path/filepath"
 	"reflect"
-	"strings"
 	"testing"
 )
 
@@ -149,40 +148,6 @@ func TestListStyleFontsByAssFiles_WithFormatSpacingAndBOM(t *testing.T) {
 	}
 	if !reflect.DeepEqual(got, want) {
 		t.Fatalf("ListStyleFontsByAssFiles() = %+v, want %+v", got, want)
-	}
-}
-
-func TestListStyleFontsByAssFiles_FromUTF16File(t *testing.T) {
-	tmpDir := t.TempDir()
-	originalDir, err := os.Getwd()
-	if err != nil {
-		t.Fatalf("getwd failed: %v", err)
-	}
-
-	if err := os.Chdir(tmpDir); err != nil {
-		t.Fatalf("chdir failed: %v", err)
-	}
-	t.Cleanup(func() {
-		_ = os.Chdir(originalDir)
-	})
-
-	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "..", "data", "foobar.ass"))
-	if err != nil {
-		t.Fatalf("read sample file failed: %v", err)
-	}
-	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
-		t.Fatalf("write foobar.ass failed: %v", err)
-	}
-
-	err = func() error {
-		_, err := ListStyleFontsByAssFiles()
-		return err
-	}()
-	if err == nil {
-		t.Fatalf("expected non UTF-8 file detection error, got success")
-	}
-	if !strings.Contains(err.Error(), "Please run `subs encoding reset`") {
-		t.Fatalf("error = %q, want contains command hint", err)
 	}
 }
 

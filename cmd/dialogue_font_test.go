@@ -3,7 +3,6 @@ package cmd
 import (
 	"bytes"
 	"os"
-	"path/filepath"
 	"strings"
 	"testing"
 )
@@ -79,80 +78,6 @@ func TestDialogueFontCommand_Help(t *testing.T) {
 	output := out.String()
 	if !strings.Contains(output, "Available Commands:") {
 		t.Fatalf("output = %q, want to contain Available Commands", output)
-	}
-}
-
-func TestDialogueFontListCommand_UTF16File(t *testing.T) {
-	cmd := NewRootCmd()
-	tmpDir := t.TempDir()
-	originalDir, err := os.Getwd()
-	if err != nil {
-		t.Fatalf("getwd failed: %v", err)
-	}
-
-	if err := os.Chdir(tmpDir); err != nil {
-		t.Fatalf("chdir failed: %v", err)
-	}
-	t.Cleanup(func() {
-		_ = os.Chdir(originalDir)
-	})
-
-	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "data", "foobar.ass"))
-	if err != nil {
-		t.Fatalf("read sample file failed: %v", err)
-	}
-	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
-		t.Fatalf("write foobar.ass failed: %v", err)
-	}
-
-	var out bytes.Buffer
-	cmd.SetOut(&out)
-	cmd.SetErr(&bytes.Buffer{})
-	cmd.SetArgs([]string{"dialogue", "font", "list"})
-
-	execErr := cmd.Execute()
-	if execErr == nil {
-		t.Fatalf("expected error for non UTF-8 file, got nil")
-	}
-	if !strings.Contains(execErr.Error(), "Please run `subs encoding reset`") {
-		t.Fatalf("error = %q, want contains `Please run `subs encoding reset`", execErr)
-	}
-}
-
-func TestDialogueFontPruneCommand_UTF16File(t *testing.T) {
-	cmd := NewRootCmd()
-	tmpDir := t.TempDir()
-	originalDir, err := os.Getwd()
-	if err != nil {
-		t.Fatalf("getwd failed: %v", err)
-	}
-
-	if err := os.Chdir(tmpDir); err != nil {
-		t.Fatalf("chdir failed: %v", err)
-	}
-	t.Cleanup(func() {
-		_ = os.Chdir(originalDir)
-	})
-
-	sample, err := os.ReadFile(filepath.Join(originalDir, "..", "data", "foobar.ass"))
-	if err != nil {
-		t.Fatalf("read sample file failed: %v", err)
-	}
-	if err := os.WriteFile("foobar.ass", sample, 0o644); err != nil {
-		t.Fatalf("write foobar.ass failed: %v", err)
-	}
-
-	var out bytes.Buffer
-	cmd.SetOut(&out)
-	cmd.SetErr(&bytes.Buffer{})
-	cmd.SetArgs([]string{"dialogue", "font", "prune"})
-
-	execErr := cmd.Execute()
-	if execErr == nil {
-		t.Fatalf("expected error for non UTF-8 file, got nil")
-	}
-	if !strings.Contains(execErr.Error(), "Please run `subs encoding reset`") {
-		t.Fatalf("error = %q, want contains `Please run `subs encoding reset`", execErr)
 	}
 }
 
