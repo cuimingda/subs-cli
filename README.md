@@ -1,17 +1,15 @@
 # subs
 
-`subs` is a focused command-line utility for batch operations on subtitle files in the **current working directory**.
+`subs` is a command-line utility for batch operations on subtitle files in the **current working directory**.
 
-It is designed for `.srt` and `.ass` files and is intentionally non-recursive: only files in the current directory are processed, subdirectories are skipped.
+It works only on `.srt` and `.ass` files and is intentionally non-recursive: only files in the current directory are processed, subdirectories are skipped.
 
-## Goal
+## Features
 
-The tool is intended to grow into a small toolkit for common subtitle maintenance tasks, such as:
-
-- listing subtitle files
-- inspecting encoding information
-- normalizing encoding to UTF-8
-- processing ASS `\fn` font tags
+- List subtitle files in the current directory
+- Inspect detected encodings
+- Convert subtitle encodings to UTF-8
+- Inspect or edit ASS style and dialogue font information
 
 ## Installation
 
@@ -20,13 +18,13 @@ The tool is intended to grow into a small toolkit for common subtitle maintenanc
 $ go install github.com/cuimingda/subs-cli/cmd/subs@latest
 ```
 
-You can also run it directly from source:
+Or run directly from source:
 
 ```bash
-go run .
+go run ./cmd/subs [command]
 ```
 
-> Requirements: Go 1.24+
+> Requires Go 1.24+
 
 ## Usage
 
@@ -40,13 +38,22 @@ Use `--help` on any command to view its subcommands.
 
 - `list`
 - `encoding`
+  - `list`
+  - `reset`
 - `dialogue`
+  - `font`
+    - `list`
+    - `prune`
+- `style`
+  - `font`
+    - `list`
+    - `reset`
 
 ## Commands
 
 ### `subs list`
 
-List all `.srt` and `.ass` files in the current directory.
+List all `.srt` and `.ass` files in the current directory, one per line.
 
 ```bash
 subs list
@@ -58,7 +65,7 @@ Container command for encoding-related operations.
 
 #### `subs encoding list`
 
-List each subtitle file and the detected encoding in the current directory.
+List detected encodings for all subtitle files in the current directory.
 
 ```bash
 subs encoding list
@@ -70,7 +77,7 @@ Output format:
 file.ext - ENCODING
 ```
 
-If no `.srt`/`.ass` file exists, the command returns `ErrNoSubtitleFiles`.
+If there are no `.srt`/`.ass` files, it returns `ErrNoSubtitleFiles`.
 
 #### `subs encoding reset`
 
@@ -80,39 +87,45 @@ Convert all subtitle files in the current directory to UTF-8 when needed.
 subs encoding reset
 ```
 
-Output:
+Output format:
 
 ```text
 Total N file(s), updated M file(s)
 ```
 
-(`N` is total subtitle files, `M` is how many files were changed.)
-
 ### `subs dialogue`
 
-Container command for dialogue-related ASS operations.
+Container command for ASS dialogue operations.
 
 #### `subs dialogue font`
 
-Shows font-related ASS operations.
+Shows font-related ASS dialogue operations.
 
-#### `subs dialogue font list`
+##### `subs dialogue font list`
 
-List font names used by `\fn` tags in every `.ass` file. Output is one line per file:
-
-```text
-file.ass: font1,font2,font3
-```
-
-If no `\fn` font appears in a file, `None` is shown.
+List font names used by `\fn` tags in each `.ass` file in the current directory.
 
 ```bash
 subs dialogue font list
 ```
 
-#### `subs dialogue font prune`
+Output format:
 
-Remove `\fn` font tags from all `.ass` files in the current directory.
+```text
+file.ass: font1,font2,font3
+```
+
+If no `\fn` font is present in a file, output `None` for that file.
+
+Example:
+
+```text
+example.ass: Arial,Times New Roman,None
+```
+
+##### `subs dialogue font prune`
+
+Remove all `\fn` font tags from every `.ass` file.
 
 ```bash
 subs dialogue font prune
@@ -124,13 +137,56 @@ Output format:
 Pruned X font tags in Y files.
 ```
 
-`Y` is always the number of `.ass` files in the current directory; repeated runs are supported.
+`Y` is always the number of `.ass` files in the current directory.
 
-## Behavior Notes
+### `subs style`
 
-- Commands with no extra arguments generally show help for the parent command.
-- All core logic lives under `internal/subtitles` and is covered by tests.
-- Current scope is one directory level only; recursion is intentionally not used.
+Container command for ASS style operations.
+
+#### `subs style font`
+
+Shows style-font related ASS operations.
+
+##### `subs style font list`
+
+List unique font names referenced by the `Fontname` field in `[V4+ Styles]` section for each `.ass` file.
+
+```bash
+subs style font list
+```
+
+Output format:
+
+```text
+file.ass: font1,font2,font3
+```
+
+If no style font can be found in a file, output `None` for that file.
+
+##### `subs style font reset`
+
+Replace all style `Fontname` values in `[V4+ Styles]` with `Microsoft YaHei` for every `.ass` file.
+
+```bash
+subs style font reset
+```
+
+Output format:
+
+```text
+Reset X font names in Y file(s).
+```
+
+- `X` is the number of font names replaced.
+- `Y` is the number of `.ass` files that were updated.
+
+## Behavior Rules
+
+- `subs list` and `subs encoding` commands are always available without UTF-8 preconditions.
+- All other subtitle operations that read/modify files are UTF-8 only:
+  - If any file is not UTF-8, the command stops and prints:
+    `Please run \`subs encoding reset\` to convert subtitle files to UTF-8 first.`
+- Running commands with parent-only arguments (for example `subs dialogue`, `subs dialogue font`, `subs style`, `subs style font`) shows help.
 
 ## Tests
 
