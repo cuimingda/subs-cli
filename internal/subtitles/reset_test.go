@@ -26,7 +26,7 @@ func TestResetCurrentDirSubtitleFilesToUTF8_GB18030(t *testing.T) {
 }
 
 func TestResetCurrentDirSubtitleFilesToUTF8_GB18030WithHyphen(t *testing.T) {
-	testResetFileToUTF8ByEncoding(t, "GB18030", "GB-18030")
+	testResetFileToUTF8ByEncodingAndDetected(t, "GB18030", "GB-18030")
 }
 
 func TestResetCurrentDirSubtitleFilesToUTF8_ANSI(t *testing.T) {
