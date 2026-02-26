@@ -58,7 +58,7 @@ func NewFilenameCmd() *cobra.Command {
 				videoBase := strings.TrimSuffix(videoFile, filepath.Ext(videoFile))
 				if subtitleBase == videoBase {
 					suffix := colorize("(same)", "32")
-					if _, err := fmt.Fprintf(cmd.OutOrStdout(), "%s => %s (%s)\n", subtitleFile, videoFile, suffix); err != nil {
+					if _, err := fmt.Fprintf(cmd.OutOrStdout(), "%s => %s %s\n", subtitleFile, videoFile, suffix); err != nil {
 						return err
 					}
 					continue

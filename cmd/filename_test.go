@@ -64,7 +64,7 @@ func TestFilenameSeachCommand_Success(t *testing.T) {
 		"a.srt => " + ignoreText,
 		"c.S03E99.srt => " + notFoundText,
 		"found.S03E10.ass => other_show.S03E10.mkv (found)",
-		"same.S03E12.ass => same.S03E12.mkv (" + sameText + ")",
+		"same.S03E12.ass => same.S03E12.mkv " + sameText,
 	}
 	if len(gotLines) != len(wantLines) {
 		t.Fatalf("output line count = %d, want %d, output=%q", len(gotLines), len(wantLines), out.String())
