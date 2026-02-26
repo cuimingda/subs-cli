@@ -164,7 +164,7 @@ func TestDialogueFontPruneCommand_Success(t *testing.T) {
 		_ = os.Chdir(originalDir)
 	})
 
-	if err := os.WriteFile("fonts.ass", []byte("Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\\fn微软雅黑\\fs18\\b0\\bord1\\shad1\\3C&h2F2F2F&,Hello}{\\fnTimes New Roman\\foobar}"), 0o644); err != nil {
+	if err := os.WriteFile("fonts.ass", []byte("Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\\fnArial\\fs18\\b0\\bord1\\shad1\\3C&h2F2F2F&,Hello}{\\fnTimes New Roman\\foobar}"), 0o644); err != nil {
 		t.Fatalf("write fonts.ass failed: %v", err)
 	}
 	if err := os.WriteFile("nofont.ass", []byte("Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,hello"), 0o644); err != nil {
@@ -255,7 +255,7 @@ func TestDialogueFontPruneCommand_RepeatedRun(t *testing.T) {
 		_ = os.Chdir(originalDir)
 	})
 
-	if err := os.WriteFile("fonts.ass", []byte("Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\\fn微软雅黑\\fs18\\b0\\bord1\\shad1\\3C&h2F2F2F&,Hello}{\\fnTimes New Roman\\foobar}"), 0o644); err != nil {
+	if err := os.WriteFile("fonts.ass", []byte("Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\\fnArial\\fs18\\b0\\bord1\\shad1\\3C&h2F2F2F&,Hello}{\\fnTimes New Roman\\foobar}"), 0o644); err != nil {
 		t.Fatalf("write fonts.ass failed: %v", err)
 	}
 

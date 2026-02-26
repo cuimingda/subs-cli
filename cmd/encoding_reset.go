@@ -17,7 +17,7 @@ var encodingResetCmd = &cobra.Command{
 			return err
 		}
 
-		_, err = fmt.Fprintf(cmd.OutOrStdout(), "总共 %d 个文件，修改了 %d 个文件\n", result.Total, result.Updated)
+		_, err = fmt.Fprintf(cmd.OutOrStdout(), "Total %d file(s), updated %d file(s)\n", result.Total, result.Updated)
 		return err
 	},
 }

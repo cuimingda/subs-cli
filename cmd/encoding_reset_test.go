@@ -41,10 +41,10 @@ func TestEncodingResetCommand_Success(t *testing.T) {
 	}
 
 	output := out.String()
-	if !strings.Contains(output, "总共 2 个文件") {
+	if !strings.Contains(output, "Total 2 file(s), updated 0 file(s)") {
 		t.Fatalf("output should contain total count, got %q", output)
 	}
-	if !strings.Contains(output, "修改了 0 个文件") {
+	if !strings.Contains(output, "updated 0") {
 		t.Fatalf("output should contain unchanged count, got %q", output)
 	}
 }

@@ -61,7 +61,7 @@ func TestListDialogueFontsByAssFiles_WithStyleTagsAfterFont(t *testing.T) {
 		_ = os.Chdir(originalDir)
 	})
 
-	if err := os.WriteFile("style-tags.ass", []byte(`Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\fn微软雅黑\fs18\b0\bord1\shad1\3C&h2F2F2F&,Hello}`), 0o644); err != nil {
+	if err := os.WriteFile("style-tags.ass", []byte(`Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\fnSans Serif\fs18\b0\bord1\shad1\3C&h2F2F2F&,Hello}`), 0o644); err != nil {
 		t.Fatalf("write style-tags.ass failed: %v", err)
 	}
 
@@ -71,7 +71,7 @@ func TestListDialogueFontsByAssFiles_WithStyleTagsAfterFont(t *testing.T) {
 	}
 
 	want := []AssDialogueFonts{
-		{FileName: "style-tags.ass", Fonts: []string{"微软雅黑"}},
+		{FileName: "style-tags.ass", Fonts: []string{"Sans Serif"}},
 	}
 
 	if !reflect.DeepEqual(got, want) {
@@ -189,7 +189,7 @@ func TestPruneDialogueFontTagsFromAssFiles(t *testing.T) {
 
 	if err := os.WriteFile(
 		"fonts.ass",
-		[]byte(`Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\fn微软雅黑\fs18\b0\bord1\shad1\3C&h2F2F2F&,Hello}\N{\fn方正黑体_GBK\foobar}`),
+		[]byte(`Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,{\fnArial\fs18\b0\bord1\shad1\3C&h2F2F2F&,Hello}\N{\fnSans Serif\foobar}`),
 		0o644,
 	); err != nil {
 		t.Fatalf("write fonts.ass failed: %v", err)

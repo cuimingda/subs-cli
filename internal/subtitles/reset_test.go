@@ -51,7 +51,7 @@ func TestResetCurrentDirSubtitleFilesToUTF8_SkipUTF8(t *testing.T) {
 		_ = os.Chdir(originalDir)
 	})
 
-	original := []byte("已经是 UTF-8 文件")
+	original := []byte("already UTF-8 subtitle file")
 	if err := os.WriteFile("a.srt", original, 0o644); err != nil {
 		t.Fatalf("write file failed: %v", err)
 	}
@@ -165,10 +165,10 @@ func encodeTextByCharset(text, charset string) ([]byte, error) {
 
 func textByCharset(charset string) string {
 	if charset == "ANSI" {
-		return "caf\u00e9"
+		return "cafe\u00e9"
 	}
 
-	return "测试字幕"
+	return "sample subtitle text with cafe\u00e9"
 }
 
 func encodingByCharset(charset string) encoding.Encoding {

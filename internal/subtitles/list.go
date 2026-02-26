@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var ErrNoSubtitleFiles = errors.New("当前目录下未找到 .srt 或 .ass 文件")
+var ErrNoSubtitleFiles = errors.New("no .srt or .ass subtitle files found in current directory")
 
 func ListCurrentDirSubtitleFiles() ([]string, error) {
 	entries, err := os.ReadDir(".")
