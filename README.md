@@ -54,6 +54,10 @@ Use `--help` on any command to view its subcommands.
   - `search`
   - `rename`
   - `rm`
+- `font`
+  - `list`
+  - `url`
+  - `download`
 
 ## Commands
 
@@ -185,6 +189,40 @@ Reset X font names in Y file(s).
 
 - `X` is the number of font names replaced.
 - `Y` is the number of `.ass` files that were updated.
+
+### `subs font`
+
+Container command for font resource operations.
+
+#### `subs font list`
+
+List known font names and their download URLs.
+
+```bash
+subs font list
+```
+#### `subs font url <name>`
+
+Print the download URL for a supported font.
+
+```bash
+subs font url yahei
+```
+
+#### `subs font download <name>`
+
+Download the font file for a supported font to current directory.
+
+```bash
+subs font download yahei
+```
+
+Output message format includes start/complete logs:
+
+```text
+Downloading <filename> from URL...
+Download complete: <filename>
+```
 
 ### `subs file`
 
