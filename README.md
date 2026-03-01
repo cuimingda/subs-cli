@@ -42,6 +42,10 @@ Use `--help` on any command to view its subcommands.
 - `encoding`
   - `list`
   - `reset`
+- `info`
+- `extract`
+- `merge`
+- `remove`
 - `dialogue`
   - `font`
     - `list`
@@ -280,12 +284,94 @@ To provide confirmation input non-interactively in scripts, pipe in `y`:
 printf 'y\n' | subs file rm
 ```
 
+### `subs info <mkv-filename>`
+
+Print stream summary for one mkv file.
+
+```bash
+subs info low_quality_with_subtitles_5s.mkv
+```
+
+Output format (one line per stream):
+
+- Non-subtitle streams: `<ID> <Type> <Title>`
+- Subtitle streams: `<ID> <Type> <Language> <Format> <Title>`
+- If a stream has no title/language/format, `(EMPTY)` is printed.
+
+### `subs extract <mkv-filename> [--id <stream_id>] [--output <dir>]`
+
+Extract subtitle stream(s) from an mkv file.
+
+Validation:
+
+- file must exist and be `.mkv`
+- `ffmpeg` must be installed
+- with `--id`, only the target subtitle stream is extracted; otherwise all subtitle streams are extracted
+- `--id` must refer to an existing subtitle stream
+- `--output` (if provided) must be an existing directory
+
+Output:
+
+- Writes extracted files to `<mkv-dir>/<mkv-name>_subs/<mkv-name>_<id>_<lang>_<title>.<ext>` (title and language are omitted when empty).
+- `ext` is `srt` or `ass` according to subtitle codec.
+- If output directory already exists, the command stops and prints an error.
+- Example:
+
+```bash
+subs extract --id 4 --output ./out low_quality_with_subtitles_5s.mkv
+```
+
+### `subs merge <subtitle_filename> --target <mkv_filename> [--language <tag>] [--title <title>]`
+
+Append a subtitle file as a new stream at the end of an mkv container.
+
+Validation:
+
+- `--target` is required and must be an existing `.mkv`
+- subtitle file is required and must be `.srt` or `.ass`
+- `ffmpeg` must be installed
+- optional `--language` must be three lowercase letters (for example `eng`, `jpn`)
+- optional `--title` is set as stream metadata
+
+Behavior:
+
+- Existing stream count is preserved and the new stream is appended.
+- The output is first written to a temporary mkv file then replaced into target.
+- Example:
+
+```bash
+subs merge foobar.srt --target low_quality_with_subtitles_5s.mkv --language eng --title "subtitle title"
+```
+
+### `subs remove <mkv_filename> --id <stream_id>`
+
+Delete a subtitle stream by stream id from an mkv file.
+
+Validation:
+
+- mkv file must exist and end with `.mkv`
+- `--id` is required, must be numeric, and must point to an existing subtitle stream
+- `ffmpeg` must be installed
+- command reads stream details (id/type/language/format/title) and asks for confirmation before deletion
+- default is no; only `y`/`yes` proceeds.
+
+Example:
+
+```bash
+subs remove low_quality_with_subtitles_5s.mkv --id 4
+```
+
 ## Behavior Rules
 
 - `subs list` and `subs encoding` commands are always available without UTF-8 preconditions.
 - All other subtitle operations that read/modify files are UTF-8 only:
   - If any file is not UTF-8, the command stops and prints:
     `Please run \`subs encoding reset\` to convert subtitle files to UTF-8 first.`
+- mkv-related commands (`info`, `extract`, `merge`, `remove`) require `ffmpeg` in `PATH`.
+- mkv-related commands check filename suffixes and stream-type constraints:
+  - `extract/remove` only operate on subtitle streams.
+  - `merge` only accepts `.srt` or `.ass` subtitle inputs.
+  - `remove` validates stream id is numeric before attempting removal.
 - Running commands with parent-only arguments (for example `subs dialogue`, `subs dialogue font`, `subs style`, `subs style font`) shows help.
 
 ## Tests
