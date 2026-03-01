@@ -113,6 +113,89 @@ func TestExtractCommand_SingleID(t *testing.T) {
 	}
 }
 
+func TestExtractCommand_Success_WithOutputDir(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip extract command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip extract command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	if err := copyFile(samplePath, filepath.Join(tmpDir, filepath.Base(samplePath))); err != nil {
+		t.Fatalf("copy sample failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	outputRoot := filepath.Join(tmpDir, "custom_output")
+	if err := os.MkdirAll(outputRoot, 0o755); err != nil {
+		t.Fatalf("mkdir output root failed: %v", err)
+	}
+
+	mkvName := filepath.Base(samplePath)
+	outDir := filepath.Join(outputRoot, strings.TrimSuffix(mkvName, filepath.Ext(mkvName))+"_subs")
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"extract", "--output", outputRoot, mkvName})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	entries, err := os.ReadDir(outDir)
+	if err != nil {
+		t.Fatalf("read output dir failed: %v", err)
+	}
+	if len(entries) != 8 {
+		t.Fatalf("output subtitle file count = %d, want 8", len(entries))
+	}
+}
+
+func TestExtractCommand_InvalidOutputDir(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip extract command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip extract command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	if err := copyFile(samplePath, filepath.Join(tmpDir, filepath.Base(samplePath))); err != nil {
+		t.Fatalf("copy sample failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	outputFile := filepath.Join(tmpDir, "not_a_directory.txt")
+	if err := os.WriteFile(outputFile, []byte("x"), 0o644); err != nil {
+		t.Fatalf("write output file failed: %v", err)
+	}
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"extract", "--output", outputFile, filepath.Base(samplePath)})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected invalid output directory error, got nil")
+	}
+	if !strings.Contains(err.Error(), "output is not a directory") {
+		t.Fatalf("error = %q, want output is not a directory", err)
+	}
+}
+
 func TestExtractCommand_RejectedNonSubtitleID(t *testing.T) {
 	if _, err := exec.LookPath("ffmpeg"); err != nil {
 		t.Skip("skip extract command test: ffmpeg is not available")

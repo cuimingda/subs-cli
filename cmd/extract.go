@@ -14,6 +14,7 @@ import (
 
 func NewExtractCmd() *cobra.Command {
 	var streamID string
+	var outputDir string
 
 	cmd := &cobra.Command{
 		Use:   "extract <mkv-file>",
@@ -34,6 +35,18 @@ func NewExtractCmd() *cobra.Command {
 				return fmt.Errorf("ffmpeg is not installed or not in PATH, please install ffmpeg")
 			}
 
+			mkvOutputDir := filepath.Dir(fileName)
+			if outputDir != "" {
+				info, err := os.Stat(outputDir)
+				if err != nil {
+					return err
+				}
+				if !info.IsDir() {
+					return fmt.Errorf("output is not a directory: %s", outputDir)
+				}
+				mkvOutputDir = outputDir
+			}
+
 			streams, err := getMKVStreams(fileName)
 			if err != nil {
 				return err
@@ -51,7 +64,7 @@ func NewExtractCmd() *cobra.Command {
 				return err
 			}
 
-			outDir := mkvSubtitleOutputDir(fileName)
+			outDir := mkvSubtitleOutputDir(fileName, mkvOutputDir)
 			if err := os.MkdirAll(outDir, 0o755); err != nil {
 				return err
 			}
@@ -61,7 +74,7 @@ func NewExtractCmd() *cobra.Command {
 			}
 
 			for _, stream := range selectedStreams {
-				outputPath, err := mkvSubtitleOutputPath(fileName, stream)
+				outputPath, err := mkvSubtitleOutputPath(fileName, mkvOutputDir, stream)
 				if err != nil {
 					return err
 				}
@@ -99,6 +112,7 @@ func NewExtractCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&streamID, "id", "", "Only export one subtitle stream by stream id (for example: 4)")
+	cmd.Flags().StringVar(&outputDir, "output", "", "Output directory for extracted subtitle files")
 
 	return cmd
 }
@@ -143,12 +157,12 @@ func streamIDTail(streamID string) string {
 	return strings.TrimSpace(streamID[lastColon+1:])
 }
 
-func mkvSubtitleOutputDir(fileName string) string {
+func mkvSubtitleOutputDir(fileName, baseOutputDir string) string {
 	base := strings.TrimSuffix(filepath.Base(fileName), filepath.Ext(fileName))
-	return filepath.Join(filepath.Dir(fileName), base+"_subs")
+	return filepath.Join(baseOutputDir, base+"_subs")
 }
 
-func mkvSubtitleOutputPath(fileName string, stream mkvStreamInfo) (string, error) {
+func mkvSubtitleOutputPath(fileName, outputBaseDir string, stream mkvStreamInfo) (string, error) {
 	base := strings.TrimSuffix(filepath.Base(fileName), filepath.Ext(fileName))
 	parts := []string{base, sanitizeStreamID(stream.ID)}
 	if stream.Language != "" {
@@ -164,7 +178,7 @@ func mkvSubtitleOutputPath(fileName string, stream mkvStreamInfo) (string, error
 		ext = "srt"
 	}
 
-	return filepath.Join(mkvSubtitleOutputDir(fileName), fmt.Sprintf("%s.%s", filename, ext)), nil
+	return filepath.Join(mkvSubtitleOutputDir(fileName, outputBaseDir), fmt.Sprintf("%s.%s", filename, ext)), nil
 }
 
 func sanitizeStreamID(streamID string) string {
