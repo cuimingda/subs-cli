@@ -145,6 +145,77 @@ func TestMergeCommand_InvalidLanguage(t *testing.T) {
 	}
 }
 
+func TestMergeCommand_UppercaseSubtitleExt(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip merge command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip merge command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	subtitle := filepath.Join(tmpDir, "foobar.SRT")
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := copyFile(filepath.Join(filepath.Dir(samplePath), "foobar.srt"), subtitle); err != nil {
+		t.Fatalf("copy subtitle failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	beforeStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() before error = %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", filepath.Base(target), "foobar.SRT"})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	afterStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() after error = %v", err)
+	}
+	if len(afterStreams)-len(beforeStreams) != 1 {
+		t.Fatalf("stream count diff = %d, want 1", len(afterStreams)-len(beforeStreams))
+	}
+}
+
+func TestMergeCommand_InvalidLanguageUppercase(t *testing.T) {
+	tmpDir := t.TempDir()
+	targetPath := filepath.Join(tmpDir, "target.mkv")
+	subtitlePath := filepath.Join(tmpDir, "subtitle.srt")
+	if err := os.WriteFile(targetPath, []byte("not real mkv"), 0o644); err != nil {
+		t.Fatalf("write target.mkv failed: %v", err)
+	}
+	if err := os.WriteFile(subtitlePath, []byte("1\n00:00:00,000 --> 00:00:01,000\nhello\n"), 0o644); err != nil {
+		t.Fatalf("write subtitle.srt failed: %v", err)
+	}
+
+	cmd := NewRootCmd()
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", targetPath, "--language", "ENG", subtitlePath})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected invalid language error, got nil")
+	}
+	if !strings.Contains(err.Error(), "invalid language tag") {
+		t.Fatalf("error = %q, want contains invalid language tag", err)
+	}
+}
+
 func TestMergeCommand_InvalidTargetFileType(t *testing.T) {
 	tmpDir := t.TempDir()
 	targetPath := filepath.Join(tmpDir, "target.txt")
@@ -193,5 +264,126 @@ func TestMergeCommand_InvalidSubtitleFileType(t *testing.T) {
 	}
 	if !strings.Contains(err.Error(), "unsupported subtitle format") {
 		t.Fatalf("error = %q, want unsupported subtitle format", err)
+	}
+}
+
+func TestMergeCommand_RemovesExistingTempOutputBeforeWrite(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip merge command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip merge command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	subtitle := filepath.Join(tmpDir, "foobar.srt")
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := copyFile(filepath.Join(filepath.Dir(samplePath), "foobar.srt"), subtitle); err != nil {
+		t.Fatalf("copy subtitle failed: %v", err)
+	}
+
+	outputTmp := target + ".tmp_subs.mkv"
+	if err := os.WriteFile(outputTmp, []byte("stale"), 0o644); err != nil {
+		t.Fatalf("write stale tmp output failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	beforeStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() before error = %v", err)
+	}
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", filepath.Base(target), filepath.Base(subtitle)})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	afterStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() after error = %v", err)
+	}
+	if len(afterStreams) != len(beforeStreams)+1 {
+		t.Fatalf("stream count changed = %d, want %d", len(afterStreams), len(beforeStreams)+1)
+	}
+
+	if _, err := os.Stat(outputTmp); err == nil {
+		t.Fatalf("temporary output should be renamed away")
+	}
+}
+
+func TestMergeCommand_RejectsInvalidTargetContent(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip merge command test: ffmpeg is not available")
+	}
+
+	subtitle := filepath.Join(t.TempDir(), "subtitle.srt")
+	if err := os.WriteFile(subtitle, []byte("1\n00:00:00,000 --> 00:00:01,000\nhello\n"), 0o644); err != nil {
+		t.Fatalf("write subtitle failed: %v", err)
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, "bad.mkv")
+	if err := os.WriteFile(target, []byte("not real mkv"), 0o644); err != nil {
+		t.Fatalf("write bad target failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", target, subtitle})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected merge failure, got nil")
+	}
+	if !strings.Contains(err.Error(), "Failed to merge subtitle") && !strings.Contains(err.Error(), "ffmpeg") {
+		t.Fatalf("error = %q, want ffmpeg merge error", err)
+	}
+}
+
+func TestMergeCommand_RejectsWhenFFmpegMissing(t *testing.T) {
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip merge command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	subtitle := filepath.Join(tmpDir, "foobar.srt")
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := copyFile(filepath.Join(filepath.Dir(samplePath), "foobar.srt"), subtitle); err != nil {
+		t.Fatalf("copy subtitle failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", filepath.Base(target), "--language", "eng", filepath.Base(subtitle)})
+	t.Setenv("PATH", "/tmp/no-path-for-test")
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected ffmpeg missing error, got nil")
+	}
+	if err.Error() != "ffmpeg is not installed or not in PATH, please install ffmpeg" {
+		t.Fatalf("error = %q, want ffmpeg missing message", err)
 	}
 }

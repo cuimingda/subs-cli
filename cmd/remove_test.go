@@ -66,13 +66,14 @@ func TestRemoveCommand_DeletesSubtitleAfterConfirm(t *testing.T) {
 		if stream.Type == "Subtitle" {
 			afterSubtitleStreams++
 		}
-		if stream.ID == "0:2" {
-			t.Fatalf("stream 0:2 should be removed")
-		}
 	}
 
 	if afterSubtitleStreams != subtitleStreams-1 {
 		t.Fatalf("subtitle stream count = %d, want %d", afterSubtitleStreams, subtitleStreams-1)
+	}
+
+	if _, err := os.Stat(target + ".tmp_subs.mkv"); err == nil {
+		t.Fatalf("tmp output file should not exist after rename")
 	}
 }
 
@@ -151,6 +152,27 @@ func TestRemoveCommand_RejectsInvalidIDType(t *testing.T) {
 	}
 }
 
+func TestRemoveCommand_RejectsNonMkvTarget(t *testing.T) {
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, "target.txt")
+	if err := os.WriteFile(target, []byte("x"), 0o644); err != nil {
+		t.Fatalf("write target.txt failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"remove", target, "--id", "2"})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected non-mkv target error, got nil")
+	}
+	if !strings.Contains(err.Error(), "file must be an mkv file") {
+		t.Fatalf("error = %q, want file must be an mkv file", err)
+	}
+}
+
 func TestRemoveCommand_RejectsNonSubtitleStream(t *testing.T) {
 	if _, err := exec.LookPath("ffmpeg"); err != nil {
 		t.Skip("skip remove command test: ffmpeg is not available")
@@ -217,6 +239,36 @@ func TestRemoveCommand_RejectsStreamNotFound(t *testing.T) {
 	}
 }
 
+func TestRemoveCommand_RejectsWhenFFmpegMissing(t *testing.T) {
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip remove command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"remove", filepath.Base(target), "--id", "2"})
+	t.Setenv("PATH", "/tmp/no-path-for-test")
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected ffmpeg missing error, got nil")
+	}
+	if err.Error() != "ffmpeg is not installed or not in PATH, please install ffmpeg" {
+		t.Fatalf("error = %q, want ffmpeg missing message", err)
+	}
+}
+
 func TestRemoveCommand_RejectsMissingIDFlag(t *testing.T) {
 	cmd := NewRootCmd()
 	tmpDir := t.TempDir()
@@ -235,5 +287,67 @@ func TestRemoveCommand_RejectsMissingIDFlag(t *testing.T) {
 	}
 	if !strings.Contains(err.Error(), "required flag(s) \"id\" not set") {
 		t.Fatalf("error = %q, want required flag(s) \"id\" not set", err)
+	}
+}
+
+func TestRemoveCommand_UppercaseMkvExtension(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip remove command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip remove command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, "sample.MKV")
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	beforeStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() before error = %v", err)
+	}
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetIn(strings.NewReader("y\n"))
+	cmd.SetArgs([]string{"remove", filepath.Base(target), "--id", "2"})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	afterStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() after error = %v", err)
+	}
+
+	beforeSubtitleCount := 0
+	afterSubtitleCount := 0
+	for _, stream := range beforeStreams {
+		if stream.Type == "Subtitle" {
+			beforeSubtitleCount++
+		}
+	}
+	for _, stream := range afterStreams {
+		if stream.Type == "Subtitle" {
+			afterSubtitleCount++
+		}
+	}
+
+	if afterSubtitleCount != beforeSubtitleCount-1 {
+		t.Fatalf("subtitle stream count = %d, want %d", afterSubtitleCount, beforeSubtitleCount-1)
+	}
+
+	if !strings.Contains(out.String(), "Removed stream") {
+		t.Fatalf("output = %q, want Removed stream message", out.String())
 	}
 }

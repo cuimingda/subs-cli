@@ -122,3 +122,59 @@ func TestInfoCommand_RejectsArgs(t *testing.T) {
 		t.Fatalf("expected args validation error, got nil")
 	}
 }
+
+func TestInfoCommand_RejectsWhenFFmpegMissing(t *testing.T) {
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip info command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"info", filepath.Base(target)})
+	t.Setenv("PATH", "/tmp/no-path-for-test")
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected ffmpeg missing error, got nil")
+	}
+	if err.Error() != "ffmpeg is not installed or not in PATH, please install ffmpeg" {
+		t.Fatalf("error = %q, want ffmpeg missing message", err)
+	}
+}
+
+func TestInfoCommand_RejectsInvalidMKVContent(t *testing.T) {
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, "bad.mkv")
+	if err := os.WriteFile(target, []byte("not mkv"), 0o644); err != nil {
+		t.Fatalf("write bad mkv failed: %v", err)
+	}
+
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"info", filepath.Base(target)})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected info parse error, got nil")
+	}
+
+	if !strings.Contains(err.Error(), "no stream lines found") && !strings.Contains(err.Error(), "failed") {
+		t.Fatalf("error = %q, want parse failure", err)
+	}
+}
