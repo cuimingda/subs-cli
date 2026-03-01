@@ -57,7 +57,12 @@ func NewMergeCmd() *cobra.Command {
 				return err
 			}
 
-			targetStreamCount := len(streams)
+			targetSubtitleCount := 0
+			for _, stream := range streams {
+				if stream.Type == "Subtitle" {
+					targetSubtitleCount++
+				}
+			}
 			outputFile := mkvMergeOutputPath(targetFile)
 
 			if _, err := os.Stat(outputFile); err == nil {
@@ -77,7 +82,7 @@ func NewMergeCmd() *cobra.Command {
 				"-map", "1",
 			)
 			if languageTag != "" || subtitleTitle != "" {
-				targetMetadata := fmt.Sprintf("%d", targetStreamCount)
+				targetMetadata := fmt.Sprintf("%d", targetSubtitleCount)
 				if languageTag != "" {
 					ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+targetMetadata, "language="+languageTag)
 				}
