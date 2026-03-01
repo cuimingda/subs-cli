@@ -196,6 +196,45 @@ func TestExtractCommand_InvalidOutputDir(t *testing.T) {
 	}
 }
 
+func TestExtractCommand_OutputSubDirExists(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip extract command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip extract command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	if err := copyFile(samplePath, filepath.Join(tmpDir, filepath.Base(samplePath))); err != nil {
+		t.Fatalf("copy sample failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	mkvName := filepath.Base(samplePath)
+	outDir := strings.TrimSuffix(mkvName, filepath.Ext(mkvName)) + "_subs"
+	if err := os.MkdirAll(outDir, 0o755); err != nil {
+		t.Fatalf("mkdir output subdir failed: %v", err)
+	}
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"extract", mkvName})
+
+	err := cmd.Execute()
+	if err == nil {
+		t.Fatalf("expected output subdir exists error, got nil")
+	}
+	if !strings.Contains(err.Error(), "already exists") {
+		t.Fatalf("error = %q, want contains 'already exists'", err)
+	}
+}
+
 func TestExtractCommand_RejectedNonSubtitleID(t *testing.T) {
 	if _, err := exec.LookPath("ffmpeg"); err != nil {
 		t.Skip("skip extract command test: ffmpeg is not available")

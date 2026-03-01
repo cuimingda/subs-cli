@@ -65,6 +65,9 @@ func NewExtractCmd() *cobra.Command {
 			}
 
 			outDir := mkvSubtitleOutputDir(fileName, mkvOutputDir)
+			if _, err := os.Stat(outDir); err == nil {
+				return fmt.Errorf("subtitle output directory already exists: %s", outDir)
+			}
 			if err := os.MkdirAll(outDir, 0o755); err != nil {
 				return err
 			}
