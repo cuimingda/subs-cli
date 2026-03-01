@@ -142,6 +142,11 @@ func ParseSubtitleFormat(description string) string {
 		rest := description[open+1:]
 		close := strings.Index(rest, ")")
 		if close >= 0 {
+			formatPrefix := strings.TrimSpace(description[:open])
+			if strings.EqualFold(formatPrefix, "ass") {
+				return strings.TrimSpace(description[:open+close+2])
+			}
+
 			return strings.TrimSpace(rest[:close])
 		}
 	}
@@ -151,6 +156,19 @@ func ParseSubtitleFormat(description string) string {
 	}
 
 	return strings.TrimSpace(description)
+}
+
+func SubtitleFileExtension(subtitleFormat string) string {
+	normalizedFormat := strings.ToLower(strings.TrimSpace(subtitleFormat))
+	if normalizedFormat == "" {
+		return "srt"
+	}
+
+	if strings.HasPrefix(normalizedFormat, "ass") {
+		return "ass"
+	}
+
+	return strings.TrimPrefix(normalizedFormat, ".")
 }
 
 func StreamIDMatch(rawID, target string) bool {
@@ -223,14 +241,11 @@ func SubtitleOutputPath(fileName, outputBaseDir string, stream StreamInfo) (stri
 		parts = append(parts, stream.Language)
 	}
 	if stream.Title != "" {
-		parts = append(parts, SanitizeStreamTitle(stream.Title))
+	parts = append(parts, SanitizeStreamTitle(stream.Title))
 	}
 
 	filename := strings.Join(parts, "_")
-	ext := strings.ToLower(stream.SubtitleFormat)
-	if ext == "" {
-		ext = "srt"
-	}
+	ext := SubtitleFileExtension(stream.SubtitleFormat)
 
 	return filepath.Join(SubtitleOutputDir(fileName, outputBaseDir), fmt.Sprintf("%s.%s", filename, ext)), nil
 }

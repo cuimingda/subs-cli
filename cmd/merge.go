@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/cuimingda/subs-cli/internal/mkv"
 
@@ -22,9 +23,9 @@ func NewMergeCmd() *cobra.Command {
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			subtitleFile := args[0]
+			subtitleExt := strings.ToLower(filepath.Ext(subtitleFile))
 
-			if filepath.Ext(subtitleFile) != ".srt" && filepath.Ext(subtitleFile) != ".ass" &&
-				filepath.Ext(subtitleFile) != ".SRT" && filepath.Ext(subtitleFile) != ".ASS" {
+			if subtitleExt != ".srt" && subtitleExt != ".ass" && subtitleExt != ".ssa" {
 				return fmt.Errorf("unsupported subtitle format: %s", subtitleFile)
 			}
 

@@ -26,6 +26,10 @@ func TestParseSubtitleFormat(t *testing.T) {
 	if got := ParseSubtitleFormat("SubRip (srt)"); got != "srt" {
 		t.Fatalf("ParseSubtitleFormat() with parentheses = %q, want %q", got, "srt")
 	}
+
+	if got := ParseSubtitleFormat("ass (ssa)"); got != "ass (ssa)" {
+		t.Fatalf("ParseSubtitleFormat() for ass/ssa = %q, want %q", got, "ass (ssa)")
+	}
 }
 
 func TestStreamIDMatch(t *testing.T) {
@@ -92,6 +96,18 @@ func TestSubtitleOutputPath(t *testing.T) {
 		Language:       "eng",
 		Title:          "Title",
 		SubtitleFormat: "ass",
+	})
+	if err != nil {
+		t.Fatalf("SubtitleOutputPath() error = %v", err)
+	}
+	if path == "" || path[len(path)-4:] != ".ass" {
+		t.Fatalf("path = %q", path)
+	}
+
+	path, err = SubtitleOutputPath("movie.mkv", "/tmp", StreamInfo{
+		ID:             "0:5",
+		Language:       "eng",
+		SubtitleFormat: "ass (ssa)",
 	})
 	if err != nil {
 		t.Fatalf("SubtitleOutputPath() error = %v", err)

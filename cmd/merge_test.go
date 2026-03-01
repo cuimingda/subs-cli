@@ -120,6 +120,52 @@ func TestMergeCommand_AssSuccessWithoutOptions(t *testing.T) {
 	}
 }
 
+func TestMergeCommand_SsaSuccessWithoutOptions(t *testing.T) {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		t.Skip("skip merge command test: ffmpeg is not available")
+	}
+
+	samplePath := resolveTestMkvPath(t)
+	if samplePath == "" {
+		t.Skip("skip merge command test: test mkv not found")
+	}
+
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	target := filepath.Join(tmpDir, filepath.Base(samplePath))
+	subtitle := filepath.Join(tmpDir, "foobar.ssa")
+	if err := copyFile(samplePath, target); err != nil {
+		t.Fatalf("copy target failed: %v", err)
+	}
+	if err := copyFile(filepath.Join(filepath.Dir(samplePath), "foobar.ass"), subtitle); err != nil {
+		t.Fatalf("copy subtitle failed: %v", err)
+	}
+	if err := os.Chdir(tmpDir); err != nil {
+		t.Fatalf("chdir failed: %v", err)
+	}
+
+	beforeStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() before error = %v", err)
+	}
+
+	cmd.SetOut(&bytes.Buffer{})
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"merge", "--target", filepath.Base(target), filepath.Base(subtitle)})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	afterStreams, err := getMKVStreams(filepath.Base(target))
+	if err != nil {
+		t.Fatalf("getMKVStreams() after error = %v", err)
+	}
+	if len(afterStreams)-len(beforeStreams) != 1 {
+		t.Fatalf("stream count diff = %d, want 1", len(afterStreams)-len(beforeStreams))
+	}
+}
+
 func TestMergeCommand_InvalidLanguage(t *testing.T) {
 	tmpDir := t.TempDir()
 	targetPath := filepath.Join(tmpDir, "target.mkv")

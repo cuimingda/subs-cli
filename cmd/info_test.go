@@ -2,11 +2,14 @@ package cmd
 
 import (
 	"bytes"
+	"errors"
 	"path/filepath"
 	"os"
 	"os/exec"
 	"strings"
 	"testing"
+
+	"github.com/cuimingda/subs-cli/internal/mkv"
 )
 
 func TestInfoCommand_Success(t *testing.T) {
@@ -63,6 +66,59 @@ func TestInfoCommand_Success(t *testing.T) {
 		if lines[i] != expected {
 			t.Fatalf("line %d = %q, want %q", i, lines[i], expected)
 		}
+	}
+}
+
+type fakeFFmpegRunner struct {
+	installed bool
+	output    string
+	runErr    error
+}
+
+func (f *fakeFFmpegRunner) IsInstalled() error {
+	if f.installed {
+		return nil
+	}
+	return errors.New("ffmpeg is not installed or not in PATH, please install ffmpeg")
+}
+
+func (f *fakeFFmpegRunner) Run(args ...string) ([]byte, error) {
+	return []byte(f.output), f.runErr
+}
+
+func TestInfoCommand_PreservesAssSsaFormat(t *testing.T) {
+	cmd := NewRootCmd()
+	tmpDir := t.TempDir()
+	mkvPath := filepath.Join(tmpDir, "mock.mkv")
+	if err := os.WriteFile(mkvPath, []byte("mock"), 0o644); err != nil {
+		t.Fatalf("write mock mkv failed: %v", err)
+	}
+
+	runner := &fakeFFmpegRunner{
+		installed: true,
+		output: "Stream #0:0: Video: h264\nStream #0:2(eng): Subtitle: ass (ssa)\n",
+	}
+	oldRunnerCleanup := func() { mkv.SetFFmpegRunner(nil) }
+	mkv.SetFFmpegRunner(runner)
+	t.Cleanup(oldRunnerCleanup)
+
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
+	cmd.SetArgs([]string{"info", mkvPath})
+
+	if err := cmd.Execute(); err != nil {
+		t.Fatalf("cmd.Execute() error = %v", err)
+	}
+
+	lines := strings.Split(strings.TrimSpace(out.String()), "\n")
+	if len(lines) != 2 {
+		t.Fatalf("line count = %d, want 2, output=%q", len(lines), out.String())
+	}
+	line := lines[1]
+	expected := "0:2 Subtitle eng ass (ssa) (EMPTY)"
+	if line != expected {
+		t.Fatalf("output = %q, want %q", line, expected)
 	}
 }
 
