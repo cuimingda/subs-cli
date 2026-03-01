@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 	"os"
-	"os/exec"
 	"path/filepath"
-	"regexp"
+
+	"github.com/cuimingda/subs-cli/internal/mkv"
 
 	"github.com/spf13/cobra"
 )
@@ -44,8 +44,8 @@ func NewMergeCmd() *cobra.Command {
 				return fmt.Errorf("invalid language tag: %s", languageTag)
 			}
 
-			if _, err := exec.LookPath("ffmpeg"); err != nil {
-				return fmt.Errorf("ffmpeg is not installed or not in PATH, please install ffmpeg")
+			if err := mkv.RequireFFmpegInstalled(); err != nil {
+				return err
 			}
 
 			streams, err := getMKVStreams(targetFile)
@@ -65,35 +65,14 @@ func NewMergeCmd() *cobra.Command {
 			}
 			outputFile := mkvMergeOutputPath(targetFile)
 
-			if _, err := os.Stat(outputFile); err == nil {
-				if err := os.Remove(outputFile); err != nil {
-					return err
-				}
+			if err := mkv.RemoveTempOutputIfExists(outputFile); err != nil {
+				return err
 			}
 
-			var ffmpegArgs []string
-			ffmpegArgs = append(ffmpegArgs,
-				"-hide_banner",
-				"-y",
-				"-i", targetFile,
-				"-i", subtitleFile,
-				"-c", "copy",
-				"-map", "0",
-				"-map", "1",
-			)
-			if languageTag != "" || subtitleTitle != "" {
-				targetMetadata := fmt.Sprintf("%d", targetSubtitleCount)
-				if languageTag != "" {
-					ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+targetMetadata, "language="+languageTag)
-				}
-				if subtitleTitle != "" {
-					ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+targetMetadata, "title="+subtitleTitle)
-				}
-			}
-			ffmpegArgs = append(ffmpegArgs, outputFile)
+			mergeArgs := mkv.BuildMergeFFmpegArgs(targetFile, subtitleFile, targetSubtitleCount, languageTag, subtitleTitle)
+			mergeArgs = append(mergeArgs, outputFile)
 
-			mergeCmd := exec.Command("ffmpeg", ffmpegArgs...)
-			mergeOutput, err := mergeCmd.CombinedOutput()
+			mergeOutput, err := mkv.RunFFmpeg(mergeArgs...)
 			if err != nil {
 				return fmt.Errorf("failed to merge subtitle: %w: %s", err, bytes.TrimSpace(mergeOutput))
 			}
@@ -111,13 +90,4 @@ func NewMergeCmd() *cobra.Command {
 	cmd.Flags().StringVar(&languageTag, "language", "", "Subtitle language tag (lowercase, 3 letters)")
 	cmd.Flags().StringVar(&subtitleTitle, "title", "", "Subtitle title")
 	return cmd
-}
-
-func mkvMergeOutputPath(targetFile string) string {
-	return targetFile + ".tmp_subs.mkv"
-}
-
-func validLanguageTag(language string) bool {
-	re := regexp.MustCompile(`^[a-z]{3}$`)
-	return re.MatchString(language)
 }
