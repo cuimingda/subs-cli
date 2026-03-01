@@ -1,0 +1,1031 @@
+﻿[Script Info]
+; // 此字幕由Srt2Ass生成
+; // 欢迎访问人人影视 http://www.YYeTs.com
+Title:YYeTs
+Original Script:YYeTs
+Synch Point:1
+ScriptType:v4.00+
+Collisions:Normal
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,22,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,0,0,0,0,100,100,0,0.00,1,2,0,2,30,30,5,134
+Style: LOGO,Microsoft YaHei,20,&H00FFFFFF,&HF0000000,&H00000000,&H32000000,0,0,0,0,100,100,0,0,1,2,1,2,5,5,2,134
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:05:28.35,0:05:33.36,*LOGO,NTP,0,0,0,,{\fad(500,0)\bord0\shad0\fscx16\fscy20\p1\c&HFFEBD1&\pos(60.2,205)\t(4800,5000,\fscx0\fscy0)}m 195 227 l 228 227 l 149 147 m 149 86 l 134 100 l 241 210 l 241 180 m 195 71 l 89 180 l 89 210 l 89 210 l 225 71 m 134 71 l 89 117 l 89 147 l 163 71 m 134 164 l 195 227 l 228 227 l 150 148 m 149 86 l 134 100 l 241 210 l 241 177 m 195 71 l 89 180 l 89 210 l 89 210 l 225 71 m 134 71 l 89 117 l 89 147 {\p0}
+Dialogue: 2,0:05:28.35,0:05:33.36,*LOGO,NTP,0,0,0,,{\fad(500,0)\bord0\shad0\fscx11\fscy14\p1\c&HD18A2C&\pos(74.6,219.373)\t(4800,5000,\fscx0\fscy0)}m 20 0 l 209 0 b 218 0 229 11 229 20 l 229 209 b 229 218 218 228 209 228 l 20 228 b 11 228 0 218 0 209 l 0 20 b 0 11 11 0 20 0{\p0}
+Dialogue: 5,0:05:28.35,0:05:33.36,*LOGO,NTP,0,0,0,,{\fad(500,0)\bord0\shad0\fscx19\fscy20\p1\1a&H3D&\c&HFFFFFF&\blur10\pos(63.2,210.173)\t(4800,5000,\fscx0\fscy0)}m 71 60 b 71 0 161 0 161 60 b 161 120 71 120 71 60{\p0}
+Dialogue: 5,0:05:28.35,0:05:33.36,*LOGO,NTP,0,0,0,,{\fad(500,500)\bord0\shad0\fscx17\blur20\fscy22\p1\c&HDEA455&\t(0,1000,1,\blur0)\pos(120.2,219.2)}m 330 133 l 343 133 l 343 125 l 330 125 m 330 122 l 343 122 l 343 115 l 330 115 m 330 112 l 343 112 l 343 104 l 330 104 m 322 136 l 322 133 l 327 133 l 327 101 l 346 101 l 346 133 l 350 133 l 350 136 m 316 121 b 316 121 316 121 316 121 b 316 121 320 121 323 121 b 323 121 323 123 323 123 b 318 124 315 124 311 125 l 311 122 b 311 122 317 114 317 114 b 317 114 317 114 317 114 b 316 113 310 115 310 115 l 310 112 b 310 112 317 99 317 99 l 320 100 b 317 105 316 107 314 112 b 313 112 314 112 313 112 b 320 112 322 105 322 105 l 325 107 b 325 107 316 121 316 121 m 310 131 b 313 131 318 130 324 129 l 324 131 b 319 132 315 133 310 134 m 296 126 b 296 125 293 124 293 123 l 288 123 l 288 126 m 281 123 b 280 123 277 126 277 126 l 285 126 l 285 123 m 276 116 l 298 116 l 298 113 l 276 113 m 276 111 l 298 111 l 298 109 l 276 109 m 291 99 l 294 99 l 294 101 l 306 101 l 305 104 l 294 104 l 294 106 l 291 106 l 291 104 l 282 104 l 282 106 l 279 106 l 279 104 l 268 104 l 268 101 l 279 101 l 279 98 l 282 98 l 282 101 l 291 101 m 268 120 l 278 120 b 280 119 280 119 278 120 b 280 119 280 119 280 119 l 272 119 l 272 106 l 301 106 l 301 118 l 287 118 b 285 118 284 119 283 120 l 305 120 l 305 123 l 297 123 b 299 123 297 123 307 128 b 306 128 307 128 305 131 b 301 128 300 128 300 128 l 300 130 b 300 134 297 135 297 135 l 291 135 b 291 135 291 135 291 132 b 291 132 291 133 291 133 b 292 132 292 132 297 132 b 297 130 297 130 297 131 l 297 129 l 288 129 l 288 138 l 285 138 l 285 129 l 277 129 l 277 136 l 274 136 l 274 127 b 274 127 274 127 268 131 b 268 131 268 131 266 129 b 266 129 272 125 276 123 l 268 123 m 244 98 l 244 98 b 244 98 246 103 247 104 l 244 104 l 263 104 l 263 112 l 259 112 l 259 108 l 229 108 l 229 113 l 225 113 l 225 104 l 244 104 b 244 104 241 99 244 104 b 244 104 241 99 241 99 m 242 119 l 251 115 l 231 115 l 231 112 l 256 112 l 256 116 l 246 121 l 246 122 l 264 122 l 264 125 l 246 125 l 246 129 b 246 134 246 137 243 138 l 235 138 b 235 138 234 134 234 134 b 236 134 236 134 242 134 b 242 134 242 130 242 130 l 242 125 l 224 125 l 224 122 l 242 122 m 210 58 l 192 58 l 192 54 l 210 54 m 225 55 l 239 56 l 261 28 l 245 28 l 225 53 b 224 49 221 45 216 46 l 178 46 l 178 66 l 193 66 l 193 77 l 189 77 l 191 68 l 178 68 l 174 87 l 188 87 l 190 81 l 193 87 l 209 87 l 209 66 l 225 66 m 192 19 l 210 19 l 210 21 l 192 21 m 192 9 l 210 9 l 210 12 l 192 12 m 228 34 l 210 34 l 209 31 l 226 31 l 226 27 l 238 27 l 261 0 l 244 0 l 226 22 l 225 22 l 225 6 b 225 3 224 0 217 0 l 177 0 l 176 30 l 193 30 l 193 34 l 174 34 l 174 43 l 227 43 m 246 57 l 226 79 l 224 69 l 212 69 l 215 85 l 223 84 l 222 87 l 238 87 l 261 57 m 336 77 l 336 59 l 329 58 l 329 14 l 315 14 l 315 49 l 291 87 l 306 87 l 324 58 l 324 87 l 346 87 l 350 77 m 310 10 l 334 10 l 335 56 l 345 56 l 345 6 b 345 4 343 0 339 0 l 298 0 l 298 56 l 310 56 m 295 36 l 286 36 l 295 21 l 295 10 l 288 10 l 284 0 l 267 0 l 272 10 l 261 10 l 261 20 l 279 20 l 260 51 l 270 51 l 270 86 l 283 87 l 283 42 l 285 39 l 287 64 l 297 64 m 155 87 l 129 35 l 104 87 l 84 87 l 128 0 l 146 0 l 132 30 l 146 30 l 174 87 m 66 87 l 39 35 l 14 87 l -5 87 l 38 0 l 56 0 l 42 30 l 56 30 l 84 87 m 203 138 l 199 138 l 190 111 l 194 111 l 201 133 b 201 134 201 134 201 133 l 209 111 l 213 111 m 188 135 l 188 137 b 183 137 188 137 183 137 b 183 137 179 138 179 134 l 179 115 l 176 115 l 176 111 l 179 111 l 179 104 l 183 103 l 183 111 l 187 111 l 187 115 l 183 115 l 183 135 b 183 135 183 135 188 135 m 166 132 l 171 132 l 171 137 l 166 137 m 154 111 l 158 111 l 158 137 l 155 137 l 155 133 b 153 136 151 138 145 137 b 143 138 139 137 136 132 l 136 111 l 140 111 l 140 127 b 140 131 139 134 146 135 b 151 135 153 132 154 128 m 110 134 l 132 134 l 132 137 l 104 137 l 104 135 l 126 105 l 107 105 l 107 102 l 131 102 l 131 105 m 96 111 l 100 111 l 100 137 l 97 137 l 97 133 b 94 135 93 138 88 138 b 85 138 81 136 79 130 l 79 111 l 83 111 l 83 130 b 84 133 86 135 89 135 b 94 135 97 130 96 123 m 69 107 l 57 137 l 54 137 l 42 107 l 42 137 l 38 137 l 38 102 l 43 102 l 56 132 l 67 102 l 73 102 l 73 137 l 69 137 m 27 111 l 31 111 l 31 137 l 27 137 m 27 102 l 31 102 l 31 106 l 27 106 m 0 135 l 23 135 l 23 137 l -5 137 l -5 135 l 17 105 l -3 105 l -3 102 l 22 102 l 22 104 {\p0}
+Dialogue: 0,0:05:29.35,0:05:33.36,*LOGO,NTP,0000,0000,0000,,{\fad(500,500)\fs16\bord0\shad0\b1\c&HDEA455&\clip(50,204,52,273)\t(0,1000,1,\clip(52,204,335,275))\pos(106.2,237.8)}原创翻译  双语字幕
+Dialogue: 0,0:05:29.35,0:05:33.36,*LOGO,NTP,0000,0000,0000,,{\clip(52,154,52,273)\fad(500,500)\3c&HFFFFFF&\fscx600\fs86\alpha&H9F&\c&H000000&\bord1\shad0\t(0,1000,1,\clip(52,154,335,275))\pos(193.2,256.8)}■
+Dialogue: 0,0:05:29.35,0:05:33.36,*LOGO,NTP,0000,0000,0000,,{\fad(500,500)\fs16\b1\bord0\shad0\clip(50,154,52,273)\t(0,1000,1,\clip(52,154,335,275))\pos(238.2,237.8)}仅供学习 禁止用于任何商业盈利行为\N更多影视更新\N{\fs18}请登陆{\c&HDEA455&}www.ZiMuZu.tv
+Dialogue: 0,0:05:33.37,0:05:38.37,*LOGO,NTP,0000,0000,0000,,{\an7\fad(500,500)\fs18\bord0\shad0\c&H0200FA&\pos(12,15)}翻 译  {\c&HFFFFFF&}witbat   流水亦芳菲   慕风夕   安sim
+Dialogue: 0,0:05:38.34,0:05:43.34,*LOGO,NTP,0000,0000,0000,,{\an7\fad(500,500)\fs18\bord0\shad0\c&H0200FA&\pos(12,15)}翻 译  {\c&HFFFFFF&}咦个芝麻糕   凉粉   杏仁斯嘉丽   夕橙
+Dialogue: 0,0:05:43.30,0:05:48.30,*LOGO,NTP,0000,0000,0000,,{\an7\fad(500,500)\fs18\bord0\shad0\c&H0200FA&\pos(12,15)}时 间 轴   {\c&HFFFFFF&}三水    林卡
+Dialogue: 0,0:05:48.27,0:05:53.27,*LOGO,NTP,0000,0000,0000,,{\an7\fad(500,500)\fs18\bord0\shad0\c&H0200FA&\pos(12,15)}后 期   {\c&HFFFFFF&}鱼骨头      {\c&H0200FA&}校 对/总 监   {\c&HFFFFFF&}夕橙
+Dialogue: 0,0:05:25.19,0:05:28.30,*Default,NTP,0000,0000,0000,,{\an8\pos(191,170)\fad(200,100)\fs25\t(0,3000,1,\fs35)\c&H000000&\3c&HFFFFFF&\fsp2\bord2}黑   色   {\c&HFFFFFF&\bord0}警   报
+Dialogue: 0,0:05:25.19,0:05:28.30,*Default,NTP,0000,0000,0000,,{\an8\pos(185,210)\fad(200,100)\fs16\t(0,3000,1,\fs20)\c&HFFFFFF&\bord0}第一季   第一集
+Dialogue: 0,0:00:00.37,0:00:05.70,*Default,NTP,0000,0000,0000,,{\an7}{\pos(76,60)\fad(400,500)\fs22\b0\bord1\shad1\3c&H2F2F2F&}黑色警报
+Dialogue: 0,0:00:01.90,0:00:05.70,*Default,NTP,0000,0000,0000,,{\an7}{\pos(76,170)\fad(200,500)\fs18\b0\bord1\shad1\3c&H2F2F2F&}病患大量涌入医院\N没有足够的医疗资源进行治疗
+Dialogue: 0,0:00:05.97,0:00:13.04,*Default,NTP,0000,0000,0000,,{\an7}{\pos(80,75)\fad(400,500)\fs18\b0\bord1\shad1\3c&H2F2F2F&}一般的急诊室每年平均会遇到五次黑色警报
+Dialogue: 0,0:00:08.40,0:00:13.04,*Default,NTP,0000,0000,0000,,{\an7}{\pos(80,197)\fad(200,500)\fs18\b0\bord1\shad1\3c&H2F2F2F&}洛杉矶天使纪念医院每年会遇到三百次黑色警报
+Dialogue: 0,0:00:14.80,0:00:17.07,*Default,NTP,0000,0000,0000,,{\an1\pos(222,267)\bord0\shad0\b1\K100\fad(130,130)\c&HFFFFFF&\fs18}警报级别：绿色
+Dialogue: 0,0:08:04.12,0:08:06.35,*Default,NTP,0000,0000,0000,,{\an1\pos(222,267)\bord0\shad0\b1\K100\fad(130,50)\c&HFFFFFF&\fs18}警报级别：黄色
+Dialogue: 0,0:23:23.30,0:23:25.25,*Default,NTP,0000,0000,0000,,{\an1\pos(223,267)\bord0\shad0\b1\K100\fad(130,50)\c&HFFFFFF&\fs18}警报级别：红色
+Dialogue: 0,0:30:19.60,0:30:21.80,*Default,NTP,0000,0000,0000,,{\an1\pos(223,267)\bord0\shad0\b1\K100\fad(130,50)\c&HFFFFFF&\fs18}警报级别：黑色
+Dialogue: 0,0:25:49.04,0:25:51.84,*Default,NTP,0000,0000,0000,,{\an1\pos(223,267)\bord0\shad0\b1\K100\fad(130,50)\c&HFFFFFF&\fs18}警报级别：黑色
+Dialogue: 0,0:14:06.80,0:14:09.31,*Default,NTP,0000,0000,0000,,{\an8\pos(310,50)\frz3}{\fs14\b0\bord1\3c&H2F2F2F&}放射科\N{\fs18}X光室
+Dialogue: 0,0:06:58.00,0:07:00.13,*Default,NTP,0000,0000,0000,,{\an2\pos(205,248)}{\fs16\b0\bord1\shad1\3c&H2F2F2F&}急诊严重指数
+Dialogue: 0,0:09:13.01,0:09:14.28,*Default,NTP,0000,0000,0000,,{\an8\pos(215,233)}{\fs15\b0\bord1\shad1\3c&H2F2F2F&}组织型纤溶酶原激活剂
+Dialogue: 0,0:00:06.97,0:00:08.65,*Default,NTP,0000,0000,0000,,-医生  -今天随时都可以\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Doctor? - Any time today.
+Dialogue: 0,0:00:12.83,0:00:14.55,*Default,NTP,0000,0000,0000,,各位住院医师大家好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}{\an1}Hello, residents. 
+Dialogue: 0,0:00:14.55,0:00:16.43,*Default,NTP,0000,0000,0000,,{\an1}洛里斯医生一会就来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Rorish will be here shortly.
+Dialogue: 0,0:00:16.43,0:00:18.01,*Default,NTP,0000,0000,0000,,{\an1}现在  先跟着我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For now, you got me.
+Dialogue: 0,0:00:18.94,0:00:20.07,*Default,NTP,0000,0000,0000,,我是杰西·萨兰德\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm Jesse Sallander.
+Dialogue: 0,0:00:20.07,0:00:22.71,*Default,NTP,0000,0000,0000,,接下来的三年  我就是你们的老妈\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For the next three years, I'm your mama.
+Dialogue: 0,0:00:22.95,0:00:25.41,*Default,NTP,0000,0000,0000,,我是高级急诊室护师  我可以向你们保证\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm the senior E.R. nurse, and I can promise you
+Dialogue: 0,0:00:25.41,0:00:27.64,*Default,NTP,0000,0000,0000,,这里发生的所有事情\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}there's nothing that goes on in this house
+Dialogue: 0,0:00:27.80,0:00:29.60,*Default,NTP,0000,0000,0000,,没有你老妈不知道的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}your mama don't know about.
+Dialogue: 0,0:00:30.05,0:00:33.97,*Default,NTP,0000,0000,0000,,胆敢有所隐瞒  老妈都会发现\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Try hiding something, your mama will find out.
+Dialogue: 0,0:00:34.23,0:00:36.07,*Default,NTP,0000,0000,0000,,你以为自己有个医学学位\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You think you're smarter than your mama
+Dialogue: 0,0:00:36.08,0:00:37.44,*Default,NTP,0000,0000,0000,,就能比我聪明吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}because you got an M.D.?
+Dialogue: 0,0:00:37.44,0:00:39.73,*Default,NTP,0000,0000,0000,,其实不然\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, you are not.
+Dialogue: 0,0:00:39.73,0:00:43.21,*Default,NTP,0000,0000,0000,,老妈知道你何时在撒谎  何时哭或何时死\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Your mama knows when you're lying, crying, or dying,
+Dialogue: 0,0:00:43.67,0:00:46.31,*Default,NTP,0000,0000,0000,,我的工作不仅是要教会你们辨别对错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And it's not only my job to teach you right from wrong,
+Dialogue: 0,0:00:46.31,0:00:49.39,*Default,NTP,0000,0000,0000,,还要确保三年后你们离开这里时\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but to make sure you don't leave here in three years
+Dialogue: 0,0:00:49.40,0:00:52.51,*Default,NTP,0000,0000,0000,,不会幻想着自己绝不会犯错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}thinking you can do no wrong.
+Dialogue: 0,0:00:52.83,0:00:54.96,*Default,NTP,0000,0000,0000,,各位  能把那边处理一下吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Guys, can we clean this up, please?
+Dialogue: 0,0:00:55.04,0:00:56.17,*Default,NTP,0000,0000,0000,,你是住院医师还是主治医师\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You resident or attending?
+Dialogue: 0,0:00:56.17,0:00:57.58,*Default,NTP,0000,0000,0000,,住院医师第一年  跟你一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}First-year resident, like you.
+Dialogue: 0,0:00:57.58,0:00:58.46,*Default,NTP,0000,0000,0000,,我叫克丽斯塔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}My name's Christa.
+Dialogue: 0,0:00:58.46,0:00:59.95,*Default,NTP,0000,0000,0000,,马里奥  你在哪实习的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Mario. Where'd you intern?
+Dialogue: 0,0:00:59.95,0:01:00.82,*Default,NTP,0000,0000,0000,,加州大学洛杉矶分校\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}UCLA.
+Dialogue: 0,0:01:00.82,0:01:02.27,*Default,NTP,0000,0000,0000,,付不起学费啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can't beat the tuition, right?
+Dialogue: 0,0:01:02.27,0:01:03.37,*Default,NTP,0000,0000,0000,,不知道  我是纽约大学\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wouldn't know. NYU.
+Dialogue: 0,0:01:03.37,0:01:05.14,*Default,NTP,0000,0000,0000,,我要到你这个年纪才能付清贷款\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'll be paying off loans till I'm your age.
+Dialogue: 0,0:01:05.95,0:01:06.91,*Default,NTP,0000,0000,0000,,谢谢了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you.
+Dialogue: 0,0:01:07.36,0:01:11.29,*Default,NTP,0000,0000,0000,,每年有成千上万个像你们这样的新晋医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thousands of newly minted doctors like yourself apply every year 
+Dialogue: 0,0:01:11.29,0:01:15.13,*Default,NTP,0000,0000,0000,,申请来这所医疗圣殿学习急诊医学\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to learn emergency medicine in the civic cathedral,
+Dialogue: 0,0:01:15.13,0:01:17.99,*Default,NTP,0000,0000,0000,,也就是你们接下来要进入的地方\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}which you are about to enter.
+Dialogue: 0,0:01:21.20,0:01:24.08,*Default,NTP,0000,0000,0000,,这里  就是你们来这儿的原因\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This is why you're here.
+Dialogue: 0,0:01:25.69,0:01:29.51,*Default,NTP,0000,0000,0000,,全国最知名的医疗机构\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The most famous strip of hospital real estate in the nation, 
+Dialogue: 0,0:01:29.51,0:01:31.72,*Default,NTP,0000,0000,0000,,国内急诊医学的起源地\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}where emergency medicine was born,
+Dialogue: 0,0:01:32.20,0:01:34.26,*Default,NTP,0000,0000,0000,,特勤局也在本院为美国总统预留了床位\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}where The Secret Service reserves a trauma bed
+Dialogue: 0,0:01:34.26,0:01:36.55,*Default,NTP,0000,0000,0000,,特勤局也在本院为美国总统预留了床位\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}for the president of the United States
+Dialogue: 0,0:01:36.55,0:01:38.45,*Default,NTP,0000,0000,0000,,以备总统莅临洛杉矶时之用\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}when he is in Los Angeles.
+Dialogue: 0,0:01:38.45,0:01:42.05,*Default,NTP,0000,0000,0000,,这是天使纪念医院的创伤一室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This is Trauma-1, Angels Memorial.
+Dialogue: 0,0:01:42.37,0:01:46.26,*Default,NTP,0000,0000,0000,,沿着周边的这些小隔间叫做「边床」\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}These stalls around the perimeter, which we call the Sides,
+Dialogue: 0,0:01:46.47,0:01:49.58,*Default,NTP,0000,0000,0000,,用于救治那些暂时还不会死的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}are for the patients who put off dying for a few minutes.
+Dialogue: 0,0:01:50.01,0:01:51.70,*Default,NTP,0000,0000,0000,,这边呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And then this here, 
+Dialogue: 0,0:01:51.70,0:01:55.35,*Default,NTP,0000,0000,0000,,是供那些分分钟都可能会断气的病患所用\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}this is for the ones who are trying to die on you right this second.
+Dialogue: 0,0:01:55.35,0:01:57.23,*Default,NTP,0000,0000,0000,,这里  女士们先生们\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This, ladies and gentlemen,
+Dialogue: 0,0:01:57.23,0:01:58.93,*Default,NTP,0000,0000,0000,,就是「中央抢救区」了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}is center stage.
+Dialogue: 0,0:01:59.01,0:02:02.08,*Default,NTP,0000,0000,0000,,人们来这里只有一个原因\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}People come here for one reason and one reason only --
+Dialogue: 0,0:02:02.44,0:02:04.06,*Default,NTP,0000,0000,0000,,来实现最后的奇迹\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to get one last miracle.
+Dialogue: 0,0:02:04.41,0:02:07.76,*Default,NTP,0000,0000,0000,,在老妈的地盘上  有一条首要规则\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Now, in your mama's house, there is a number-one rule,
+Dialogue: 0,0:02:08.06,0:02:10.66,*Default,NTP,0000,0000,0000,,而为了让你们遵守这一规则\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and in order that you properly obey this number-one rule,
+Dialogue: 0,0:02:10.66,0:02:12.40,*Default,NTP,0000,0000,0000,,什么白痴的问题都可以来问我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}ask me all the questions you think are stupid.
+Dialogue: 0,0:02:12.40,0:02:15.38,*Default,NTP,0000,0000,0000,,为什么  因为老爸会让你们怕得不敢发问\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why? Because you're gonna be too afraid to ask daddy.
+Dialogue: 0,0:02:15.38,0:02:19.12,*Default,NTP,0000,0000,0000,,所以为了不违反首要规则  最好来问我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So better to ask me than to violate the number-one rule,
+Dialogue: 0,0:02:19.12,0:02:23.79,*Default,NTP,0000,0000,0000,,也就是  任何情况下  你们都不许\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}which is that you are not, under any circumstances,
+Dialogue: 0,0:02:23.79,0:02:27.62,*Default,NTP,0000,0000,0000,,在我的地盘上搞死「客人」\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}allowed to kill a guest in my house.
+Dialogue: 0,0:02:30.40,0:02:31.85,*Default,NTP,0000,0000,0000,,如果他是老妈  那谁是老爸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}If he's mama, who's daddy?
+Dialogue: 0,0:02:33.97,0:02:35.15,*Default,NTP,0000,0000,0000,,门口有人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Somebody's at the door!
+Dialogue: 0,0:02:35.49,0:02:37.14,*Default,NTP,0000,0000,0000,,小弟送货来了  跑起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Homeboy drop-off! Let's move!
+Dialogue: 0,0:02:37.15,0:02:38.24,*Default,NTP,0000,0000,0000,,那就是老爸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's daddy.
+Dialogue: 0,0:02:38.40,0:02:39.68,*Default,NTP,0000,0000,0000,,拿上手套  跟我走\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Grab some gloves, follow me.
+Dialogue: 0,0:02:39.68,0:02:41.16,*Default,NTP,0000,0000,0000,,「小弟送货」是什么意思\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What the hell's a homeboy drop-off?
+Dialogue: 0,0:02:41.16,0:02:43.12,*Default,NTP,0000,0000,0000,,小混混把受伤成员留在了过道上\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Gangbangers leave their wounded on the sidewalk.
+Dialogue: 0,0:02:43.12,0:02:44.10,*Default,NTP,0000,0000,0000,,杰西  把门铃声关了吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse put up a doorbell.
+Dialogue: 0,0:02:44.10,0:02:45.70,*Default,NTP,0000,0000,0000,,「小弟送货」  种族歧视啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}"Homeboy drop-off"? That sounds racist.
+Dialogue: 0,0:02:45.71,0:02:47.79,*Default,NTP,0000,0000,0000,,他们取的名字  不是我们\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}They gave it that name, not us.
+Dialogue: 0,0:02:48.32,0:02:49.21,*Default,NTP,0000,0000,0000,,我的天\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, my God.
+Dialogue: 0,0:02:49.54,0:02:50.41,*Default,NTP,0000,0000,0000,,这是怎么了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What the hell?
+Dialogue: 0,0:02:50.41,0:02:51.42,*Default,NTP,0000,0000,0000,,大家一起来  快点\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Keep it together! Come on!
+Dialogue: 0,0:02:51.42,0:02:53.71,*Default,NTP,0000,0000,0000,,前座伤者大出血  检查下后座\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Got a heavy bleeder up front. Check the back.
+Dialogue: 0,0:02:54.75,0:02:55.55,*Default,NTP,0000,0000,0000,,后面没人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Back's empty.
+Dialogue: 0,0:02:55.55,0:02:58.35,*Default,NTP,0000,0000,0000,,颈部中枪  动脉撕裂\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Gunshot wound to the neck, obliterated carotid.
+Dialogue: 0,0:02:58.38,0:02:59.45,*Default,NTP,0000,0000,0000,,他失去了一半的血\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's lost half his volume here.
+Dialogue: 0,0:02:59.45,0:03:00.46,*Default,NTP,0000,0000,0000,,杰西  我们得把他抬出来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse, we got to get him out of here.
+Dialogue: 0,0:03:00.46,0:03:02.10,*Default,NTP,0000,0000,0000,,-快把轮床放到他身下  -走\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Let's get the gurney underneath him, please. - Go.
+Dialogue: 0,0:03:02.10,0:03:03.43,*Default,NTP,0000,0000,0000,,好了  你去另一边\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, you -- get over there on the other side
+Dialogue: 0,0:03:03.43,0:03:04.58,*Default,NTP,0000,0000,0000,,用脚踹一下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and push with both legs.
+Dialogue: 0,0:03:04.71,0:03:07.16,*Default,NTP,0000,0000,0000,,一  二  三  走\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One, two, three... go!
+Dialogue: 0,0:03:07.65,0:03:08.57,*Default,NTP,0000,0000,0000,,把他抬起来  小心他的头\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Put him up. Watch his head. 
+Dialogue: 0,0:03:08.57,0:03:09.27,*Default,NTP,0000,0000,0000,,再一次  开始吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One more time. Let's go.
+Dialogue: 0,0:03:09.27,0:03:10.26,*Default,NTP,0000,0000,0000,,一  二  三  走\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One, two, three, go!
+Dialogue: 0,0:03:10.67,0:03:12.42,*Default,NTP,0000,0000,0000,,好了  你去前面\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, you, ride up top.
+Dialogue: 0,0:03:13.60,0:03:14.39,*Default,NTP,0000,0000,0000,,我去吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I can do it.
+Dialogue: 0,0:03:15.04,0:03:15.76,*Default,NTP,0000,0000,0000,,你上去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Get up there.
+Dialogue: 0,0:03:16.22,0:03:17.99,*Default,NTP,0000,0000,0000,,好了  小心  小心\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, careful, careful.
+Dialogue: 0,0:03:18.08,0:03:19.60,*Default,NTP,0000,0000,0000,,把你的手指放在我手指那里  找到了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Put your finger down where my finger is, right?
+Dialogue: 0,0:03:19.60,0:03:21.71,*Default,NTP,0000,0000,0000,,感觉到那个像小虫子一样扭来扭去的东西了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You feel that little thing wiggling around like a worm trying to get away?
+Dialogue: 0,0:03:21.71,0:03:23.06,*Default,NTP,0000,0000,0000,,那是颈动脉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, that's the carotid artery.
+Dialogue: 0,0:03:23.06,0:03:25.25,*Default,NTP,0000,0000,0000,,现在这个人的命就按在你的手指之下了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Your finger is now the only thing keeping that man alive.
+Dialogue: 0,0:03:25.25,0:03:26.17,*Default,NTP,0000,0000,0000,,好  走吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, go.
+Dialogue: 0,0:03:26.73,0:03:29.08,*Default,NTP,0000,0000,0000,,在这里  生命是按秒来计的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Life is measured here in split seconds.
+Dialogue: 0,0:03:29.08,0:03:30.66,*Default,NTP,0000,0000,0000,,稍有犹豫  患者就会死\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hesitate, and people die.
+Dialogue: 0,0:03:31.32,0:03:32.40,*Default,NTP,0000,0000,0000,,我需要进行抽吸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm gonna need some suction.
+Dialogue: 0,0:03:32.40,0:03:34.44,*Default,NTP,0000,0000,0000,,艾拉  艾拉  准备环甲膜穿刺通气\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ella, Ella. Call a T.T.A.
+Dialogue: 0,0:03:34.49,0:03:36.26,*Default,NTP,0000,0000,0000,,杰西  给血库打电话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse, call the blood bank.
+Dialogue: 0,0:03:36.26,0:03:38.69,*Default,NTP,0000,0000,0000,,告诉他们我需要六到八个单位  再通知手术室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Tell them I need 6 to 8 units and notify the O.R.
+Dialogue: 0,0:03:38.69,0:03:39.49,*Default,NTP,0000,0000,0000,,收到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Copy that.
+Dialogue: 0,0:03:40.14,0:03:41.72,*Default,NTP,0000,0000,0000,,去一层\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Off to level 1.
+Dialogue: 0,0:03:41.72,0:03:43.10,*Default,NTP,0000,0000,0000,,枪伤患者  男性\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right. Got a gunshot wound, male. 
+Dialogue: 0,0:03:43.11,0:03:44.72,*Default,NTP,0000,0000,0000,,有一处伤口  不确定其他地方还有没有\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One hole. I don't know if there's more.
+Dialogue: 0,0:03:44.72,0:03:46.12,*Default,NTP,0000,0000,0000,, NVP水凝胶  马上\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}N.V.P. now!
+Dialogue: 0,0:03:47.69,0:03:50.90,*Default,NTP,0000,0000,0000,,注射依托咪酯快速麻醉诱导  二十毫克\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}R.S.I. etomidate. 20 milligrams.
+Dialogue: 0,0:03:50.90,0:03:53.06,*Default,NTP,0000,0000,0000,,琥珀酰胆碱140  听我口令再推\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sux 140, please. Push it on my mark.
+Dialogue: 0,0:03:53.06,0:03:53.75,*Default,NTP,0000,0000,0000,,药物准备完毕\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Meds are ready.
+Dialogue: 0,0:03:53.75,0:03:55.24,*Default,NTP,0000,0000,0000,,现在推注吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Push it now, please.
+Dialogue: 0,0:03:55.25,0:03:56.37,*Default,NTP,0000,0000,0000,,好了  你现在可以下来了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay. Okay, now's a good time to get down.
+Dialogue: 0,0:03:56.37,0:03:57.55,*Default,NTP,0000,0000,0000,,-快点快点  -收到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Come on, come on. - Copy that.
+Dialogue: 0,0:03:57.61,0:03:58.78,*Default,NTP,0000,0000,0000,,需要我去实验室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Do you want me to get the labs
+Dialogue: 0,0:03:58.78,0:04:00.12,*Default,NTP,0000,0000,0000,,去做血型检测和交叉配血吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}for transfusion type and cross match?
+Dialogue: 0,0:04:00.12,0:04:01.49,*Default,NTP,0000,0000,0000,,不用  你来接手做心肺复苏吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, but you can take over CPR.
+Dialogue: 0,0:04:01.49,0:04:02.73,*Default,NTP,0000,0000,0000,,但是他失血很严重\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But the blood loss is critical.
+Dialogue: 0,0:04:02.73,0:04:03.71,*Default,NTP,0000,0000,0000,,看他的脉搏  医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Look at his pulse, doctor.
+Dialogue: 0,0:04:03.71,0:04:05.23,*Default,NTP,0000,0000,0000,,他的心脏需要外力帮助\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This man's heart needs assistance.
+Dialogue: 0,0:04:05.52,0:04:07.15,*Default,NTP,0000,0000,0000,,停止按压  进行插管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Stop compressions so we can intubate.
+Dialogue: 0,0:04:07.67,0:04:08.50,*Default,NTP,0000,0000,0000,,-准备好了吗  -好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- You got it? - Yeah.
+Dialogue: 0,0:04:08.50,0:04:10.65,*Default,NTP,0000,0000,0000,,谁能告诉我为什么该伤患不能输\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Who can tell me why this patient cannot be transfused
+Dialogue: 0,0:04:10.65,0:04:12.21,*Default,NTP,0000,0000,0000,,相同血型或是交叉配型的血\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}with type and cross-match blood?
+Dialogue: 0,0:04:12.69,0:04:13.52,*Default,NTP,0000,0000,0000,,有谁知道\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Anyone?
+Dialogue: 0,0:04:14.22,0:04:16.28,*Default,NTP,0000,0000,0000,,因为这需要一个小时  他等不了一个小时了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}'cause it takes an hour. He doesn't have an hour.
+Dialogue: 0,0:04:16.28,0:04:18.04,*Default,NTP,0000,0000,0000,,他需要O型阴性血  现在已经有了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He needs O-neg, which is here now.
+Dialogue: 0,0:04:18.04,0:04:18.68,*Default,NTP,0000,0000,0000,,谢谢你  杰西\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you, Jesse.
+Dialogue: 0,0:04:18.68,0:04:20.41,*Default,NTP,0000,0000,0000,,但这是六个单位已经不少了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But six units? That's a lot of blood.
+Dialogue: 0,0:04:20.87,0:04:23.12,*Default,NTP,0000,0000,0000,,等他缝合好了  他失去的血量会比这还多\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}By the time he gets sewn up, he'll have lost that and more.
+Dialogue: 0,0:04:23.47,0:04:24.46,*Default,NTP,0000,0000,0000,,等等  她说得对\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hang on. She's right.
+Dialogue: 0,0:04:25.30,0:04:26.07,*Default,NTP,0000,0000,0000,,没错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah.
+Dialogue: 0,0:04:26.42,0:04:28.25,*Default,NTP,0000,0000,0000,,血管外科医生需要一个小时\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's gonna take a vascular surgeon an hour
+Dialogue: 0,0:04:28.25,0:04:29.97,*Default,NTP,0000,0000,0000,,才能修复好血管  他撑不了一小时的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to replace that vessel, and he doesn't have an hour.
+Dialogue: 0,0:04:29.97,0:04:31.24,*Default,NTP,0000,0000,0000,,他连十分钟都撑不住\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He doesn't have 10 minutes.
+Dialogue: 0,0:04:31.24,0:04:32.63,*Default,NTP,0000,0000,0000,,地上会血流成河\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And all that blood's gonna end up on the floor
+Dialogue: 0,0:04:32.63,0:04:33.82,*Default,NTP,0000,0000,0000,,这人也就死了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}underneath a dead man.
+Dialogue: 0,0:04:34.24,0:04:35.99,*Default,NTP,0000,0000,0000,,今天是周五晚上  老妈  血得省着用\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's Friday night, mama. We're gonna need that blood.
+Dialogue: 0,0:04:35.99,0:04:36.87,*Default,NTP,0000,0000,0000,,没错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes, we will.
+Dialogue: 0,0:04:36.94,0:04:37.71,*Default,NTP,0000,0000,0000,,你不给他输血吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're not gonna transfuse him?
+Dialogue: 0,0:04:37.71,0:04:39.08,*Default,NTP,0000,0000,0000,,等等  你就这么让他等死吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. You're just gonna kill him?
+Dialogue: 0,0:04:39.13,0:04:40.03,*Default,NTP,0000,0000,0000,,怎么回事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's going on?
+Dialogue: 0,0:04:43.60,0:04:45.66,*Default,NTP,0000,0000,0000,,我要在他左锁骨下插入导管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need a vas cath in his "L" Subclavian
+Dialogue: 0,0:04:45.66,0:04:47.18,*Default,NTP,0000,0000,0000,,把所有冷生理盐水都拿来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and all the cold saline that I can get.
+Dialogue: 0,0:04:47.18,0:04:48.17,*Default,NTP,0000,0000,0000,,琳恩  解释一下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Leanne? A word?
+Dialogue: 0,0:04:48.25,0:04:49.59,*Default,NTP,0000,0000,0000,,谁知道我为什么这么做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Who can tell me what I'm doing?
+Dialogue: 0,0:04:50.40,0:04:51.50,*Default,NTP,0000,0000,0000,,冷盐水  马上就到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Cold saline, coming in.
+Dialogue: 0,0:04:51.65,0:04:52.26,*Default,NTP,0000,0000,0000,,我去拿\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'll get it. 
+Dialogue: 0,0:04:52.26,0:04:53.05,*Default,NTP,0000,0000,0000,,谁知道\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Anyone?
+Dialogue: 0,0:04:54.02,0:04:57.38,*Default,NTP,0000,0000,0000,,我要用冷盐水替换伤者体内所有血液\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm replacing all the patient's blood with ice-cold saline.
+Dialogue: 0,0:04:57.38,0:04:57.94,*Default,NTP,0000,0000,0000,,我为什么那么做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why am I doing that?
+Dialogue: 0,0:04:57.94,0:04:59.55,*Default,NTP,0000,0000,0000,,你不应该这样  他现在已经代偿失调了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You shouldn't be. - he's already decompensating.
+Dialogue: 0,0:04:59.55,0:05:01.13,*Default,NTP,0000,0000,0000,,我需要协助  哈德森医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need assistance, Dr. Hudson.
+Dialogue: 0,0:05:01.29,0:05:02.73,*Default,NTP,0000,0000,0000,,请不要添乱\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'll take it black with no sugar.
+Dialogue: 0,0:05:02.73,0:05:04.42,*Default,NTP,0000,0000,0000,,那是条生命  琳恩\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's a man on that table, Leanne.
+Dialogue: 0,0:05:05.31,0:05:06.83,*Default,NTP,0000,0000,0000,,你  准备好回答了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You -- are you ready to speak yet?
+Dialogue: 0,0:05:07.47,0:05:09.14,*Default,NTP,0000,0000,0000,,冷盐水输注的原理是通过降低体温\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The theory of cold infusion is that it can create
+Dialogue: 0,0:05:09.14,0:05:11.22,*Default,NTP,0000,0000,0000,,使患者产生暂时假死的现象\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}a temporary suspension of animation through hypothermia,
+Dialogue: 0,0:05:11.22,0:05:13.57,*Default,NTP,0000,0000,0000,,理论上能在外科医生修复动脉之前\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}buying the patient, in theory, the hour it'll take a surgeon
+Dialogue: 0,0:05:13.57,0:05:14.53,*Default,NTP,0000,0000,0000,,为患者争取时间\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to repair the artery.
+Dialogue: 0,0:05:15.11,0:05:16.67,*Default,NTP,0000,0000,0000,,答对  你说的没错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Bingo. So you were right.
+Dialogue: 0,0:05:16.67,0:05:17.88,*Default,NTP,0000,0000,0000,,我们要杀死他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We are going to kill him.
+Dialogue: 0,0:05:17.88,0:05:19.59,*Default,NTP,0000,0000,0000,,杀死他是为了救活他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're going to kill him to save him.
+Dialogue: 0,0:05:20.39,0:05:22.20,*Default,NTP,0000,0000,0000,,好了  继续  继续\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right. Let it go, let it go.
+Dialogue: 0,0:05:31.88,0:05:34.09,*Default,NTP,0000,0000,0000,,冷盐水输注  只是一种试验性的手术\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}A cold infusion. - it's an experimental procedure.
+Dialogue: 0,0:05:34.09,0:05:35.92,*Default,NTP,0000,0000,0000,,甚至还没被机构审查委员会批准\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It doesn't even have I.R.B. approval yet.
+Dialogue: 0,0:05:36.20,0:05:37.19,*Default,NTP,0000,0000,0000,,听起来不错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sounds exciting.
+Dialogue: 0,0:05:37.54,0:05:38.71,*Default,NTP,0000,0000,0000,,你是急诊主任  马克\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're the director of the E.R., Mark.
+Dialogue: 0,0:05:38.71,0:05:39.78,*Default,NTP,0000,0000,0000,,你怎么无动于衷呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Where's your concern?
+Dialogue: 0,0:05:39.83,0:05:41.41,*Default,NTP,0000,0000,0000,,我习惯遇事镇定了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Left it in a bottle of xanax.
+Dialogue: 0,0:05:41.41,0:05:42.70,*Default,NTP,0000,0000,0000,,伤者毕竟活下来了  尼尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The patient survived, Neal.
+Dialogue: 0,0:05:42.70,0:05:43.64,*Default,NTP,0000,0000,0000,,这次算他走运\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, this time.
+Dialogue: 0,0:05:44.32,0:05:46.18,*Default,NTP,0000,0000,0000,,琳恩遭遇的事情的确很糟糕\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Look, it was a horrible thing that happened to Leanne.
+Dialogue: 0,0:05:46.18,0:05:47.20,*Default,NTP,0000,0000,0000,,我们感同身受\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We all felt it.
+Dialogue: 0,0:05:47.77,0:05:49.65,*Default,NTP,0000,0000,0000,,但三年来  在她手下退出的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But in the three years since, she's had more dropouts
+Dialogue: 0,0:05:49.65,0:05:51.53,*Default,NTP,0000,0000,0000,,其数量之多简直是我院之最了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}than any residency director we've ever had.
+Dialogue: 0,0:05:51.81,0:05:53.57,*Default,NTP,0000,0000,0000,,她变得更危险  更鲁莽轻率\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's become more dangerous and more reckless.
+Dialogue: 0,0:05:53.57,0:05:55.13,*Default,NTP,0000,0000,0000,,她都被调查四次了吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's been investigated -- what -- four times by the state.
+Dialogue: 0,0:05:55.14,0:05:57.08,*Default,NTP,0000,0000,0000,,四次都证明无罪\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Exonerated four times.
+Dialogue: 0,0:05:57.46,0:05:59.03,*Default,NTP,0000,0000,0000,,说这些干什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I mean, where are we going with this?
+Dialogue: 0,0:05:59.60,0:06:01.55,*Default,NTP,0000,0000,0000,,她特立独行  你很清楚\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's different. You know she is.
+Dialogue: 0,0:06:01.55,0:06:05.81,*Default,NTP,0000,0000,0000,,不  我清楚的是  虽然那场意外悲惨异常\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, what I know is that while the accident was deeply tragic,
+Dialogue: 0,0:06:05.81,0:06:07.44,*Default,NTP,0000,0000,0000,,但愤怒令她更加出色\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}all that rage made her better.
+Dialogue: 0,0:06:08.08,0:06:09.60,*Default,NTP,0000,0000,0000,,确实有很多医生退出\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You know, more dropouts, yes,
+Dialogue: 0,0:06:10.14,0:06:11.80,*Default,NTP,0000,0000,0000,,但通过她考验的那些医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but the ones that got through her
+Dialogue: 0,0:06:11.80,0:06:13.88,*Default,NTP,0000,0000,0000,,也在更好的医院找到了更好的工作\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}went on to better jobs at better hospitals.
+Dialogue: 0,0:06:14.81,0:06:16.33,*Default,NTP,0000,0000,0000,,她能培养伟大的医生  尼尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She makes great docs, Neal.
+Dialogue: 0,0:06:16.97,0:06:19.54,*Default,NTP,0000,0000,0000,,医院董事会喜欢她  所以我也喜欢她\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The board likes her, which means I love her.
+Dialogue: 0,0:06:23.05,0:06:23.93,*Default,NTP,0000,0000,0000,,你找我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You wanted to see me?
+Dialogue: 0,0:06:23.93,0:06:26.69,*Default,NTP,0000,0000,0000,,是的  你让伤者假死了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, yeah. You put a patient into suspended animation.
+Dialogue: 0,0:06:26.69,0:06:29.57,*Default,NTP,0000,0000,0000,,他情况如何  有没有超生到多维空间\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How's he doing? Has he, uh, reached hyperspace yet?
+Dialogue: 0,0:06:29.57,0:06:31.78,*Default,NTP,0000,0000,0000,,他在手术室  颈动脉已被缝合好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's in the O.R., getting his carotid sewn up.
+Dialogue: 0,0:06:31.78,0:06:33.61,*Default,NTP,0000,0000,0000,,他的血已经安全输回自己身体了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And all of his blood is safely back inside him.
+Dialogue: 0,0:06:33.61,0:06:35.10,*Default,NTP,0000,0000,0000,,以后别在我的住院医师面前挑衅我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Don't ever challenge me in front of my residents again.
+Dialogue: 0,0:06:35.10,0:06:36.29,*Default,NTP,0000,0000,0000,,你在给患者施行未经批准的治疗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You were performing an unapproved procedure on a patient, Leanne.
+Dialogue: 0,0:06:36.29,0:06:39.41,*Default,NTP,0000,0000,0000,,尼尔  这位老太太想要起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, Neal, your old lady here, she's, uh, trying to get up.
+Dialogue: 0,0:06:39.44,0:06:42.12,*Default,NTP,0000,0000,0000,,女士  女士  你还不能起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Miss? Miss, you can't do that, okay?
+Dialogue: 0,0:06:42.42,0:06:44.69,*Default,NTP,0000,0000,0000,,伤患都一脚迈进棺材了  是我把他救了回来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The patient was in the grave. And I brought him back.
+Dialogue: 0,0:06:44.69,0:06:46.07,*Default,NTP,0000,0000,0000,,这对哪个医生来说  都算赢了一次\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's a win in anyone's book.
+Dialogue: 0,0:06:46.07,0:06:47.09,*Default,NTP,0000,0000,0000,,对你不是\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Not yours.
+Dialogue: 0,0:06:47.64,0:06:48.50,*Default,NTP,0000,0000,0000,,当我做住院医师时\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You know, when I was a resident,
+Dialogue: 0,0:06:48.50,0:06:50.00,*Default,NTP,0000,0000,0000,,你总说患者不是医生的记分卡\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}you always said they're not scorecards.
+Dialogue: 0,0:06:50.00,0:06:51.15,*Default,NTP,0000,0000,0000,,他们是活生生的人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}They're actual people.
+Dialogue: 0,0:06:51.15,0:06:53.49,*Default,NTP,0000,0000,0000,,说话小心点  我想我比你更清楚\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Careful. I think I know a little bit better than you 
+Dialogue: 0,0:06:53.49,0:06:55.56,*Default,NTP,0000,0000,0000,,那孩子是个活生生的人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}that kid is an actual person, 
+Dialogue: 0,0:06:55.56,0:06:58.00,*Default,NTP,0000,0000,0000,,他也有家人在祈祷着\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}that he has an actual family who's praying 
+Dialogue: 0,0:06:58.00,0:07:00.13,*Default,NTP,0000,0000,0000,,如果儿子以{\u1}ESI-1级{\u0}状态入院\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}that if their son gets brought in here ESI-1,
+Dialogue: 0,0:07:00.13,0:07:02.02,*Default,NTP,0000,0000,0000,,会有医生在不违反人道的情况下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}he'll be treated by a doctor who will do everything
+Dialogue: 0,0:07:02.03,0:07:04.14,*Default,NTP,0000,0000,0000,,竭尽全力救治孩子的性命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}humanly possible to save his kid's life,
+Dialogue: 0,0:07:04.23,0:07:06.89,*Default,NTP,0000,0000,0000,,而不是谨小慎微  关心规则\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}not by a timid one who's more concerned about the rules
+Dialogue: 0,0:07:06.89,0:07:08.43,*Default,NTP,0000,0000,0000,,甚于关心眼前的生命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}than he is about the life on the table in front of him.
+Dialogue: 0,0:07:08.44,0:07:10.65,*Default,NTP,0000,0000,0000,,我知道  他们想要你  而不是我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I see. They want you, not me.
+Dialogue: 0,0:07:10.66,0:07:13.22,*Default,NTP,0000,0000,0000,,不  你是他们想要的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No. You're the doctor they want.
+Dialogue: 0,0:07:13.71,0:07:15.27,*Default,NTP,0000,0000,0000,,我是他们需要的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm the doctor they need.
+Dialogue: 0,0:07:16.45,0:07:18.54,*Default,NTP,0000,0000,0000,,有意思  但我刚收到信息\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Fun stuff, but I just got a text
+Dialogue: 0,0:07:18.54,0:07:19.71,*Default,NTP,0000,0000,0000,,我们窝里斗的这一会儿功夫\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}that 40 people just checked in
+Dialogue: 0,0:07:19.71,0:07:20.97,*Default,NTP,0000,0000,0000,,又有四十位患者刚被送入医院\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}while we were having this little menage,
+Dialogue: 0,0:07:20.97,0:07:22.88,*Default,NTP,0000,0000,0000,,如果还打算穿着医生袍的话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}so if nobody's taking their clothes off,
+Dialogue: 0,0:07:22.88,0:07:25.28,*Default,NTP,0000,0000,0000,,你们俩现在就都给我下楼去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need you both back down on the floor now.
+Dialogue: 0,0:07:25.81,0:07:27.08,*Default,NTP,0000,0000,0000,,尼尔  你的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Neal, your patient.
+Dialogue: 0,0:07:33.65,0:07:35.44,*Default,NTP,0000,0000,0000,,你对他态度有点粗暴啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You were a little rough on him, huh?
+Dialogue: 0,0:07:35.45,0:07:38.47,*Default,NTP,0000,0000,0000,,我们不是患者的亲友  也不是精神科医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're not their friend, their family, or their shrink.
+Dialogue: 0,0:07:38.47,0:07:40.14,*Default,NTP,0000,0000,0000,,我们只是医生  他没搞清楚罢了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're their doctor. He gets confused.
+Dialogue: 0,0:07:40.83,0:07:42.00,*Default,NTP,0000,0000,0000,,他不是没搞清\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's not confused.
+Dialogue: 0,0:07:42.09,0:07:45.29,*Default,NTP,0000,0000,0000,,他是在乎  在乎你  在乎患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He cares -- about you, about them.
+Dialogue: 0,0:07:46.11,0:07:48.86,*Default,NTP,0000,0000,0000,,你把他教成这样的  只能怪你了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And for that, - you have only yourself to blame.
+Dialogue: 0,0:08:07.35,0:08:08.19,*Default,NTP,0000,0000,0000,,从滑板上摔下来的吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Fall off your board?
+Dialogue: 0,0:08:08.19,0:08:10.66,*Default,NTP,0000,0000,0000,,栏杆不牢稳  我觉得是骨折了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The rail was sketchy. I think it's broken.
+Dialogue: 0,0:08:10.66,0:08:13.27,*Default,NTP,0000,0000,0000,,我能感觉到里面的骨头嘎吱作响\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I can feel bones - crunching around in there.
+Dialogue: 0,0:08:13.27,0:08:14.32,*Default,NTP,0000,0000,0000,,你药磕多了吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You high right now?
+Dialogue: 0,0:08:15.20,0:08:16.22,*Default,NTP,0000,0000,0000,,怎么了  你要来点吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why? You want some?
+Dialogue: 0,0:08:16.52,0:08:17.85,*Default,NTP,0000,0000,0000,,别闹了  过来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Cute. Come on.
+Dialogue: 0,0:08:18.35,0:08:21.11,*Default,NTP,0000,0000,0000,,你们只要在这里就要坚守职责\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're only as good as your wait time out here.
+Dialogue: 0,0:08:21.31,0:08:23.55,*Default,NTP,0000,0000,0000,,你想爱你的患者  没问题  谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You want to love your patients, fine -- thank you --
+Dialogue: 0,0:08:23.55,0:08:25.32,*Default,NTP,0000,0000,0000,,但你们最好也同样爱惜那边的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But you better love the ones out here just as much,
+Dialogue: 0,0:08:25.33,0:08:27.28,*Default,NTP,0000,0000,0000,,因为他们更需要你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Because they may need you more.
+Dialogue: 0,0:08:27.89,0:08:28.66,*Default,NTP,0000,0000,0000,,安格斯·雷顿\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Angus Leighton.
+Dialogue: 0,0:08:28.66,0:08:29.75,*Default,NTP,0000,0000,0000,,马拉娅·皮内达\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Malaya Pineda.
+Dialogue: 0,0:08:29.75,0:08:32.08,*Default,NTP,0000,0000,0000,,等等  你是迈克·雷顿的兄弟\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. You're Mike Leighton's brother?
+Dialogue: 0,0:08:32.14,0:08:33.19,*Default,NTP,0000,0000,0000,,他提到过你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He talked about you.
+Dialogue: 0,0:08:33.44,0:08:34.32,*Default,NTP,0000,0000,0000,,你认识他吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You know him?
+Dialogue: 0,0:08:34.42,0:08:36.16,*Default,NTP,0000,0000,0000,,他当上住院医师时我还只是个医学生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I was just a med student when he was a resident,
+Dialogue: 0,0:08:36.17,0:08:37.71,*Default,NTP,0000,0000,0000,,但迈克可是鼎鼎大名\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but everyone knew Mike.
+Dialogue: 0,0:08:37.72,0:08:38.75,*Default,NTP,0000,0000,0000,,他就像个明星\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's a superstar.
+Dialogue: 0,0:08:38.75,0:08:40.34,*Default,NTP,0000,0000,0000,,他夏令营时在床上拉裤子了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He crapped his bed in summer camp.
+Dialogue: 0,0:08:40.86,0:08:42.22,*Default,NTP,0000,0000,0000,,虽然才12岁  但也够丢脸的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He was 12, but it counts.
+Dialogue: 0,0:08:42.33,0:08:44.78,*Default,NTP,0000,0000,0000,,我们按敏度分为三个类别\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We separate them into three categories of acuity --
+Dialogue: 0,0:08:44.78,0:08:46.38,*Default,NTP,0000,0000,0000,,ESI-1  2  3级\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}E.S.I.-1, 2, and 3.
+Dialogue: 0,0:08:46.38,0:08:48.23,*Default,NTP,0000,0000,0000,,ESI-1  情况危急\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}E.S.I.-1 is critical.
+Dialogue: 0,0:08:48.23,0:08:49.84,*Default,NTP,0000,0000,0000,,枪伤  心脏病发\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Bullet wound, heart attack.
+Dialogue: 0,0:08:49.84,0:08:52.47,*Default,NTP,0000,0000,0000,,2级很棘手  但不会即刻致命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The 2 is rough, but it's not death's door --
+Dialogue: 0,0:08:52.47,0:08:53.85,*Default,NTP,0000,0000,0000,,肺炎  血栓\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pneumonia, blood clot.
+Dialogue: 0,0:08:53.85,0:08:55.68,*Default,NTP,0000,0000,0000,,ESI-3级  小打小闹\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}E.S.I.-3 -- meh.
+Dialogue: 0,0:08:55.78,0:08:58.38,*Default,NTP,0000,0000,0000,,流感  偏头痛  小伤口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The flu, migraine, minor laceration.
+Dialogue: 0,0:08:58.77,0:09:00.59,*Default,NTP,0000,0000,0000,,我们今天会独自诊治患者吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Are we gonna be seeing our own patients today?
+Dialogue: 0,0:09:00.59,0:09:02.20,*Default,NTP,0000,0000,0000,,目前你们会负责小病例\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For now, you'll be taking light cases
+Dialogue: 0,0:09:02.21,0:09:03.59,*Default,NTP,0000,0000,0000,,协助主治医师\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and assisting the attendings
+Dialogue: 0,0:09:03.66,0:09:05.44,*Default,NTP,0000,0000,0000,,除非板上显示「黑色警报」\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}unless that board says "Code Black,"
+Dialogue: 0,0:09:05.44,0:09:07.34,*Default,NTP,0000,0000,0000,,届时洛杉矶一半人口都在这里急救\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}in which case, half of L.A. is in this room,
+Dialogue: 0,0:09:07.34,0:09:08.58,*Default,NTP,0000,0000,0000,,所有规定都不作数了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And then all bets are off.
+Dialogue: 0,0:09:08.58,0:09:11.14,*Default,NTP,0000,0000,0000,,医生  75岁男性\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Doctors. 75-year-old male.
+Dialogue: 0,0:09:11.14,0:09:12.37,*Default,NTP,0000,0000,0000,,晚餐时开始胡言乱语\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Started speaking gibberish at dinner.
+Dialogue: 0,0:09:12.37,0:09:13.00,*Default,NTP,0000,0000,0000,,推到第四区\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Bay number 4.
+Dialogue: 0,0:09:13.01,0:09:14.28,*Default,NTP,0000,0000,0000,,他需要{\u1}tPA{\u0}溶栓治疗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's gonna need t.P.A.
+Dialogue: 0,0:09:14.31,0:09:15.50,*Default,NTP,0000,0000,0000,,雷顿医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Leighton.
+Dialogue: 0,0:09:15.66,0:09:17.40,*Default,NTP,0000,0000,0000,,tPA  我想他需要tPA溶栓治疗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}t.P.A. I think he needs t.P.A.
+Dialogue: 0,0:09:17.61,0:09:20.09,*Default,NTP,0000,0000,0000,,我没问你  但我想格思里医生会很高兴\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I didn't ask, but I'm sure Dr. Guthrie will be thrilled.
+Dialogue: 0,0:09:20.09,0:09:21.91,*Default,NTP,0000,0000,0000,,跟着他  小心别杀了人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Follow him and try not to kill anyone.
+Dialogue: 0,0:09:22.05,0:09:24.03,*Default,NTP,0000,0000,0000,,洛里斯医生  我也想观察那个病例\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Rorish, I'd really like to observe that case, too.
+Dialogue: 0,0:09:24.03,0:09:24.96,*Default,NTP,0000,0000,0000,,你人真好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How nice for you.
+Dialogue: 0,0:09:24.96,0:09:26.83,*Default,NTP,0000,0000,0000,,还等着正式邀请吗  赶紧去吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Waiting for a formal invitation? Go -- now.
+Dialogue: 0,0:09:27.22,0:09:28.44,*Default,NTP,0000,0000,0000,,我现在要安排活了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm gonna need you at dispatch.
+Dialogue: 0,0:09:28.44,0:09:30.42,*Default,NTP,0000,0000,0000,,有两位病患即将入院  其中一位很危急\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got two coming in, one critical.
+Dialogue: 0,0:09:30.57,0:09:32.98,*Default,NTP,0000,0000,0000,,哈德森医生马上会下楼来跟大家汇合\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Hudson's on his way down now to meet you.
+Dialogue: 0,0:09:32.98,0:09:34.34,*Default,NTP,0000,0000,0000,,你  还有你  跟着我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You and you -- follow me.
+Dialogue: 0,0:09:34.34,0:09:36.13,*Default,NTP,0000,0000,0000,,杰西  找点事情给皮内达医生做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse, find something for Dr. Pineda.
+Dialogue: 0,0:09:37.86,0:09:38.86,*Default,NTP,0000,0000,0000,,她为什么忽视我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why is she ignoring me?
+Dialogue: 0,0:09:38.86,0:09:40.65,*Default,NTP,0000,0000,0000,,因为只有你还跟上学时一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Because you're the only one who went to school here.
+Dialogue: 0,0:09:40.65,0:09:42.07,*Default,NTP,0000,0000,0000,,今天是他们第一天跟她\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's their first day around her.
+Dialogue: 0,0:09:42.07,0:09:43.29,*Default,NTP,0000,0000,0000,,你得放轻松\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You need to relax.
+Dialogue: 0,0:09:43.29,0:09:44.62,*Default,NTP,0000,0000,0000,,我不是来这里放松的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm not here to relax.
+Dialogue: 0,0:09:44.62,0:09:45.12,*Default,NTP,0000,0000,0000,,-我知道  -我想要\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- I know. - I want -- 
+Dialogue: 0,0:09:45.12,0:09:47.59,*Default,NTP,0000,0000,0000,,你又要说「我是医生」这种豪言壮语了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This is your big "I'm a doctor now" moment?
+Dialogue: 0,0:09:47.80,0:09:49.09,*Default,NTP,0000,0000,0000,,算是吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Kinda, yeah.
+Dialogue: 0,0:09:49.09,0:09:50.75,*Default,NTP,0000,0000,0000,,很好  因为我需要一个英雄\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Good, good, 'cause I need a hero.
+Dialogue: 0,0:09:51.31,0:09:53.20,*Default,NTP,0000,0000,0000,,其实我一直坚持等待一位英雄\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}In fact, I'm holding out for a hero
+Dialogue: 0,0:09:53.91,0:09:55.21,*Default,NTP,0000,0000,0000,,直到今晚结束\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}till the end of the night.
+Dialogue: 0,0:09:56.04,0:09:58.70,*Default,NTP,0000,0000,0000,,*她得要神速又强壮*\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}* And she gotta be fast and she gotta be strong *
+Dialogue: 0,0:09:58.70,0:10:01.05,*Default,NTP,0000,0000,0000,,*她得要刚从战场归来*\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}* And she gotta be fresh from the fight *
+Dialogue: 0,0:10:01.46,0:10:02.60,*Default,NTP,0000,0000,0000,,别害羞\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Don't get shy now.
+Dialogue: 0,0:10:02.68,0:10:04.16,*Default,NTP,0000,0000,0000,,*我需要一位英雄*\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}* I need a hero *
+Dialogue: 0,0:10:04.16,0:10:04.95,*Default,NTP,0000,0000,0000,,来吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on.
+Dialogue: 0,0:10:05.28,0:10:07.78,*Default,NTP,0000,0000,0000,,来吧  我们找位病患让你烦恼\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on. Let's go find you an attending to annoy.
+Dialogue: 0,0:10:07.78,0:10:09.14,*Default,NTP,0000,0000,0000,,那位病患\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Someone who...
+Dialogue: 0,0:10:09.14,0:10:11.26,*Default,NTP,0000,0000,0000,,*需要一位英雄*\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}* needs a hero! *
+Dialogue: 0,0:10:11.86,0:10:12.91,*Default,NTP,0000,0000,0000,,找寻一位英雄\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Looking for a hero.
+Dialogue: 0,0:10:13.77,0:10:14.63,*Default,NTP,0000,0000,0000,,琳恩\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Leanne?
+Dialogue: 0,0:10:14.92,0:10:17.67,*Default,NTP,0000,0000,0000,,哈德森医生  这是沙维提与劳伦森医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Hudson. Say hello to doctors Savetti and Lorenson.
+Dialogue: 0,0:10:17.67,0:10:19.71,*Default,NTP,0000,0000,0000,,尼尔·哈德森  恭喜你们来到天使纪念医院\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Neal hudson. Congratulations on matching to Angels.
+Dialogue: 0,0:10:19.71,0:10:20.92,*Default,NTP,0000,0000,0000,,你们正在跟最好的老师学习\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're learning from the best.
+Dialogue: 0,0:10:21.23,0:10:22.78,*Default,NTP,0000,0000,0000,,我之前讲的话不是真心的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I didn't mean what I said before.
+Dialogue: 0,0:10:22.78,0:10:24.03,*Default,NTP,0000,0000,0000,,我对你的看法不是那样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I don't think those things about you.
+Dialogue: 0,0:10:24.03,0:10:24.59,*Default,NTP,0000,0000,0000,,你就是那样想的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes, you do.
+Dialogue: 0,0:10:24.59,0:10:26.16,*Default,NTP,0000,0000,0000,,我们只是有不同的人生哲学\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, we just have different philosophies.
+Dialogue: 0,0:10:26.16,0:10:27.28,*Default,NTP,0000,0000,0000,,我们以前没那么不同  琳恩\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We didn't always, Leanne.
+Dialogue: 0,0:10:27.28,0:10:28.12,*Default,NTP,0000,0000,0000,,病患状况怎样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What you got?
+Dialogue: 0,0:10:28.12,0:10:30.34,*Default,NTP,0000,0000,0000,,36岁男性  汽车安全气囊故障\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}36-year-old male. Airbag malfunction.
+Dialogue: 0,0:10:30.34,0:10:32.26,*Default,NTP,0000,0000,0000,,无反应  头部创伤  多处撕裂伤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Nonresponsive, head injury, multiple lacs.
+Dialogue: 0,0:10:32.26,0:10:33.27,*Default,NTP,0000,0000,0000,,脉搏65  血压120/90\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pulse 65, B.P. 120 over 90.
+Dialogue: 0,0:10:33.27,0:10:35.37,*Default,NTP,0000,0000,0000,,艾瑞尔  脸部  头部及上半身多处撕裂伤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel -- multiple lacs to the face, head, and upper body,
+Dialogue: 0,0:10:35.37,0:10:36.62,*Default,NTP,0000,0000,0000,,几乎所有伤口都有玻璃碎片嵌入\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}With glass embedded just about everywhere.
+Dialogue: 0,0:10:36.62,0:10:37.63,*Default,NTP,0000,0000,0000,,她非常激动\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She is highly agitated.
+Dialogue: 0,0:10:37.63,0:10:38.91,*Default,NTP,0000,0000,0000,,爸爸  爸爸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Daddy! Daddy!
+Dialogue: 0,0:10:39.84,0:10:41.35,*Default,NTP,0000,0000,0000,,不不不  亲爱的  别激动\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, no, no, no, no! Darling, please!
+Dialogue: 0,0:10:41.35,0:10:42.23,*Default,NTP,0000,0000,0000,,放开我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let go of me!
+Dialogue: 0,0:10:42.23,0:10:43.33,*Default,NTP,0000,0000,0000,,-别这样  -他会死吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- No. - Is he gonna die?
+Dialogue: 0,0:10:43.33,0:10:43.99,*Default,NTP,0000,0000,0000,,绝对不会\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No way.
+Dialogue: 0,0:10:43.99,0:10:46.51,*Default,NTP,0000,0000,0000,,你想要我直说还是医生的客套话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Do you want it straight or do you want doctor talk?
+Dialogue: 0,0:10:46.70,0:10:47.37,*Default,NTP,0000,0000,0000,,我想要你直说\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I want it straight.
+Dialogue: 0,0:10:47.38,0:10:48.81,*Default,NTP,0000,0000,0000,,-你叫什么名字  -艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- What's your name? - Ariel.
+Dialogue: 0,0:10:48.81,0:10:50.92,*Default,NTP,0000,0000,0000,,艾瑞尔  我是洛里斯医生  事实是\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel, I'm Dr. Rorish, and the truth is
+Dialogue: 0,0:10:50.92,0:10:52.64,*Default,NTP,0000,0000,0000,,我们不知道为什么你爸会无意识\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}we don't know why your father's unconscious,
+Dialogue: 0,0:10:52.64,0:10:54.32,*Default,NTP,0000,0000,0000,,而且这里一片漆黑我也无法查明原因\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And I can't learn anything out here in the dark.
+Dialogue: 0,0:10:54.37,0:10:57.19,*Default,NTP,0000,0000,0000,,所以  如果你允许  我想带他进去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So, with your permission, I want to take him inside,
+Dialogue: 0,0:10:57.23,0:10:59.01,*Default,NTP,0000,0000,0000,,我跟你保证  只要我一有什么消息\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And I promise you I will tell you everything I know
+Dialogue: 0,0:10:59.01,0:11:00.04,*Default,NTP,0000,0000,0000,,我会告诉你所有情况\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}As soon as I know it.
+Dialogue: 0,0:11:00.14,0:11:01.31,*Default,NTP,0000,0000,0000,,-好吗  -好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Okay? - Okay.
+Dialogue: 0,0:11:01.31,0:11:02.10,*Default,NTP,0000,0000,0000,,好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay.
+Dialogue: 0,0:11:03.36,0:11:04.25,*Default,NTP,0000,0000,0000,,你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You.
+Dialogue: 0,0:11:04.64,0:11:06.61,*Default,NTP,0000,0000,0000,,不要再对病患说谎\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Don't ever lie to a patient again.
+Dialogue: 0,0:11:06.88,0:11:09.54,*Default,NTP,0000,0000,0000,,她可能年纪还小  但她有权知道真相\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She may be young, - but she's entitled to the truth.
+Dialogue: 0,0:11:09.64,0:11:12.28,*Default,NTP,0000,0000,0000,,一  二  三  小心\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One, two, three. And careful.
+Dialogue: 0,0:11:12.40,0:11:15.03,*Default,NTP,0000,0000,0000,,好  很好  现在慢慢放下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right. And great. Back down easy now.
+Dialogue: 0,0:11:15.62,0:11:16.50,*Default,NTP,0000,0000,0000,,好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}There we go.
+Dialogue: 0,0:11:17.54,0:11:19.60,*Default,NTP,0000,0000,0000,,脉搏微弱  血压60/30\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pulse is thready. B.P. 60 over 30.
+Dialogue: 0,0:11:19.60,0:11:21.59,*Default,NTP,0000,0000,0000,,好  我需要中心静脉导管来注入升压药\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, I need central lines prepped for pressors, please.
+Dialogue: 0,0:11:21.60,0:11:22.34,*Default,NTP,0000,0000,0000,,去甲肾上腺素\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Norepinephrine?
+Dialogue: 0,0:11:22.35,0:11:23.12,*Default,NTP,0000,0000,0000,,对  拜托了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes, please.
+Dialogue: 0,0:11:23.12,0:11:24.66,*Default,NTP,0000,0000,0000,,请联络X光室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Somebody call X-ray, please.
+Dialogue: 0,0:11:25.09,0:11:26.02,*Default,NTP,0000,0000,0000,,正在联络\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm on it.
+Dialogue: 0,0:11:26.41,0:11:27.20,*Default,NTP,0000,0000,0000,,谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you.
+Dialogue: 0,0:11:27.56,0:11:29.22,*Default,NTP,0000,0000,0000,,你评估状况如何  医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's your evaluation, doctor?
+Dialogue: 0,0:11:29.44,0:11:32.75,*Default,NTP,0000,0000,0000,,病患无意识  低血压  四肢温暖\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, patient unconscious, low B.P., warm extremities.
+Dialogue: 0,0:11:32.75,0:11:33.68,*Default,NTP,0000,0000,0000,,应该是脊髓休克\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's in spinal shock.
+Dialogue: 0,0:11:33.68,0:11:35.09,*Default,NTP,0000,0000,0000,,不用作额外检查了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No additional examination?
+Dialogue: 0,0:11:35.36,0:11:36.60,*Default,NTP,0000,0000,0000,,症状已经很典型了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's pretty textbook.
+Dialogue: 0,0:11:36.60,0:11:37.90,*Default,NTP,0000,0000,0000,,-很典型是吗  -对\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Pretty textbook, huh? - Yeah.
+Dialogue: 0,0:11:38.26,0:11:39.88,*Default,NTP,0000,0000,0000,,好  你呢  医生  典型吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, what about you, doctor? Textbook?
+Dialogue: 0,0:11:43.16,0:11:44.94,*Default,NTP,0000,0000,0000,,-针头给你  -谢谢  拿到了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Here you go, needle. - Thank you. Got it.
+Dialogue: 0,0:11:45.75,0:11:47.27,*Default,NTP,0000,0000,0000,,-导线  -导线\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Wire. - Wire.
+Dialogue: 0,0:11:51.20,0:11:52.14,*Default,NTP,0000,0000,0000,,他是1-1-1吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is he 1-1-1?
+Dialogue: 0,0:11:52.15,0:11:53.62,*Default,NTP,0000,0000,0000,,-对  -那就说出来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Yes. - Then say so.
+Dialogue: 0,0:11:54.54,0:11:56.89,*Default,NTP,0000,0000,0000,,在这里  恐慌是足以致命的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Trepidation is a deadly quality in this place.
+Dialogue: 0,0:11:57.78,0:11:58.62,*Default,NTP,0000,0000,0000,,让我出去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let me out.
+Dialogue: 0,0:11:58.62,0:11:59.64,*Default,NTP,0000,0000,0000,,教你们一课\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Life lesson.
+Dialogue: 0,0:11:59.70,0:12:02.43,*Default,NTP,0000,0000,0000,,如果你被问到是否想再对病患多做些检查时\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}When asked if you want to examine your patient some more,
+Dialogue: 0,0:12:02.60,0:12:04.66,*Default,NTP,0000,0000,0000,,就像在问你是否想要颗薄荷糖一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}it's like being asked if you want a breath mint.
+Dialogue: 0,0:12:04.97,0:12:06.51,*Default,NTP,0000,0000,0000,,唯一的回答就是「好」\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The only answer is "Yes."
+Dialogue: 0,0:12:08.09,0:12:09.03,*Default,NTP,0000,0000,0000,,好  进去了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, we're in.
+Dialogue: 0,0:12:09.03,0:12:10.22,*Default,NTP,0000,0000,0000,,1-1-1到底是什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What the hell is a 1-1-1?
+Dialogue: 0,0:12:10.23,0:12:12.23,*Default,NTP,0000,0000,0000,,我想她是指格拉斯哥昏迷评分量表\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I assumed she was referring to the G.C.S. Scale.
+Dialogue: 0,0:12:12.23,0:12:13.92,*Default,NTP,0000,0000,0000,,6-5-4表示为正常脑部功能\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}6-5-4 is normal brain function.
+Dialogue: 0,0:12:13.92,0:12:15.25,*Default,NTP,0000,0000,0000,,1-1-1则是最低脑部功能\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}1-1-1 is the lowest.
+Dialogue: 0,0:12:15.85,0:12:17.01,*Default,NTP,0000,0000,0000,,他脑死亡了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's brain-dead.
+Dialogue: 0,0:12:18.49,0:12:19.67,*Default,NTP,0000,0000,0000,,可怜的孩子\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That poor kid.
+Dialogue: 0,0:12:22.79,0:12:25.66,*Default,NTP,0000,0000,0000,,艾瑞尔  我认为你该联络你阿姨了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You know, Ariel, I think it's time you called your aunt.
+Dialogue: 0,0:12:25.93,0:12:27.72,*Default,NTP,0000,0000,0000,,她到明天才能坐飞机来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She can't get a flight until tomorrow.
+Dialogue: 0,0:12:29.58,0:12:31.77,*Default,NTP,0000,0000,0000,,在知道我爸没事前我不能跟她讲\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I can't talk to her until I know my dad's okay.
+Dialogue: 0,0:12:33.33,0:12:35.99,*Default,NTP,0000,0000,0000,,我妈垂死时  她没办法好好接受\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She didn't handle my mom dying very well.
+Dialogue: 0,0:12:38.89,0:12:40.01,*Default,NTP,0000,0000,0000,,那你怎么接受的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How did you handle it?
+Dialogue: 0,0:12:41.25,0:12:42.99,*Default,NTP,0000,0000,0000,,我当时才8岁  所以\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I was only 8, so...
+Dialogue: 0,0:12:45.39,0:12:47.38,*Default,NTP,0000,0000,0000,,那位女医生会很快过来吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is that lady doctor coming in soon?
+Dialogue: 0,0:12:47.98,0:12:49.26,*Default,NTP,0000,0000,0000,,就是那位照顾我爸的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The one taking care of my dad.
+Dialogue: 0,0:12:49.26,0:12:50.26,*Default,NTP,0000,0000,0000,,我去看看\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'll check.
+Dialogue: 0,0:12:50.84,0:12:53.66,*Default,NTP,0000,0000,0000,,同时  这是我的手机\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Meantime, here's my cellphone.
+Dialogue: 0,0:12:54.59,0:12:55.66,*Default,NTP,0000,0000,0000,,你打给你阿姨\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You call your aunt.
+Dialogue: 0,0:12:57.05,0:12:58.92,*Default,NTP,0000,0000,0000,,她听到你的声音会好受点\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She'll feel better hearing your voice.
+Dialogue: 0,0:13:03.41,0:13:06.80,*Default,NTP,0000,0000,0000,,-他很疑惑我听不懂他的话  -嗯\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- He was confused - that I didn't understand him. - Yes.
+Dialogue: 0,0:13:07.01,0:13:08.75,*Default,NTP,0000,0000,0000,,这叫做表达性失语\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Called expressive aphasia.
+Dialogue: 0,0:13:08.81,0:13:09.87,*Default,NTP,0000,0000,0000,,就是词语杂乱\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's word salad.
+Dialogue: 0,0:13:10.02,0:13:11.15,*Default,NTP,0000,0000,0000,,他自己听起来是对的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sounds right to him,
+Dialogue: 0,0:13:11.15,0:13:13.32,*Default,NTP,0000,0000,0000,,但说出来的话都不成句子\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But the words come out all tossed around.
+Dialogue: 0,0:13:15.30,0:13:16.79,*Default,NTP,0000,0000,0000,,呼叫卒中小组\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Activate the stroke team, please.
+Dialogue: 0,0:13:16.79,0:13:19.81,*Default,NTP,0000,0000,0000,,小少爷  我听你刚才提到了tPA\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Young squire. - I heard you mention t.P.A.
+Dialogue: 0,0:13:19.98,0:13:20.63,*Default,NTP,0000,0000,0000,,你觉得是那个\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is that what you're thinking?
+Dialogue: 0,0:13:20.63,0:13:22.05,*Default,NTP,0000,0000,0000,,北四层\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}...sides, north 4.
+Dialogue: 0,0:13:24.20,0:13:25.02,*Default,NTP,0000,0000,0000,,对\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes.
+Dialogue: 0,0:13:25.80,0:13:28.19,*Default,NTP,0000,0000,0000,,症状显示可能是大脑中动脉栓塞\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The symptom profile suggests M.C.A. distribution.
+Dialogue: 0,0:13:28.40,0:13:29.50,*Default,NTP,0000,0000,0000,,我也这么觉得\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I think so, too.
+Dialogue: 0,0:13:30.00,0:13:31.14,*Default,NTP,0000,0000,0000,,但愿吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Fingers crossed.
+Dialogue: 0,0:13:31.31,0:13:32.88,*Default,NTP,0000,0000,0000,,好了  克利里先生和夫人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, Mr. And Mrs. Cleery,
+Dialogue: 0,0:13:32.97,0:13:35.46,*Default,NTP,0000,0000,0000,,tPA是一种很神奇的药\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}t.P.A. is a kind of miracle drug 
+Dialogue: 0,0:13:35.46,0:13:38.91,*Default,NTP,0000,0000,0000,,它可以打碎血栓  治好中风\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}that has the potential to bust the clot up and reverse the stroke,
+Dialogue: 0,0:13:38.91,0:13:41.84,*Default,NTP,0000,0000,0000,,但只在没有出现脑出血的情况下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But only if there's no actual bleeding yet in the brain.
+Dialogue: 0,0:13:41.84,0:13:43.43,*Default,NTP,0000,0000,0000,,为确保万无一失我们需要做个扫描排除诊断\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're gonna need a scan to know for sure.
+Dialogue: 0,0:13:43.43,0:13:45.60,*Default,NTP,0000,0000,0000,,做扫描用不着十二个人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Doesn't take 12 people to run a scan.
+Dialogue: 0,0:13:46.04,0:13:47.23,*Default,NTP,0000,0000,0000,,来吧  伙计们  现在可是周五晚上\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on, folks. It's Friday night.
+Dialogue: 0,0:13:47.23,0:13:48.88,*Default,NTP,0000,0000,0000,,分散开来  去攻克别的难关\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's divide and conquer.
+Dialogue: 0,0:13:50.32,0:13:53.39,*Default,NTP,0000,0000,0000,,小少爷  你能到护士站转转\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Young squire, would you check in at the nursing station,
+Dialogue: 0,0:13:53.39,0:13:54.73,*Default,NTP,0000,0000,0000,,看看哪里还需要你吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}see where you can be useful?
+Dialogue: 0,0:13:56.07,0:13:57.41,*Default,NTP,0000,0000,0000,,他们给他拍好X光后\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}When they're done X-raying him,
+Dialogue: 0,0:13:57.41,0:14:00.22,*Default,NTP,0000,0000,0000,,带他到一边去  然后给他上个石膏\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}take him down to sides and put a cast on him.
+Dialogue: 0,0:14:00.22,0:14:01.03,*Default,NTP,0000,0000,0000,,懂了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Are you good?
+Dialogue: 0,0:14:01.03,0:14:02.40,*Default,NTP,0000,0000,0000,,打石膏  这么简单\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}A cast? That's it?
+Dialogue: 0,0:14:02.56,0:14:05.02,*Default,NTP,0000,0000,0000,,-这个人  -交给我吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- This one. - You got it.
+Dialogue: 0,0:14:05.25,0:14:06.80,*Default,NTP,0000,0000,0000,,等等  在哪拍X光\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. Where is X-ray?
+Dialogue: 0,0:14:11.06,0:14:13.19,*Default,NTP,0000,0000,0000,,别告诉别人  好吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's just keep that between us, okay?
+Dialogue: 0,0:14:21.98,0:14:23.08,*Default,NTP,0000,0000,0000,,他脑死亡了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's brain-dead.
+Dialogue: 0,0:14:23.08,0:14:24.25,*Default,NTP,0000,0000,0000,,上帝啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, God.
+Dialogue: 0,0:14:24.70,0:14:26.31,*Default,NTP,0000,0000,0000,,她要一个人等到明天了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And she's all alone till tomorrow.
+Dialogue: 0,0:14:27.04,0:14:29.28,*Default,NTP,0000,0000,0000,,有打电话叫儿童与家庭服务中心来接她吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Has someone called child and family services to come get her?
+Dialogue: 0,0:14:29.28,0:14:31.43,*Default,NTP,0000,0000,0000,,有  但你知道流程  可能要好几个小时\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, but you know how that goes. It could be hours.
+Dialogue: 0,0:14:33.43,0:14:34.40,*Default,NTP,0000,0000,0000,,还有更糟的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It gets worse.
+Dialogue: 0,0:14:34.79,0:14:36.40,*Default,NTP,0000,0000,0000,,他是器官捐赠者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's an organ donor.
+Dialogue: 0,0:14:36.89,0:14:38.29,*Default,NTP,0000,0000,0000,,移植小组在来的路上了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Transplant team's on the way.
+Dialogue: 0,0:14:38.30,0:14:40.35,*Default,NTP,0000,0000,0000,,我们等不了签知情同意书了  我得告诉她\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Then we can't wait for C.F.s. I have to tell her.
+Dialogue: 0,0:14:40.72,0:14:41.49,*Default,NTP,0000,0000,0000,,尼尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Neal.
+Dialogue: 0,0:14:42.04,0:14:42.76,*Default,NTP,0000,0000,0000,,尼尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Neal.
+Dialogue: 0,0:14:45.05,0:14:46.14,*Default,NTP,0000,0000,0000,,这该我来做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I should do it.
+Dialogue: 0,0:14:47.11,0:14:48.57,*Default,NTP,0000,0000,0000,,为什么  她是我的病人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why? She's my patient.
+Dialogue: 0,0:14:49.64,0:14:50.82,*Default,NTP,0000,0000,0000,,我向她保证过\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I gave her my word.
+Dialogue: 0,0:14:52.06,0:14:54.05,*Default,NTP,0000,0000,0000,,我觉得不太妥当  到时场面会不太好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I don't think it's a good idea. It won't be pretty.
+Dialogue: 0,0:14:54.27,0:14:56.06,*Default,NTP,0000,0000,0000,,你是在保护我还是保护她\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Are you protecting me or her?
+Dialogue: 0,0:14:56.93,0:14:58.50,*Default,NTP,0000,0000,0000,,他是我的病人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He was under my care.
+Dialogue: 0,0:14:58.54,0:14:59.98,*Default,NTP,0000,0000,0000,,我们一起吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's do it together.
+Dialogue: 0,0:15:06.02,0:15:06.93,*Default,NTP,0000,0000,0000,,他醒了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is he awake?
+Dialogue: 0,0:15:08.17,0:15:12.03,*Default,NTP,0000,0000,0000,,艾瑞尔  你父亲送来时受了很重的伤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel, your father came in with some terrible injuries,
+Dialogue: 0,0:15:12.13,0:15:14.56,*Default,NTP,0000,0000,0000,,很多情况我们刚开始时并没有发现\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}most of which we couldn't see at first.
+Dialogue: 0,0:15:14.71,0:15:15.45,*Default,NTP,0000,0000,0000,,你在...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are you...
+Dialogue: 0,0:15:16.65,0:15:17.82,*Default,NTP,0000,0000,0000,,你在说什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are you saying?
+Dialogue: 0,0:15:18.90,0:15:20.44,*Default,NTP,0000,0000,0000,,没什么委...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}There is no g--
+Dialogue: 0,0:15:22.05,0:15:23.77,*Default,NTP,0000,0000,0000,,委婉的说法\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}...good way to say this.
+Dialogue: 0,0:15:24.36,0:15:25.59,*Default,NTP,0000,0000,0000,,我很遗憾\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm sorry.
+Dialogue: 0,0:15:25.89,0:15:27.12,*Default,NTP,0000,0000,0000,,遗憾什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For what?
+Dialogue: 0,0:15:30.31,0:15:31.90,*Default,NTP,0000,0000,0000,,我们没能救得了他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We couldn't save him.
+Dialogue: 0,0:15:32.41,0:15:34.21,*Default,NTP,0000,0000,0000,,我不明白\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I-I don't understand.
+Dialogue: 0,0:15:34.32,0:15:36.07,*Default,NTP,0000,0000,0000,,你父亲死了  艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Your father died, Ariel.
+Dialogue: 0,0:15:36.90,0:15:38.60,*Default,NTP,0000,0000,0000,,严格来说\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, technically --
+Dialogue: 0,0:15:38.63,0:15:41.29,*Default,NTP,0000,0000,0000,,严格来说  是脑死亡\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}technically, it's a-a brain death.
+Dialogue: 0,0:15:41.29,0:15:43.24,*Default,NTP,0000,0000,0000,,-所以他没死  -不  不  那是\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- So he's not dead? - No, no. That's --
+Dialogue: 0,0:15:44.14,0:15:45.21,*Default,NTP,0000,0000,0000,,我的意思是\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What I mean is,
+Dialogue: 0,0:15:45.21,0:15:47.97,*Default,NTP,0000,0000,0000,,在机器的帮助下  他的身体能...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}machines are keeping his body in a state of --
+Dialogue: 0,0:15:47.97,0:15:48.92,*Default,NTP,0000,0000,0000,,你在说什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are you saying?
+Dialogue: 0,0:15:48.92,0:15:50.15,*Default,NTP,0000,0000,0000,,我在向你解释\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm trying to explain to you.
+Dialogue: 0,0:15:50.15,0:15:52.05,*Default,NTP,0000,0000,0000,,你没有  不是说好了要直说的吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, you're not! What happened to just giving it to me straight?
+Dialogue: 0,0:15:52.05,0:15:53.29,*Default,NTP,0000,0000,0000,,我的说法就是直截了当的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm giving it to you straight.
+Dialogue: 0,0:15:53.29,0:15:55.62,*Default,NTP,0000,0000,0000,,所以他死了  但严格来说没死  对吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So he's dead, but technically, not really, right?
+Dialogue: 0,0:15:55.62,0:15:57.18,*Default,NTP,0000,0000,0000,,不  我要见他  我要见他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, I want to go see him. I want to see him.
+Dialogue: 0,0:15:57.18,0:15:57.96,*Default,NTP,0000,0000,0000,,我必须要见他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I have to see him!
+Dialogue: 0,0:15:57.96,0:15:59.46,*Default,NTP,0000,0000,0000,,请坐下  坐下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Please, sit down. Please sit.
+Dialogue: 0,0:16:00.39,0:16:01.49,*Default,NTP,0000,0000,0000,,-听着  -不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Listen. - No.
+Dialogue: 0,0:16:01.49,0:16:04.15,*Default,NTP,0000,0000,0000,,艾瑞尔  你爸爸是器官捐赠者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel, your father - chose to be an organ donor.
+Dialogue: 0,0:16:04.31,0:16:06.86,*Default,NTP,0000,0000,0000,,所以我们用机器保持他器官的活性\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's why we have machines keeping his organs functioning.
+Dialogue: 0,0:16:07.81,0:16:09.83,*Default,NTP,0000,0000,0000,,你要明白  他再也不会醒过来了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You have to understand -- he's never going to wake up.
+Dialogue: 0,0:16:09.83,0:16:11.48,*Default,NTP,0000,0000,0000,,他走了  亲爱的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's gone, sweetheart.
+Dialogue: 0,0:16:12.28,0:16:13.43,*Default,NTP,0000,0000,0000,,我真的很遗憾\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm terribly sorry.
+Dialogue: 0,0:16:15.33,0:16:16.08,*Default,NTP,0000,0000,0000,,不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No.
+Dialogue: 0,0:16:17.72,0:16:18.49,*Default,NTP,0000,0000,0000,,不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No.
+Dialogue: 0,0:16:19.97,0:16:20.73,*Default,NTP,0000,0000,0000,,不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No.
+Dialogue: 0,0:16:21.29,0:16:21.83,*Default,NTP,0000,0000,0000,,艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel.
+Dialogue: 0,0:16:21.83,0:16:22.34,*Default,NTP,0000,0000,0000,,不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No.
+Dialogue: 0,0:16:22.34,0:16:23.81,*Default,NTP,0000,0000,0000,,别这样  我明白\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, I know.
+Dialogue: 0,0:16:24.32,0:16:26.01,*Default,NTP,0000,0000,0000,,不  不  不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, no, no.
+Dialogue: 0,0:16:26.14,0:16:27.48,*Default,NTP,0000,0000,0000,,你们不能拿走他的器官\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You can't have his organs.
+Dialogue: 0,0:16:28.45,0:16:30.17,*Default,NTP,0000,0000,0000,,我是他的女儿  我说不行\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm his daughter, and I'm saying no.
+Dialogue: 0,0:16:30.33,0:16:32.75,*Default,NTP,0000,0000,0000,,不幸的是  这不是你说了算的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, unfortunately, that's not your decision to make.
+Dialogue: 0,0:16:32.75,0:16:34.44,*Default,NTP,0000,0000,0000,,这是你父亲的决定  他很久之前就决定好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's your father's, and he made it a long time ago.
+Dialogue: 0,0:16:34.44,0:16:35.75,*Default,NTP,0000,0000,0000,,不  你们不关心我爸爸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, you don't care about my father,
+Dialogue: 0,0:16:35.75,0:16:37.10,*Default,NTP,0000,0000,0000,,你们也不在乎我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and you don't care about me.
+Dialogue: 0,0:16:37.93,0:16:39.10,*Default,NTP,0000,0000,0000,,你们只想把他切开\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You just want to cut him up.
+Dialogue: 0,0:16:39.10,0:16:40.16,*Default,NTP,0000,0000,0000,,艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ariel.
+Dialogue: 0,0:16:40.52,0:16:42.16,*Default,NTP,0000,0000,0000,,不是这样的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That is not true.
+Dialogue: 0,0:16:42.33,0:16:43.95,*Default,NTP,0000,0000,0000,,住嘴  住嘴\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Shut up! Shut up.
+Dialogue: 0,0:16:51.24,0:16:52.09,*Default,NTP,0000,0000,0000,,抱歉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sorry.
+Dialogue: 0,0:16:52.35,0:16:53.08,*Default,NTP,0000,0000,0000,,我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm...
+Dialogue: 0,0:16:53.51,0:16:54.57,*Default,NTP,0000,0000,0000,,我真的很遗憾\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm so sorry.
+Dialogue: 0,0:17:44.11,0:17:45.83,*Default,NTP,0000,0000,0000,,移植小组在路上了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Transplant team's en route.
+Dialogue: 0,0:17:47.45,0:17:50.07,*Default,NTP,0000,0000,0000,,我想告诉你  你现在看起来棒极了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I want to tell you - how fabulous you look right now.
+Dialogue: 0,0:17:50.07,0:17:50.86,*Default,NTP,0000,0000,0000,,是吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I do?
+Dialogue: 0,0:17:51.05,0:17:53.39,*Default,NTP,0000,0000,0000,,不  我想这么说  但那就是骗你了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No. I want to tell you that, but then it'd be a lie.
+Dialogue: 0,0:17:53.81,0:17:56.56,*Default,NTP,0000,0000,0000,,你看起来好像被绑在船头上一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You look like you've been strapped to the bow of a ship.
+Dialogue: 0,0:17:56.69,0:17:58.26,*Default,NTP,0000,0000,0000,,是吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is that so?
+Dialogue: 0,0:18:00.28,0:18:01.68,*Default,NTP,0000,0000,0000,,不  不  别这样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, no. Don't do that.
+Dialogue: 0,0:18:01.69,0:18:03.64,*Default,NTP,0000,0000,0000,,相信我  你的笑纹够多了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You don't need any more laugh lines, believe me.
+Dialogue: 0,0:18:03.64,0:18:06.19,*Default,NTP,0000,0000,0000,,我  你最近有照镜子吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Me? Have you looked at yourself in the mirror lately?
+Dialogue: 0,0:18:09.45,0:18:11.48,*Default,NTP,0000,0000,0000,,我真的很爱你  爱到想把你掰成两半\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I love you so much, I want to break you in half.
+Dialogue: 0,0:18:11.48,0:18:14.93,*Default,NTP,0000,0000,0000,,我真的很爱你  爱到想把你的脸揍扁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I love you so much, I want to punch your face in.
+Dialogue: 0,0:18:16.93,0:18:18.28,*Default,NTP,0000,0000,0000,,好了  回去工作吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, back to work.
+Dialogue: 0,0:18:18.56,0:18:20.21,*Default,NTP,0000,0000,0000,,今晚可能会出现黑色警报\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We might hit Code Black tonight.
+Dialogue: 0,0:18:20.35,0:18:21.64,*Default,NTP,0000,0000,0000,,知道了  老大\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You got that, boss.
+Dialogue: 0,0:18:26.75,0:18:28.63,*Default,NTP,0000,0000,0000,,你的病情可以使用tPA\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, you qualify for t.P.A., 
+Dialogue: 0,0:18:28.63,0:18:30.77,*Default,NTP,0000,0000,0000,,我们依然认为这个药能起作用\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and we're still inside the window for it to be effective.
+Dialogue: 0,0:18:30.77,0:18:32.76,*Default,NTP,0000,0000,0000,,那问题是什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are the complications?
+Dialogue: 0,0:18:33.19,0:18:35.40,*Default,NTP,0000,0000,0000,,只有7%的患者出现了奇迹\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Only 7% experience the miracle.
+Dialogue: 0,0:18:35.69,0:18:37.31,*Default,NTP,0000,0000,0000,,然而  也有相同比例的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}However, the same number experience
+Dialogue: 0,0:18:37.32,0:18:39.55,*Default,NTP,0000,0000,0000,,在身体的其他地方出现了大出血\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}catastrophic bleeding somewhere else in the body.
+Dialogue: 0,0:18:39.89,0:18:41.91,*Default,NTP,0000,0000,0000,,在症状出现之前  我们不知道哪里会出血\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We wouldn't know where until it was actually happening,
+Dialogue: 0,0:18:41.92,0:18:43.95,*Default,NTP,0000,0000,0000,,我们也可能没办法停止出血\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and we might not be able to stop it.
+Dialogue: 0,0:18:44.93,0:18:46.63,*Default,NTP,0000,0000,0000,,如果我们什么也不做呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And if we do nothing?
+Dialogue: 0,0:18:47.13,0:18:48.14,*Default,NTP,0000,0000,0000,,会一直是现在这个样子\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What you see now.
+Dialogue: 0,0:18:48.88,0:18:50.51,*Default,NTP,0000,0000,0000,,还可能变得更糟\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And possibly worse.
+Dialogue: 0,0:18:54.57,0:18:56.53,*Default,NTP,0000,0000,0000,,汉娜  下一个是谁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hey, Hannah? Who's next?
+Dialogue: 0,0:18:56.53,0:18:59.41,*Default,NTP,0000,0000,0000,,26岁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh...26 year old...
+Dialogue: 0,0:18:59.41,0:19:01.02,*Default,NTP,0000,0000,0000,,孕妇  上呼吸道感染  发烧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}pregnant, U.R.I., fever.
+Dialogue: 0,0:19:01.02,0:19:02.00,*Default,NTP,0000,0000,0000,,送她去分诊区了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Parked her in triage.
+Dialogue: 0,0:19:02.00,0:19:03.21,*Default,NTP,0000,0000,0000,,听着像是流感\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sounds like the flu.
+Dialogue: 0,0:19:03.24,0:19:04.64,*Default,NTP,0000,0000,0000,,诊断评估后来找我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Evaluate, then come find me.
+Dialogue: 0,0:19:04.64,0:19:06.64,*Default,NTP,0000,0000,0000,,-我该去  -评估后来找我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Should I go -- - Evaluate and find me.
+Dialogue: 0,0:19:06.71,0:19:07.66,*Default,NTP,0000,0000,0000,,下一位\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Next.
+Dialogue: 0,0:19:09.94,0:19:11.05,*Default,NTP,0000,0000,0000,,你怎么懂这么多\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How do you know so much?
+Dialogue: 0,0:19:11.05,0:19:12.20,*Default,NTP,0000,0000,0000,,我真没有\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Believe me, I don't.
+Dialogue: 0,0:19:12.20,0:19:14.63,*Default,NTP,0000,0000,0000,,我们俩都上过医学院  都实习过\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We both went to medical school, we both did an internship.
+Dialogue: 0,0:19:14.64,0:19:16.04,*Default,NTP,0000,0000,0000,,你现在是做第二个住院实习医师培训实习吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You pulling second residency?
+Dialogue: 0,0:19:16.04,0:19:16.76,*Default,NTP,0000,0000,0000,,什么意思\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What do you mean?
+Dialogue: 0,0:19:16.76,0:19:18.62,*Default,NTP,0000,0000,0000,,我是说  你是否已是医学博士\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I mean, were you already an M.D. and then went back
+Dialogue: 0,0:19:18.62,0:19:19.90,*Default,NTP,0000,0000,0000,,现在回来试试不同领域什么的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to try a different specialty or something?
+Dialogue: 0,0:19:19.90,0:19:22.41,*Default,NTP,0000,0000,0000,,不  当妈当老婆已让我够忙的了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No. I was too busy being a wife and a mom.
+Dialogue: 0,0:19:22.55,0:19:24.75,*Default,NTP,0000,0000,0000,,当妈当老婆  你确定自己能面对这一切吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wife and a mom? You sure you're ready for this?
+Dialogue: 0,0:19:25.18,0:19:26.65,*Default,NTP,0000,0000,0000,,你觉得我多大了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How old do you think I am?
+Dialogue: 0,0:19:28.51,0:19:30.36,*Default,NTP,0000,0000,0000,,我只想说  所有急诊科中\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All I'm saying is, there's no tougher place to work
+Dialogue: 0,0:19:30.36,0:19:33.34,*Default,NTP,0000,0000,0000,,在天使纪念医院创伤一室工作最痛苦\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}in all of E.R. Medicine than Trauma-1 at Angels Memorial.
+Dialogue: 0,0:19:33.34,0:19:34.31,*Default,NTP,0000,0000,0000,,这地方异常艰难  对于...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This place is hard enough for...
+Dialogue: 0,0:19:34.31,0:19:35.27,*Default,NTP,0000,0000,0000,,年轻人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The young.
+Dialogue: 0,0:19:36.85,0:19:38.09,*Default,NTP,0000,0000,0000,,未婚人士\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For the unattached.
+Dialogue: 0,0:19:38.26,0:19:39.52,*Default,NTP,0000,0000,0000,,别觉得我威胁到你了行吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Stop being threatened by me, okay?
+Dialogue: 0,0:19:39.52,0:19:40.72,*Default,NTP,0000,0000,0000,,你那么想吗  我受威胁了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is that what you think, that I'm threatened?
+Dialogue: 0,0:19:40.72,0:19:43.14,*Default,NTP,0000,0000,0000,,我觉得我们该一起检查病患\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I think we should - examine this patient together.
+Dialogue: 0,0:19:43.14,0:19:45.04,*Default,NTP,0000,0000,0000,,没准我们俩都能有所收获\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Maybe we'll both learn something.
+Dialogue: 0,0:19:45.82,0:19:46.57,*Default,NTP,0000,0000,0000,,好啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why not?
+Dialogue: 0,0:19:46.57,0:19:48.05,*Default,NTP,0000,0000,0000,,最糟的就是头痛了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The worst part is the headache.
+Dialogue: 0,0:19:48.15,0:19:49.65,*Default,NTP,0000,0000,0000,,我住在锅炉房楼上\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I live above the boiler room in my building,
+Dialogue: 0,0:19:49.65,0:19:51.57,*Default,NTP,0000,0000,0000,,吵得我头都要炸了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and the noise just keeps cracking my head open.
+Dialogue: 0,0:19:51.57,0:19:53.03,*Default,NTP,0000,0000,0000,,你们对此有何建议吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is there anything - you can give me for that?
+Dialogue: 0,0:19:53.03,0:19:53.96,*Default,NTP,0000,0000,0000,,你怀孕九个月了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're nine months pregnant.
+Dialogue: 0,0:19:53.96,0:19:56.21,*Default,NTP,0000,0000,0000,,除了让你吃泰诺并没太好的办法\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}There's not a whole lot we can do other than give you tylenol.
+Dialogue: 0,0:19:56.21,0:19:57.85,*Default,NTP,0000,0000,0000,,我吃过了  没什么效果\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I've tried that. Doesn't work.
+Dialogue: 0,0:19:58.73,0:20:00.01,*Default,NTP,0000,0000,0000,,又犯瘾了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Using again?
+Dialogue: 0,0:20:00.24,0:20:01.51,*Default,NTP,0000,0000,0000,,-你说什么  -马里奥\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Excuse me? - Mario.
+Dialogue: 0,0:20:01.52,0:20:02.50,*Default,NTP,0000,0000,0000,,你手臂内侧的伤疤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The scars on the inside of your arm --
+Dialogue: 0,0:20:02.51,0:20:03.96,*Default,NTP,0000,0000,0000,,是以前注射留下的  对吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}They're old track marks, right?
+Dialogue: 0,0:20:04.11,0:20:05.67,*Default,NTP,0000,0000,0000,,跟你毛关系都没有\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}None of your damn business.
+Dialogue: 0,0:20:05.78,0:20:07.09,*Default,NTP,0000,0000,0000,,你觉得自己是谁啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Who the hell do you think you are?
+Dialogue: 0,0:20:07.09,0:20:08.94,*Default,NTP,0000,0000,0000,,只是个想查清患者病情的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Just a doctor trying to figure out what's wrong with a patient.
+Dialogue: 0,0:20:08.94,0:20:11.33,*Default,NTP,0000,0000,0000,,你混蛋  我没必要听你废话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're a jackass. I don't have to listen to this.
+Dialogue: 0,0:20:11.57,0:20:13.14,*Default,NTP,0000,0000,0000,,放松  放松\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Take it easy. Take it easy.
+Dialogue: 0,0:20:13.19,0:20:14.30,*Default,NTP,0000,0000,0000,,没关系  他要走了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's okay. He's leaving.
+Dialogue: 0,0:20:14.47,0:20:15.99,*Default,NTP,0000,0000,0000,,我能和你谈谈吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can I talk to you for a second?
+Dialogue: 0,0:20:17.01,0:20:17.95,*Default,NTP,0000,0000,0000,,刚才是怎么回事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What was that about?
+Dialogue: 0,0:20:18.38,0:20:19.31,*Default,NTP,0000,0000,0000,,她吸毒\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's a seeker.
+Dialogue: 0,0:20:19.31,0:20:21.56,*Default,NTP,0000,0000,0000,,海洛因戒毒者常出现类似流感的临床症状\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Heroin withdrawals often mimic flu symptoms.
+Dialogue: 0,0:20:21.57,0:20:22.70,*Default,NTP,0000,0000,0000,,你并没有证据\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You don't know that for a fact.
+Dialogue: 0,0:20:22.70,0:20:23.60,*Default,NTP,0000,0000,0000,,怎么没发热\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Where's the fever?
+Dialogue: 0,0:20:23.60,0:20:25.73,*Default,NTP,0000,0000,0000,,如果是流感  会严重发热的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}If it was the flu, would've hit her like a freight train.
+Dialogue: 0,0:20:25.73,0:20:27.52,*Default,NTP,0000,0000,0000,,你对戒毒很有经验吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You got a lot of experience with drug withdrawals?
+Dialogue: 0,0:20:28.03,0:20:29.87,*Default,NTP,0000,0000,0000,,抱歉  我没有  只是觉得她没吸毒\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No. I'm sorry. I just don't think that woman is using.
+Dialogue: 0,0:20:29.87,0:20:31.81,*Default,NTP,0000,0000,0000,,我这方面比你懂的多点\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I know a little bit more about this than you do.
+Dialogue: 0,0:20:32.05,0:20:33.71,*Default,NTP,0000,0000,0000,,很久前的事了  我并不感到羞耻\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It was a long time ago. I'm not ashamed.
+Dialogue: 0,0:20:33.71,0:20:35.80,*Default,NTP,0000,0000,0000,,我自己戒干净了  现在状态很好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I pulled myself out, and I'm fine now.
+Dialogue: 0,0:20:36.53,0:20:38.31,*Default,NTP,0000,0000,0000,,你俩是没事干了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What, do you two just not have enough to do?
+Dialogue: 0,0:20:38.31,0:20:40.12,*Default,NTP,0000,0000,0000,,我们对患者的看法有分歧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're having a disagreement about a patient.
+Dialogue: 0,0:20:40.12,0:20:41.08,*Default,NTP,0000,0000,0000,,是吗  哪个\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, yeah? Which one?
+Dialogue: 0,0:20:41.09,0:20:42.12,*Default,NTP,0000,0000,0000,,上呼吸道感染的孕妇\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}The pregnant U.R.I.
+Dialogue: 0,0:20:42.12,0:20:43.17,*Default,NTP,0000,0000,0000,,我认为该做毒理学检查\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I think we should run a tox screen,
+Dialogue: 0,0:20:43.17,0:20:44.59,*Default,NTP,0000,0000,0000,,排除戒海洛因的可能性\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}rule out heroin withdrawals.
+Dialogue: 0,0:20:44.83,0:20:45.54,*Default,NTP,0000,0000,0000,,你觉得呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Huh. And you?
+Dialogue: 0,0:20:45.54,0:20:46.89,*Default,NTP,0000,0000,0000,,不知道  感觉不太对劲\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I don't know. Something's not right.
+Dialogue: 0,0:20:46.89,0:20:49.01,*Default,NTP,0000,0000,0000,,我觉得不是流感也不是因为海洛因\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I don't think it's the flu, I don't think it's heroin.
+Dialogue: 0,0:20:49.02,0:20:50.24,*Default,NTP,0000,0000,0000,,要是能再给我点时间  我能...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}If I just had a little bit more time, I could --
+Dialogue: 0,0:20:50.24,0:20:53.08,*Default,NTP,0000,0000,0000,,你没时间  或是阳性的毒理检测结果\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Well, you don't have time, and a positive tox screen
+Dialogue: 0,0:20:53.08,0:20:54.99,*Default,NTP,0000,0000,0000,,并不会改变她的治疗方案\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}doesn't change the management of the case.
+Dialogue: 0,0:20:54.99,0:20:56.39,*Default,NTP,0000,0000,0000,,就算她有毒瘾\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Even if she has an addiction problem,
+Dialogue: 0,0:20:56.39,0:20:58.30,*Default,NTP,0000,0000,0000,,我们在急诊室也做不了什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}there is nothing we can do for her in the E.R.
+Dialogue: 0,0:20:58.31,0:21:00.39,*Default,NTP,0000,0000,0000,,推荐个社工  把她转移出院\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Recommend a social worker, ship her out.
+Dialogue: 0,0:21:02.03,0:21:03.18,*Default,NTP,0000,0000,0000,,你关于发热的观点很有道理\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You make a good point about the fever,
+Dialogue: 0,0:21:03.18,0:21:04.57,*Default,NTP,0000,0000,0000,,但我不觉得是因为海洛因\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but I don't think it's heroin.
+Dialogue: 0,0:21:04.57,0:21:06.19,*Default,NTP,0000,0000,0000,,无所谓了  你听到她说了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Doesn't matter. You heard what she said.
+Dialogue: 0,0:21:06.22,0:21:07.71,*Default,NTP,0000,0000,0000,,不会影响治疗方案\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Doesn't change the management of the case.
+Dialogue: 0,0:21:07.71,0:21:09.48,*Default,NTP,0000,0000,0000,,对  但我们得知道  该做个毒理学检查\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, but we need to know. We should run a tox screen.
+Dialogue: 0,0:21:09.48,0:21:11.31,*Default,NTP,0000,0000,0000,,没有「我们」  你听洛里斯说了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}There's no "We" here. You heard what Rorish said.
+Dialogue: 0,0:21:11.31,0:21:13.28,*Default,NTP,0000,0000,0000,,她还说恐慌可以致命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She also said - trepidation is a deadly quality.
+Dialogue: 0,0:21:13.28,0:21:15.20,*Default,NTP,0000,0000,0000,,我已经惹到她了  这不关我的事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm already on her bad side. There's nothing in this for me.
+Dialogue: 0,0:21:15.20,0:21:16.73,*Default,NTP,0000,0000,0000,,但可能会挽救患者的生命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Except maybe saving a patient's life.
+Dialogue: 0,0:21:16.73,0:21:18.89,*Default,NTP,0000,0000,0000,,马拉娅  停下你手里的活儿  跟我来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Malaya, whatever you're doing, log out, follow me.
+Dialogue: 0,0:21:18.89,0:21:19.94,*Default,NTP,0000,0000,0000,,你会很喜欢的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're gonna love this.
+Dialogue: 0,0:21:20.26,0:21:21.29,*Default,NTP,0000,0000,0000,,听起来很令人兴奋啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sounds exciting.
+Dialogue: 0,0:21:21.54,0:21:23.88,*Default,NTP,0000,0000,0000,,你显然不说我们国家的母语\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Clearly, you don't speak the native tongue of my people --
+Dialogue: 0,0:21:23.90,0:21:25.43,*Default,NTP,0000,0000,0000,,我是在讽刺  走吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sarcasm. Come on.
+Dialogue: 0,0:21:25.66,0:21:28.00,*Default,NTP,0000,0000,0000,,来吧  像这样把手臂举起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hey, come on. Hold your arm up just like this.
+Dialogue: 0,0:21:28.00,0:21:28.80,*Default,NTP,0000,0000,0000,,-安格斯  -什么事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Angus. - Yep?
+Dialogue: 0,0:21:28.80,0:21:30.90,*Default,NTP,0000,0000,0000,,格思里找你  他和那位中风患者在一起\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Guthrie wants you, he's with the stroke patient.
+Dialogue: 0,0:21:30.90,0:21:32.56,*Default,NTP,0000,0000,0000,,马拉娅可以打石膏\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Malaya can finish the cast.
+Dialogue: 0,0:21:32.56,0:21:35.23,*Default,NTP,0000,0000,0000,,等等  格思里让他负责注射tPA\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. Guthrie's gonna let him administer the t.P.A.?
+Dialogue: 0,0:21:35.60,0:21:37.21,*Default,NTP,0000,0000,0000,,而我干护士的活儿吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And I'm gonna do a nurse's job?
+Dialogue: 0,0:21:37.39,0:21:38.61,*Default,NTP,0000,0000,0000,,护士的活儿\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}A nurse's job?
+Dialogue: 0,0:21:39.23,0:21:40.46,*Default,NTP,0000,0000,0000,,我不是那个意思\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I didn't mean it.
+Dialogue: 0,0:21:40.97,0:21:42.45,*Default,NTP,0000,0000,0000,,你想融入团队  马拉娅\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You want to be part of a team, Malaya,
+Dialogue: 0,0:21:42.45,0:21:44.52,*Default,NTP,0000,0000,0000,,工作无关伟大或渺小\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No job is too big, no job is too small.
+Dialogue: 0,0:21:44.52,0:21:46.59,*Default,NTP,0000,0000,0000,,-雷顿医生  请快过去吧  -好的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Dr. Leighton, go now, please. - Yep.
+Dialogue: 0,0:21:47.25,0:21:48.44,*Default,NTP,0000,0000,0000,,抬起手臂\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Arm up. Come on.
+Dialogue: 0,0:21:49.27,0:21:51.03,*Default,NTP,0000,0000,0000,,我也不会去的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I won't go, either.
+Dialogue: 0,0:21:51.11,0:21:52.01,*Default,NTP,0000,0000,0000,,你别犯傻了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's ridiculous.
+Dialogue: 0,0:21:52.01,0:21:53.64,*Default,NTP,0000,0000,0000,,我瞎说的  我当然要去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I didn't mean it. Of course I'm going.
+Dialogue: 0,0:21:53.94,0:21:55.47,*Default,NTP,0000,0000,0000,,等等  这滑板少年怎么了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. What's up with skater boy?
+Dialogue: 0,0:21:55.65,0:21:56.45,*Default,NTP,0000,0000,0000,,他...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's, uh...
+Dialogue: 0,0:21:57.61,0:22:00.38,*Default,NTP,0000,0000,0000,,-打瞌睡没留神  -很好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Just sleeping it off. - Great.
+Dialogue: 0,0:22:00.68,0:22:02.68,*Default,NTP,0000,0000,0000,,快去吧  注射tPA的窗口期很短\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Go. t.P.A. has a short window.
+Dialogue: 0,0:22:11.41,0:22:13.87,*Default,NTP,0000,0000,0000,,我们多久能知道它起效了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How soon will we know if it worked?
+Dialogue: 0,0:22:13.97,0:22:16.84,*Default,NTP,0000,0000,0000,,几秒就行了  要是有效的话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Just takes a few seconds -- when it works.
+Dialogue: 0,0:22:39.22,0:22:40.79,*Default,NTP,0000,0000,0000,,快点啊  宝贝\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on, baby.
+Dialogue: 0,0:22:41.65,0:22:43.34,*Default,NTP,0000,0000,0000,,让我们见证奇迹\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Show us the magic.
+Dialogue: 0,0:22:48.69,0:22:49.64,*Default,NTP,0000,0000,0000,,克利里先生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Mr. Cleery.
+Dialogue: 0,0:22:51.45,0:22:53.22,*Default,NTP,0000,0000,0000,,我希望你能试着讲话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I want you to try and speak.
+Dialogue: 0,0:23:07.14,0:23:08.23,*Default,NTP,0000,0000,0000,,爱你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Love you.
+Dialogue: 0,0:23:09.85,0:23:11.45,*Default,NTP,0000,0000,0000,,太好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes.
+Dialogue: 0,0:23:13.08,0:23:14.42,*Default,NTP,0000,0000,0000,,天灵灵地灵灵\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Abracadabra.
+Dialogue: 0,0:23:15.57,0:23:17.83,*Default,NTP,0000,0000,0000,,这就是我们工作的意义  年轻人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's why we're here, young squire.
+Dialogue: 0,0:23:18.52,0:23:19.95,*Default,NTP,0000,0000,0000,,永远别忘记\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Never forget that.
+Dialogue: 0,0:23:32.42,0:23:36.60,*Default,NTP,0000,0000,0000,,-放松  放松  -不  不  不\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Take it easy! Take it easy! - No! No! No!
+Dialogue: 0,0:23:36.60,0:23:37.93,*Default,NTP,0000,0000,0000,,十岁男孩  呼吸困难\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}10-year-old male, breathing labored,
+Dialogue: 0,0:23:37.93,0:23:39.35,*Default,NTP,0000,0000,0000,,可能是过敏反应\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}possible allergic reaction.
+Dialogue: 0,0:23:39.49,0:23:41.96,*Default,NTP,0000,0000,0000,,他没乱吃乱喝什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He didn't eat or drink anything out of the ordinary.
+Dialogue: 0,0:23:42.06,0:23:42.79,*Default,NTP,0000,0000,0000,,你从哪儿来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, where are you from?
+Dialogue: 0,0:23:42.79,0:23:43.58,*Default,NTP,0000,0000,0000,,挪威\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Norway.
+Dialogue: 0,0:23:43.76,0:23:44.59,*Default,NTP,0000,0000,0000,,中央抢救区\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, Center Stage.
+Dialogue: 0,0:23:45.00,0:23:47.11,*Default,NTP,0000,0000,0000,,您儿子是肺萎陷  我们会帮忙救治的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Your son has a collapsed lung. We're gonna help.
+Dialogue: 0,0:23:47.11,0:23:48.13,*Default,NTP,0000,0000,0000,,你怎么知道\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}How could you know that?
+Dialogue: 0,0:23:48.45,0:23:51.25,*Default,NTP,0000,0000,0000,,如果挪威孩子不能呼吸  就是气胸了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}If a Norwegian kid can't breathe, it's a pneumothorax.
+Dialogue: 0,0:23:51.25,0:23:52.69,*Default,NTP,0000,0000,0000,,是遗传的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's a genetic predisposition.
+Dialogue: 0,0:23:52.69,0:23:54.65,*Default,NTP,0000,0000,0000,,谁能帮我在开条静脉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can someone run another I.V. for me, please?
+Dialogue: 0,0:23:54.69,0:23:56.22,*Default,NTP,0000,0000,0000,,我没有护士可用了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm all out of nurses.
+Dialogue: 0,0:23:56.33,0:23:57.65,*Default,NTP,0000,0000,0000,,-我来  -好样儿的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- I got it! - My girl.
+Dialogue: 0,0:23:57.94,0:23:59.05,*Default,NTP,0000,0000,0000,,注意点他的头\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, watch his head.
+Dialogue: 0,0:23:59.20,0:23:59.95,*Default,NTP,0000,0000,0000,,准备好了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ready?
+Dialogue: 0,0:23:59.98,0:24:01.36,*Default,NTP,0000,0000,0000,,把他抬起来  抬起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Back him up, back him up.
+Dialogue: 0,0:24:03.17,0:24:03.93,*Default,NTP,0000,0000,0000,,您儿子叫什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's your son's name?
+Dialogue: 0,0:24:03.93,0:24:05.52,*Default,NTP,0000,0000,0000,,巴斯蒂  塞巴斯蒂安的简称\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Basti -- short for "Sebastian."
+Dialogue: 0,0:24:05.52,0:24:06.50,*Default,NTP,0000,0000,0000,,好的  巴斯蒂\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, Basti.
+Dialogue: 0,0:24:07.51,0:24:08.67,*Default,NTP,0000,0000,0000,,看着我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need you to look at me.
+Dialogue: 0,0:24:08.76,0:24:09.41,*Default,NTP,0000,0000,0000,,来个氧气面罩\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Need a mask.
+Dialogue: 0,0:24:09.41,0:24:10.47,*Default,NTP,0000,0000,0000,,借过  借过\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Step it out. Step it out.
+Dialogue: 0,0:24:11.42,0:24:12.12,*Default,NTP,0000,0000,0000,,你不会有事的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're gonna be all right.
+Dialogue: 0,0:24:12.12,0:24:14.01,*Default,NTP,0000,0000,0000,,只需要从胸腔抽点空气出来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We just need to let a little air out of your chest.
+Dialogue: 0,0:24:14.01,0:24:15.24,*Default,NTP,0000,0000,0000,,你很快就会好起来的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're gonna feel better right away.
+Dialogue: 0,0:24:15.31,0:24:15.84,*Default,NTP,0000,0000,0000,,没事的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's okay.
+Dialogue: 0,0:24:15.84,0:24:16.66,*Default,NTP,0000,0000,0000,,琳恩  移植小组\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Leanne, transplant team
+Dialogue: 0,0:24:16.67,0:24:18.16,*Default,NTP,0000,0000,0000,,刚把艾瑞尔的父亲运到楼上\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}just took Ariel's father upstairs.
+Dialogue: 0,0:24:18.67,0:24:19.52,*Default,NTP,0000,0000,0000,,明白\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Understood.
+Dialogue: 0,0:24:19.71,0:24:23.51,*Default,NTP,0000,0000,0000,,我们在巴斯蒂的胸腔里插管以降压\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, we're gonna put a tube into Basti's chest to relieve the pressure.
+Dialogue: 0,0:24:23.51,0:24:25.68,*Default,NTP,0000,0000,0000,,这只是常规步骤  在这就能做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This is very routine. We can do it right here.
+Dialogue: 0,0:24:27.23,0:24:28.21,*Default,NTP,0000,0000,0000,,她想和你谈\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She asked to talk to you.
+Dialogue: 0,0:24:28.21,0:24:29.09,*Default,NTP,0000,0000,0000,,我  为什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Me? Why?
+Dialogue: 0,0:24:29.09,0:24:30.14,*Default,NTP,0000,0000,0000,,她和你有共鸣\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She connected with you.
+Dialogue: 0,0:24:30.31,0:24:31.25,*Default,NTP,0000,0000,0000,,才没有\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, she didn't.
+Dialogue: 0,0:24:31.48,0:24:32.19,*Default,NTP,0000,0000,0000,,护士\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, nurse.
+Dialogue: 0,0:24:32.62,0:24:34.25,*Default,NTP,0000,0000,0000,,安格斯 你来做胸腔插管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Angus, you're gonna do the chest tube.
+Dialogue: 0,0:24:34.60,0:24:35.65,*Default,NTP,0000,0000,0000,,-我  -对\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Me? - Yes.
+Dialogue: 0,0:24:36.15,0:24:38.36,*Default,NTP,0000,0000,0000,,医生  他有点心动过速了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's got a little tachy,doc. 
+Dialogue: 0,0:24:38.37,0:24:39.05,*Default,NTP,0000,0000,0000,,你干嘛呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are you doing?
+Dialogue: 0,0:24:39.05,0:24:41.40,*Default,NTP,0000,0000,0000,,找我的文凭好确认那上面有我名字\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm looking for my diploma to make sure it has my name on it.
+Dialogue: 0,0:24:41.60,0:24:44.65,*Default,NTP,0000,0000,0000,,我给你准备插管盘  我们得开个切口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm prepping the tray for you, and we're going to make an incision.
+Dialogue: 0,0:24:45.63,0:24:47.26,*Default,NTP,0000,0000,0000,,琳恩  我能应付这里  去和她谈谈\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Leanne, I can take this case. Go and talk to her for a minute.
+Dialogue: 0,0:24:47.27,0:24:48.82,*Default,NTP,0000,0000,0000,,听着  你要是想让我做社工\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Look, if you want me to be a social worker,
+Dialogue: 0,0:24:48.82,0:24:50.06,*Default,NTP,0000,0000,0000,,挑个该死在候诊室里的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}you pick the patient who should die in the waiting room.
+Dialogue: 0,0:24:50.06,0:24:51.91,*Default,NTP,0000,0000,0000,,琳恩  她也是患者  去和她谈谈\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's a patient, too, Leanne. Go and talk to her for a minute.
+Dialogue: 0,0:24:51.91,0:24:53.92,*Default,NTP,0000,0000,0000,,四下看看吧  就快启动黑色警报了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Look around you, doctor! We're about to be in Code Black.
+Dialogue: 0,0:24:53.93,0:24:56.45,*Default,NTP,0000,0000,0000,,我有湿疹  痒起来要人命\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I have eczema, itches like crazy.
+Dialogue: 0,0:24:56.96,0:24:57.91,*Default,NTP,0000,0000,0000,,不过你们不在乎  对吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You don't care, right?
+Dialogue: 0,0:24:58.47,0:25:01.38,*Default,NTP,0000,0000,0000,,这里的人也不在乎你们的问题\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}These people here, they don't care about your problems either.
+Dialogue: 0,0:25:01.40,0:25:02.45,*Default,NTP,0000,0000,0000,,好  塞巴斯蒂安\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, uh, Sebastian,
+Dialogue: 0,0:25:02.45,0:25:04.17,*Default,NTP,0000,0000,0000,,放慢呼吸  好吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I want you to slow - your breathing down, okay?
+Dialogue: 0,0:25:04.17,0:25:05.20,*Default,NTP,0000,0000,0000,,能做到吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can you do that?
+Dialogue: 0,0:25:05.31,0:25:06.44,*Default,NTP,0000,0000,0000,,我们会帮你的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're going to help you.
+Dialogue: 0,0:25:09.60,0:25:10.72,*Default,NTP,0000,0000,0000,,那孩子在这儿干嘛呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's that kid doing in here?
+Dialogue: 0,0:25:10.72,0:25:12.67,*Default,NTP,0000,0000,0000,,他还好吗  这是谁的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is he okay? Whose patient is this?
+Dialogue: 0,0:25:13.45,0:25:15.31,*Default,NTP,0000,0000,0000,,-我的  -精力集中\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Mine. - Hey. Focus.
+Dialogue: 0,0:25:18.41,0:25:19.92,*Default,NTP,0000,0000,0000,,这孩子头部有伤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This kid has a head injury!
+Dialogue: 0,0:25:20.14,0:25:21.23,*Default,NTP,0000,0000,0000,,来架轮床\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need a gurney.
+Dialogue: 0,0:25:21.44,0:25:22.30,*Default,NTP,0000,0000,0000,,我这儿没有轮床了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm out of gurneys.
+Dialogue: 0,0:25:22.30,0:25:25.31,*Default,NTP,0000,0000,0000,,谁能给我个轮椅  拜托\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Guys, guys, can I get a wheelchair? Come on.
+Dialogue: 0,0:25:26.29,0:25:28.64,*Default,NTP,0000,0000,0000,,来个轮椅什么的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}A wheelchair or something.
+Dialogue: 0,0:25:28.64,0:25:30.02,*Default,NTP,0000,0000,0000,,我得从这儿调个人出去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got to pull somebody out of here.
+Dialogue: 0,0:25:30.02,0:25:31.61,*Default,NTP,0000,0000,0000,,需要静脉插管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I.V. Tubing.
+Dialogue: 0,0:25:35.09,0:25:37.12,*Default,NTP,0000,0000,0000,,我们正式启动黑色警报了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We are officially in Code Black.
+Dialogue: 0,0:25:37.91,0:25:38.97,*Default,NTP,0000,0000,0000,,上帝帮帮我们\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}God help us.
+Dialogue: 0,0:25:47.20,0:25:49.38,*Default,NTP,0000,0000,0000,,{\an1}没错  我们正需要神经外科医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, exactly. That's what we need -- a neurosurgeon.
+Dialogue: 0,0:25:49.38,0:25:51.55,*Default,NTP,0000,0000,0000,,{\an1}我们当然要做CT扫描  娜塔莉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, of course we're gonna get a C.T. scan, Natalie,
+Dialogue: 0,0:25:51.55,0:25:52.97,*Default,NTP,0000,0000,0000,,{\an1}CT室一空下来就做\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}As soon as the room frees.
+Dialogue: 0,0:25:53.26,0:25:54.25,*Default,NTP,0000,0000,0000,,我知道情况\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, I know it is,
+Dialogue: 0,0:25:54.25,0:25:56.49,*Default,NTP,0000,0000,0000,,但我这眼下就需要神经外科医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but I need a neurosurgeon down here right now.
+Dialogue: 0,0:25:59.81,0:26:01.83,*Default,NTP,0000,0000,0000,,我觉得这是内出血  娜塔莉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I think it's an internal bleed, Natalie!
+Dialogue: 0,0:26:01.83,0:26:04.28,*Default,NTP,0000,0000,0000,,我们这里乱死了  等下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We're slammed up here! Hold on a second!
+Dialogue: 0,0:26:04.63,0:26:06.78,*Default,NTP,0000,0000,0000,,我在查  得个几分钟\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm checking. It's going to take a few minutes.
+Dialogue: 0,0:26:06.78,0:26:07.82,*Default,NTP,0000,0000,0000,,等等  娜塔莉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait! Wait, Natalie!
+Dialogue: 0,0:26:07.82,0:26:09.29,*Default,NTP,0000,0000,0000,,CT扫描准备好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}C.T. scan is ready.
+Dialogue: 0,0:26:09.29,0:26:10.50,*Default,NTP,0000,0000,0000,,太好了  转移\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, great. Let's move him.
+Dialogue: 0,0:26:10.50,0:26:12.63,*Default,NTP,0000,0000,0000,,杰西  胸腔插管而已  对吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse. Simple chest tube, right?
+Dialogue: 0,0:26:12.63,0:26:14.21,*Default,NTP,0000,0000,0000,,嗯嗯  马上就切口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, yeah. About to start the incision.
+Dialogue: 0,0:26:14.21,0:26:16.61,*Default,NTP,0000,0000,0000,,等下  你要走  你要走了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. Wait. You're gonna move -- you're leaving?
+Dialogue: 0,0:26:16.61,0:26:18.76,*Default,NTP,0000,0000,0000,,这位患者需要医师  黑色警报已启动\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}This patient needs an M.D., and we're in Code Black.
+Dialogue: 0,0:26:18.76,0:26:19.47,*Default,NTP,0000,0000,0000,,我觉得你能胜任\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I think you can handle it.
+Dialogue: 0,0:26:19.48,0:26:20.98,*Default,NTP,0000,0000,0000,,我们走  我们走  我们走  杰西\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's go, let's go. Let's go, Jesse.
+Dialogue: 0,0:26:20.99,0:26:22.46,*Default,NTP,0000,0000,0000,,走吧走吧  有老妈我在呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Go, go. Mama's in the kitchen.
+Dialogue: 0,0:26:26.10,0:26:27.77,*Default,NTP,0000,0000,0000,,精力集中\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hey. Focus.
+Dialogue: 0,0:26:27.78,0:26:28.63,*Default,NTP,0000,0000,0000,,你能行\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You can do this.
+Dialogue: 0,0:26:29.92,0:26:31.12,*Default,NTP,0000,0000,0000,,让开  快\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Out of my way! Come on!
+Dialogue: 0,0:26:46.64,0:26:48.46,*Default,NTP,0000,0000,0000,,再见  谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}See you. Thanks.
+Dialogue: 0,0:27:05.92,0:27:06.81,*Default,NTP,0000,0000,0000,,血压\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Blood pressure.
+Dialogue: 0,0:27:07.70,0:27:08.89,*Default,NTP,0000,0000,0000,,很好  快点\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Great. Hurry up.
+Dialogue: 0,0:27:10.58,0:27:13.00,*Default,NTP,0000,0000,0000,,情况稳定了  等他准备好了通知我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Stabilized, let me know when he's ready.
+Dialogue: 0,0:27:16.01,0:27:17.37,*Default,NTP,0000,0000,0000,,好了  管子已插入\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Got it. Tube is in.
+Dialogue: 0,0:27:17.93,0:27:19.60,*Default,NTP,0000,0000,0000,,生命体征在减弱  没道理啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Vitals are dropping. Doesn't make sense.
+Dialogue: 0,0:27:19.60,0:27:20.58,*Default,NTP,0000,0000,0000,,小弟弟  坚持住\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hang in there, pal, okay?
+Dialogue: 0,0:27:20.58,0:27:21.68,*Default,NTP,0000,0000,0000,,为什么不管用\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why isn't it working?
+Dialogue: 0,0:27:22.45,0:27:23.71,*Default,NTP,0000,0000,0000,,怎么回事  拜托告诉我\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What is happening, please?
+Dialogue: 0,0:27:23.92,0:27:25.00,*Default,NTP,0000,0000,0000,,也许管子坏了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Might be a bad chest tube.
+Dialogue: 0,0:27:25.00,0:27:26.32,*Default,NTP,0000,0000,0000,,再来一根胸腔插管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm gonna need another chest tube.
+Dialogue: 0,0:27:30.06,0:27:33.11,*Default,NTP,0000,0000,0000,,不是管子的问题  这根卡住了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I-it's--it's not the tube. This one's just stuck.
+Dialogue: 0,0:27:41.04,0:27:42.83,*Default,NTP,0000,0000,0000,,拜托做点什么  他没有呼吸了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Please do something! He's not breathing!
+Dialogue: 0,0:27:42.83,0:27:43.35,*Default,NTP,0000,0000,0000,,安格斯\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Angus!
+Dialogue: 0,0:27:43.35,0:27:44.81,*Default,NTP,0000,0000,0000,,卡到他背部筋膜上了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's stuck in the fascia of his back.
+Dialogue: 0,0:27:44.81,0:27:46.57,*Default,NTP,0000,0000,0000,,帮他疏通气管  抓住管子\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Get him out of the way! Grab the tube!
+Dialogue: 0,0:27:46.57,0:27:47.96,*Default,NTP,0000,0000,0000,,得把管子拉出来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You need to pull!
+Dialogue: 0,0:27:47.96,0:27:50.10,*Default,NTP,0000,0000,0000,,我们需要一位医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We need to get the doctor in here!
+Dialogue: 0,0:27:50.10,0:27:51.18,*Default,NTP,0000,0000,0000,,我是医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm a doctor.
+Dialogue: 0,0:27:51.39,0:27:53.21,*Default,NTP,0000,0000,0000,,你也是  听着\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And you are, too. Listen.
+Dialogue: 0,0:27:53.31,0:27:54.83,*Default,NTP,0000,0000,0000,,-听我说好吗  -好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Listen to my voice, okay? - okay.
+Dialogue: 0,0:27:54.83,0:27:55.71,*Default,NTP,0000,0000,0000,,-感觉到了吗  -嗯\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Do you feel it? - Yes.
+Dialogue: 0,0:27:55.71,0:27:57.35,*Default,NTP,0000,0000,0000,,-它插到脂肪组织里了  -是\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Just stuck in the fatty tissue. - Okay.
+Dialogue: 0,0:27:57.48,0:27:59.10,*Default,NTP,0000,0000,0000,,所以我们只要轻轻拔出来就好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So we just pull gently.
+Dialogue: 0,0:27:59.73,0:28:00.55,*Default,NTP,0000,0000,0000,,好  好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay. Okay.
+Dialogue: 0,0:28:03.89,0:28:05.51,*Default,NTP,0000,0000,0000,,干得好  皮内达医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Good job, Dr. Pineda.
+Dialogue: 0,0:28:06.66,0:28:08.08,*Default,NTP,0000,0000,0000,,您儿子没事了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Your little boy's gonna be okay.
+Dialogue: 0,0:28:08.78,0:28:09.58,*Default,NTP,0000,0000,0000,,干得好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Good job.
+Dialogue: 0,0:28:09.65,0:28:10.91,*Default,NTP,0000,0000,0000,,我需要三块尼龙布\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need a 3 of nylon.
+Dialogue: 0,0:28:11.34,0:28:12.16,*Default,NTP,0000,0000,0000,,把这拿起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pick this up.
+Dialogue: 0,0:28:13.02,0:28:14.44,*Default,NTP,0000,0000,0000,,给伤口敷点敷料\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Someone put up some dressings.
+Dialogue: 0,0:28:14.78,0:28:16.07,*Default,NTP,0000,0000,0000,,谢谢  谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you, thank you.
+Dialogue: 0,0:28:16.45,0:28:17.27,*Default,NTP,0000,0000,0000,,很好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right.
+Dialogue: 0,0:28:27.22,0:28:28.17,*Default,NTP,0000,0000,0000,,洛里斯在找你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Rorish is looking for you.
+Dialogue: 0,0:28:28.17,0:28:30.30,*Default,NTP,0000,0000,0000,,她取消了那位孕妇的毒理学检查\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She canceled the tox screen on your pregger.
+Dialogue: 0,0:28:30.46,0:28:31.73,*Default,NTP,0000,0000,0000,,总之患者已经走了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Patient left anyway.
+Dialogue: 0,0:28:31.73,0:28:32.59,*Default,NTP,0000,0000,0000,,抱歉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sorry.
+Dialogue: 0,0:28:33.79,0:28:35.55,*Default,NTP,0000,0000,0000,,呈现双凸镜型\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Which is showing a hyper-dense increased attenuation
+Dialogue: 0,0:28:35.56,0:28:36.55,*Default,NTP,0000,0000,0000,,密度增高影\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}in an elliptical pattern,
+Dialogue: 0,0:28:36.55,0:28:38.34,*Default,NTP,0000,0000,0000,,符合硬脑膜外血肿表现\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Which is consistent with an epidural hematoma.
+Dialogue: 0,0:28:38.34,0:28:40.00,*Default,NTP,0000,0000,0000,,不  不许又让我等\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, do not put me on hold again!
+Dialogue: 0,0:28:40.52,0:28:41.57,*Default,NTP,0000,0000,0000,,洛里斯医生  我知道你生气\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Rorish, I know you're angry --
+Dialogue: 0,0:28:41.58,0:28:44.23,*Default,NTP,0000,0000,0000,,你故意无视主管医师的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You deliberately ignored direct instructions
+Dialogue: 0,0:28:44.23,0:28:46.07,*Default,NTP,0000,0000,0000,,直接指令\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}from your supervising physician.
+Dialogue: 0,0:28:47.04,0:28:49.10,*Default,NTP,0000,0000,0000,,你说过恐慌可以致命的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You said trepidation is a deadly quality.
+Dialogue: 0,0:28:49.11,0:28:51.26,*Default,NTP,0000,0000,0000,,我觉得我是在为我的患者好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I thought I was acting in the best interest of my patient.
+Dialogue: 0,0:28:51.26,0:28:52.43,*Default,NTP,0000,0000,0000,,你没有患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You don't have patients.
+Dialogue: 0,0:28:52.76,0:28:55.34,*Default,NTP,0000,0000,0000,,你是第一年  第一天上班的住院实习医师\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're a first-year -- a first-day resident,
+Dialogue: 0,0:28:55.34,0:28:57.58,*Default,NTP,0000,0000,0000,,意味着你看的每一位患者都是我的患者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}which means every patient you see is my patient.
+Dialogue: 0,0:28:57.58,0:29:00.05,*Default,NTP,0000,0000,0000,,如果我无法信任你  就不能让你留在这\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}If I can't trust you here, I can't have you here.
+Dialogue: 0,0:29:00.13,0:29:01.28,*Default,NTP,0000,0000,0000,,再见  克丽斯塔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Goodbye, Christa.
+Dialogue: 0,0:29:03.08,0:29:03.74,*Default,NTP,0000,0000,0000,,慢着  什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait. What?
+Dialogue: 0,0:29:03.74,0:29:05.20,*Default,NTP,0000,0000,0000,,回家吧  结束了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Go home. It's over.
+Dialogue: 0,0:29:06.44,0:29:07.96,*Default,NTP,0000,0000,0000,,对对对  我在听\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes, yes, yes, I'm here.
+Dialogue: 0,0:29:07.96,0:29:09.26,*Default,NTP,0000,0000,0000,,不  得钻个洞\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, well, someone's gonna have to drill a hole, then,
+Dialogue: 0,0:29:09.26,0:29:10.94,*Default,NTP,0000,0000,0000,,因为血液得有地方可去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}because the blood has to go somewhere!
+Dialogue: 0,0:29:25.33,0:29:26.49,*Default,NTP,0000,0000,0000,,她把我开除了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She fired me.
+Dialogue: 0,0:29:27.88,0:29:28.83,*Default,NTP,0000,0000,0000,,你告诉过她我知道吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Did you tell her I knew?
+Dialogue: 0,0:29:28.83,0:29:30.90,*Default,NTP,0000,0000,0000,,没  马里奥  但感谢关心\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}No, Mario, but thanks for the concern.
+Dialogue: 0,0:29:30.90,0:29:33.54,*Default,NTP,0000,0000,0000,,我很抱歉  但你忙着挑幼儿园的时候\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Look, I'm sorry, but while you were busy picking up preschools,
+Dialogue: 0,0:29:33.54,0:29:35.47,*Default,NTP,0000,0000,0000,,我正开卡车赚医学院的学费呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I paid for medical school driving a truck,
+Dialogue: 0,0:29:35.47,0:29:36.60,*Default,NTP,0000,0000,0000,,被柴油机的烟呛到咳嗽\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}choking on diesel fumes.
+Dialogue: 0,0:29:36.60,0:29:37.35,*Default,NTP,0000,0000,0000,,慢着  慢着\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait, wait, wait.
+Dialogue: 0,0:29:38.63,0:29:39.59,*Default,NTP,0000,0000,0000,,柴油机的烟\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Diesel fumes!
+Dialogue: 0,0:29:39.60,0:29:40.83,*Default,NTP,0000,0000,0000,,-天啊  -什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Oh, my God! - What?
+Dialogue: 0,0:29:41.05,0:29:42.69,*Default,NTP,0000,0000,0000,,如果是一氧化碳呢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What if it's carbon monoxide?
+Dialogue: 0,0:29:42.89,0:29:45.66,*Default,NTP,0000,0000,0000,,一氧化碳中毒的症状和感冒类似\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Carbon monoxide poisoning can mimic flu symptoms.
+Dialogue: 0,0:29:45.66,0:29:47.55,*Default,NTP,0000,0000,0000,,她说她住在锅炉房上面\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She said she lived above a boiler room, right?
+Dialogue: 0,0:29:47.55,0:29:49.25,*Default,NTP,0000,0000,0000,,天啊  马里奥  我真想亲你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, my God, Mario, I could kiss you.
+Dialogue: 0,0:29:49.87,0:29:50.92,*Default,NTP,0000,0000,0000,,我开玩笑的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}But not really.
+Dialogue: 0,0:30:01.90,0:30:03.54,*Default,NTP,0000,0000,0000,,拜托  拜托  快接  快接\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on, come on, come on, come on, come on, come on.
+Dialogue: 0,0:30:24.50,0:30:25.51,*Default,NTP,0000,0000,0000,,大家行动起来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's move, people.
+Dialogue: 0,0:30:27.21,0:30:28.61,*Default,NTP,0000,0000,0000,,静脉注射管和导尿管已插好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}IV and foley are in.
+Dialogue: 0,0:30:29.83,0:30:32.24,*Default,NTP,0000,0000,0000,,卡车从他腿上碾过  至少四处骨折\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Truck ran right over his leg, broke in at least four places.
+Dialogue: 0,0:30:32.24,0:30:34.15,*Default,NTP,0000,0000,0000,,股骨中部因挤压而严重变形\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Big mid-femur deformity from the crush.
+Dialogue: 0,0:30:34.15,0:30:35.12,*Default,NTP,0000,0000,0000,,你叫什么  先生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's your name, sir?
+Dialogue: 0,0:30:35.23,0:30:37.63,*Default,NTP,0000,0000,0000,,韦恩  我感觉不到我的腿了  医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wayne. I just can't feel my leg, doc.
+Dialogue: 0,0:30:37.63,0:30:39.27,*Default,NTP,0000,0000,0000,,骨头压迫着神经  我们会帮你的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Bone's pinching a nerve. We're gonna help you.
+Dialogue: 0,0:30:42.56,0:30:44.53,*Default,NTP,0000,0000,0000,,静脉注射  输液  马上注射20毫克吗啡\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}IV, fluids, 20 milligrams morphine stat.
+Dialogue: 0,0:30:44.53,0:30:45.50,*Default,NTP,0000,0000,0000,,马上好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Flying it.
+Dialogue: 0,0:30:45.50,0:30:46.43,*Default,NTP,0000,0000,0000,,那是干什么的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What's that for?
+Dialogue: 0,0:30:46.58,0:30:48.02,*Default,NTP,0000,0000,0000,,翻新缝合室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Renovating the suture room.
+Dialogue: 0,0:30:48.02,0:30:49.13,*Default,NTP,0000,0000,0000,,你要做颅骨钻孔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're drilling a burr hole?
+Dialogue: 0,0:30:49.13,0:30:50.28,*Default,NTP,0000,0000,0000,,足部冰冷  下肢没有脉搏\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Foot cold. There's no pulse down here.
+Dialogue: 0,0:30:50.28,0:30:51.46,*Default,NTP,0000,0000,0000,,我们得把这条腿掰直\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We got to get this leg straight.
+Dialogue: 0,0:30:51.74,0:30:52.84,*Default,NTP,0000,0000,0000,,他需要那个轮床\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He's gonna need that gurney.
+Dialogue: 0,0:30:52.84,0:30:54.59,*Default,NTP,0000,0000,0000,,-明白  -推过来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Got it. - Bring it in.
+Dialogue: 0,0:30:55.35,0:30:57.83,*Default,NTP,0000,0000,0000,,你不能在急诊室给那孩子的颅骨钻孔  琳恩\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You can't put a hole in that kid's skull in the ER, Leanne.
+Dialogue: 0,0:30:57.83,0:30:58.93,*Default,NTP,0000,0000,0000,,你需要神经外科医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You need a neurosurgeon.
+Dialogue: 0,0:30:58.93,0:31:00.36,*Default,NTP,0000,0000,0000,,是硬膜外出血  他失去知觉了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's an epidural bleed. He's out cold.
+Dialogue: 0,0:31:00.36,0:31:01.38,*Default,NTP,0000,0000,0000,,我得钻孔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got to drain it.
+Dialogue: 0,0:31:01.83,0:31:03.06,*Default,NTP,0000,0000,0000,,在他旁边站好  一  二  三\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Line him up. One, two, three.
+Dialogue: 0,0:31:03.83,0:31:06.56,*Default,NTP,0000,0000,0000,,有时你得当个牛仔  尼尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sometimes you just got to be a cowboy, Neal.
+Dialogue: 0,0:31:06.99,0:31:08.81,*Default,NTP,0000,0000,0000,,如果你想拽直那条腿  得找人帮忙\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hey, you're gonna need some help if you're gonna yank that.
+Dialogue: 0,0:31:08.81,0:31:10.29,*Default,NTP,0000,0000,0000,,马里奥  过来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Mario, get over here.
+Dialogue: 0,0:31:12.07,0:31:13.81,*Default,NTP,0000,0000,0000,,韦恩  这能帮你缓解疼痛\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, Wayne, this is gonna help with the pain.
+Dialogue: 0,0:31:14.99,0:31:15.77,*Default,NTP,0000,0000,0000,,给导管室打电话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Phone the cath lab.
+Dialogue: 0,0:31:15.77,0:31:16.54,*Default,NTP,0000,0000,0000,,告诉他们我们马上就到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Tell them we're on our way.
+Dialogue: 0,0:31:16.54,0:31:17.43,*Default,NTP,0000,0000,0000,,洛里斯医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Rorish,
+Dialogue: 0,0:31:17.46,0:31:18.95,*Default,NTP,0000,0000,0000,,你可能不会对此感到惊讶\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}you might not be surprised by this,
+Dialogue: 0,0:31:18.95,0:31:20.61,*Default,NTP,0000,0000,0000,,但有个实习医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}but one of your residents is calling you
+Dialogue: 0,0:31:20.61,0:31:23.10,*Default,NTP,0000,0000,0000,,正在101高速路的急救车上给你打电话\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}from the back of an ambulance on the 101 freeway.
+Dialogue: 0,0:31:23.10,0:31:23.72,*Default,NTP,0000,0000,0000,,什么  谁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What?! Who?
+Dialogue: 0,0:31:23.72,0:31:25.49,*Default,NTP,0000,0000,0000,,-美女  我得走了  -克丽斯塔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Blondie. I got to go. - Christa?
+Dialogue: 0,0:31:25.49,0:31:27.48,*Default,NTP,0000,0000,0000,,洛里斯医生  肯定是一氧化碳\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Dr. Rorish, it's definitely carbon monoxide.
+Dialogue: 0,0:31:27.48,0:31:28.66,*Default,NTP,0000,0000,0000,,他们得打破所有的窗户\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}They had to break all the windows.
+Dialogue: 0,0:31:28.66,0:31:30.73,*Default,NTP,0000,0000,0000,,她依然昏迷  我们正给她输氧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's still unconscious. We're giving her oxygen.
+Dialogue: 0,0:31:30.73,0:31:31.49,*Default,NTP,0000,0000,0000,,我坐在这\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm sitting here --
+Dialogue: 0,0:31:31.49,0:31:33.12,*Default,NTP,0000,0000,0000,,克丽斯塔  深呼吸  告诉我生命体征\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, deep breath. Give me vitals.
+Dialogue: 0,0:31:33.12,0:31:35.42,*Default,NTP,0000,0000,0000,,脉搏微弱120  收缩压60  舒张压无\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pulse faint at 120, BP 60 over palp.
+Dialogue: 0,0:31:35.42,0:31:36.88,*Default,NTP,0000,0000,0000,,她的患者快不行了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Her patient's crashing.
+Dialogue: 0,0:31:36.88,0:31:38.79,*Default,NTP,0000,0000,0000,,她怀孕了  你得让她回到这\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's pregnant. You need to get her back here.
+Dialogue: 0,0:31:38.79,0:31:39.74,*Default,NTP,0000,0000,0000,,她需要高压氧舱\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She needs a hyperbaric chamber.
+Dialogue: 0,0:31:39.74,0:31:40.96,*Default,NTP,0000,0000,0000,,克丽斯塔  预计到达时间\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, what's your ETA?
+Dialogue: 0,0:31:41.50,0:31:42.48,*Default,NTP,0000,0000,0000,,短时间内到不了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Not soon.
+Dialogue: 0,0:31:43.41,0:31:45.04,*Default,NTP,0000,0000,0000,,你不会喜欢的  尼尔  但是...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're not gonna like this, Neal, but...
+Dialogue: 0,0:31:45.04,0:31:46.58,*Default,NTP,0000,0000,0000,,她得在车上完成一台剖腹产手术了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She has to perform a C-section on the rig.
+Dialogue: 0,0:31:46.58,0:31:47.94,*Default,NTP,0000,0000,0000,,有时你得当个牛仔  对吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Sometimes you got to be a cowboy, right?
+Dialogue: 0,0:31:47.94,0:31:48.85,*Default,NTP,0000,0000,0000,,我们来吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Let's do this.
+Dialogue: 0,0:31:49.72,0:31:50.87,*Default,NTP,0000,0000,0000,,慢着  克丽斯塔要做剖腹产手术\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait, Christa's gonna do a C-section?
+Dialogue: 0,0:31:50.88,0:31:51.88,*Default,NTP,0000,0000,0000,,马里奥  集中注意力\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Mario, focus.
+Dialogue: 0,0:31:51.88,0:31:53.08,*Default,NTP,0000,0000,0000,,你去架住他的胳膊  帮我增加力度\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need you up by his shoulders to give me leverage.
+Dialogue: 0,0:31:53.08,0:31:54.13,*Default,NTP,0000,0000,0000,,我要尽力保住他的腿\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm gonna try and save his leg.
+Dialogue: 0,0:31:54.13,0:31:55.41,*Default,NTP,0000,0000,0000,,克丽斯塔  听好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, listen.
+Dialogue: 0,0:31:56.35,0:31:57.32,*Default,NTP,0000,0000,0000,,告诉救护车上的医生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need you to tell the medic
+Dialogue: 0,0:31:57.32,0:31:59.12,*Default,NTP,0000,0000,0000,,准备紧急手术包\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}to prepare an emergency surgical kit.
+Dialogue: 0,0:31:59.12,0:32:00.42,*Default,NTP,0000,0000,0000,,慢着  慢着  我做不到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wait, wait, wait, wait. I can't do this.
+Dialogue: 0,0:32:00.43,0:32:01.67,*Default,NTP,0000,0000,0000,,你能做到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yes, you can.
+Dialogue: 0,0:32:01.67,0:32:03.64,*Default,NTP,0000,0000,0000,,你刚刚从产科轮班下来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You've done an O.B. rotation.
+Dialogue: 0,0:32:03.85,0:32:05.58,*Default,NTP,0000,0000,0000,,这种情况你见得多了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You've witnessed plenty of these.
+Dialogue: 0,0:32:05.58,0:32:06.71,*Default,NTP,0000,0000,0000,,请深吸一口气  先生\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Take a deep breath for me, sir.
+Dialogue: 0,0:32:06.73,0:32:09.39,*Default,NTP,0000,0000,0000,,克丽斯塔  确保患者一直处于昏迷状态\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, make sure the patient stays unconscious.
+Dialogue: 0,0:32:09.40,0:32:10.47,*Default,NTP,0000,0000,0000,,这没问题\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uh, no danger there.
+Dialogue: 0,0:32:11.15,0:32:11.74,*Default,NTP,0000,0000,0000,,好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay.
+Dialogue: 0,0:32:11.74,0:32:12.79,*Default,NTP,0000,0000,0000,,让骨科准备好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Get ortho ready to go.
+Dialogue: 0,0:32:12.79,0:32:14.82,*Default,NTP,0000,0000,0000,,我们的朋友韦恩之后得马上进手术室\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Our friend Wayne here is gonna need an OR right after.
+Dialogue: 0,0:32:14.82,0:32:15.77,*Default,NTP,0000,0000,0000,,在什么之后\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}After what?
+Dialogue: 0,0:32:16.51,0:32:17.75,*Default,NTP,0000,0000,0000,,苏茜  帮我按住他的骨盆\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Susie, I need you on his pelvis.
+Dialogue: 0,0:32:17.76,0:32:18.97,*Default,NTP,0000,0000,0000,,确保他不会滑动\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Make sure he doesn't slide.
+Dialogue: 0,0:32:19.05,0:32:20.79,*Default,NTP,0000,0000,0000,,杰西  过来一下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Jesse. Need you over here for a sec.
+Dialogue: 0,0:32:21.40,0:32:22.30,*Default,NTP,0000,0000,0000,,血压下降\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}BP dropping!
+Dialogue: 0,0:32:23.12,0:32:24.58,*Default,NTP,0000,0000,0000,,我得让杰西回来  见鬼\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need Jesse back, damn it.
+Dialogue: 0,0:32:25.25,0:32:25.97,*Default,NTP,0000,0000,0000,,你听见了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay. You got that?
+Dialogue: 0,0:32:25.97,0:32:26.77,*Default,NTP,0000,0000,0000,,大家准备好了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Everybody ready?
+Dialogue: 0,0:32:26.84,0:32:27.70,*Default,NTP,0000,0000,0000,,准备好什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ready for what?
+Dialogue: 0,0:32:27.70,0:32:28.38,*Default,NTP,0000,0000,0000,,按住他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hold him.
+Dialogue: 0,0:32:28.38,0:32:29.83,*Default,NTP,0000,0000,0000,,一  二  三\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}One, two, three.
+Dialogue: 0,0:32:35.49,0:32:36.23,*Default,NTP,0000,0000,0000,,脉搏下降\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pulse is dropping.
+Dialogue: 0,0:32:36.23,0:32:37.24,*Default,NTP,0000,0000,0000,,那我们就得快点行动\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, then we got to move fast.
+Dialogue: 0,0:32:37.24,0:32:38.50,*Default,NTP,0000,0000,0000,,这样还有机会救下母子二人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}To still have a chance to save both of them.
+Dialogue: 0,0:32:38.50,0:32:41.85,*Default,NTP,0000,0000,0000,,克丽斯塔  你先开一个腹部切口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, I need you to start with an abdominal incision
+Dialogue: 0,0:32:41.85,0:32:43.25,*Default,NTP,0000,0000,0000,,从肚脐开始\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}beginning at the umbilicus
+Dialogue: 0,0:32:43.25,0:32:45.07,*Default,NTP,0000,0000,0000,,一直到耻骨联合\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and straight down to the pubic symphysis.
+Dialogue: 0,0:32:46.26,0:32:48.07,*Default,NTP,0000,0000,0000,,3号过道需要清理\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I need a clean up in Aisle 3.
+Dialogue: 0,0:32:48.07,0:32:50.23,*Default,NTP,0000,0000,0000,,你得切开五层腹壁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You need to cut through all five layers of the abdominal wall,
+Dialogue: 0,0:32:50.24,0:32:51.30,*Default,NTP,0000,0000,0000,,包括腹膜\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}including the peritoneum.
+Dialogue: 0,0:32:51.30,0:32:52.15,*Default,NTP,0000,0000,0000,,我能行的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I've got this.
+Dialogue: 0,0:32:52.98,0:32:53.78,*Default,NTP,0000,0000,0000,,那是什么声音\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What is that noise?
+Dialogue: 0,0:32:53.78,0:32:54.91,*Default,NTP,0000,0000,0000,,别管这个了  生命体征\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Ignore it. Vitals?
+Dialogue: 0,0:32:54.91,0:32:56.75,*Default,NTP,0000,0000,0000,,血压下降  脉搏30\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pressure dropping. Pulse 30.
+Dialogue: 0,0:32:56.89,0:32:58.37,*Default,NTP,0000,0000,0000,,没问题  集中注意力\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's okay. Stay focused.
+Dialogue: 0,0:32:58.39,0:32:59.63,*Default,NTP,0000,0000,0000,,开始切口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Start your incision now.
+Dialogue: 0,0:33:00.59,0:33:03.54,*Default,NTP,0000,0000,0000,,克丽斯塔  在腹壁正下方\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Christa, right under the abdominal wall,
+Dialogue: 0,0:33:03.54,0:33:04.94,*Default,NTP,0000,0000,0000,,你能看见发亮的东西\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}you're gonna see something shiny.
+Dialogue: 0,0:33:04.94,0:33:06.14,*Default,NTP,0000,0000,0000,,那不是子宫\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}That's not the uterus.
+Dialogue: 0,0:33:06.36,0:33:07.26,*Default,NTP,0000,0000,0000,,是膀胱\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's the bladder.
+Dialogue: 0,0:33:07.26,0:33:08.25,*Default,NTP,0000,0000,0000,,当心  别划破它\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Careful not to nick it.
+Dialogue: 0,0:33:08.25,0:33:09.93,*Default,NTP,0000,0000,0000,,你要把它返折过去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You're gonna want to reflect it distally,
+Dialogue: 0,0:33:09.93,0:33:11.03,*Default,NTP,0000,0000,0000,,让它别挡住你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}get it out of your way.
+Dialogue: 0,0:33:11.66,0:33:13.07,*Default,NTP,0000,0000,0000,,生命体征在下降\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, vitals are dropping.
+Dialogue: 0,0:33:13.55,0:33:14.51,*Default,NTP,0000,0000,0000,,我快好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, I'm almost there.
+Dialogue: 0,0:33:15.07,0:33:16.51,*Default,NTP,0000,0000,0000,,-琳恩  -快好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Leanne? - Almost there.
+Dialogue: 0,0:33:16.56,0:33:18.59,*Default,NTP,0000,0000,0000,,脉搏下降\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay. Pulse is dropping.
+Dialogue: 0,0:33:18.59,0:33:19.77,*Default,NTP,0000,0000,0000,,琳恩  他出现脑疝了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Leanne, he's herniating!
+Dialogue: 0,0:33:19.77,0:33:21.35,*Default,NTP,0000,0000,0000,,我知道  快好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I know. Almost.
+Dialogue: 0,0:33:21.35,0:33:22.41,*Default,NTP,0000,0000,0000,,子宫露出来了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Uterus is exposed.
+Dialogue: 0,0:33:22.41,0:33:24.25,*Default,NTP,0000,0000,0000,,-等一下  -「等一下」\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Hang on. - "Hang on"?!
+Dialogue: 0,0:33:24.80,0:33:25.81,*Default,NTP,0000,0000,0000,,快到了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Almost got it.
+Dialogue: 0,0:33:26.21,0:33:27.28,*Default,NTP,0000,0000,0000,,开始引流了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Is he draining yet?
+Dialogue: 0,0:33:30.10,0:33:31.89,*Default,NTP,0000,0000,0000,,好了好了  马上就好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Come on. Come on. Almost there.
+Dialogue: 0,0:33:41.08,0:33:43.01,*Default,NTP,0000,0000,0000,,好了  放引流管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got it! Okay, get it in.
+Dialogue: 0,0:33:43.01,0:33:44.15,*Default,NTP,0000,0000,0000,,心率逐渐稳定了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Heart rate normalizing.
+Dialogue: 0,0:33:44.70,0:33:45.49,*Default,NTP,0000,0000,0000,,瞳孔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pupils...
+Dialogue: 0,0:33:45.49,0:33:46.94,*Default,NTP,0000,0000,0000,,-有反应  -很好  克丽斯塔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Reactive. - All right, Christa,
+Dialogue: 0,0:33:47.03,0:33:49.43,*Default,NTP,0000,0000,0000,,现在在子宫上做一个垂直切口\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Time to make the vertical incision in the uterus.
+Dialogue: 0,0:33:49.61,0:33:50.89,*Default,NTP,0000,0000,0000,,小心外侧的血管\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Watch the lateral vessels.
+Dialogue: 0,0:33:51.88,0:33:52.63,*Default,NTP,0000,0000,0000,,上帝啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, God.
+Dialogue: 0,0:33:54.76,0:33:55.50,*Default,NTP,0000,0000,0000,,好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay.
+Dialogue: 0,0:33:55.57,0:33:57.68,*Default,NTP,0000,0000,0000,,接下来动作一定要快\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Now, this is gonna happen very quickly.
+Dialogue: 0,0:33:57.90,0:34:00.97,*Default,NTP,0000,0000,0000,,我需要你努力快速地将手伸进去\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I want you to reach your hand inside as fast as you can,
+Dialogue: 0,0:34:01.04,0:34:02.67,*Default,NTP,0000,0000,0000,,小心感觉到胎儿的存在\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Carefully feel for the baby.
+Dialogue: 0,0:34:02.67,0:34:03.45,*Default,NTP,0000,0000,0000,,什么时候伸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}When?
+Dialogue: 0,0:34:03.45,0:34:04.84,*Default,NTP,0000,0000,0000,,-你切好了吗  -好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Have you made the cut yet? - Yes.
+Dialogue: 0,0:34:04.84,0:34:05.80,*Default,NTP,0000,0000,0000,,-动手  -动手\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- Now! - Now!
+Dialogue: 0,0:34:08.34,0:34:09.88,*Default,NTP,0000,0000,0000,,好  我好像感觉到了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, I think I can feel it.
+Dialogue: 0,0:34:11.05,0:34:11.77,*Default,NTP,0000,0000,0000,,好\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay.
+Dialogue: 0,0:34:12.79,0:34:13.70,*Default,NTP,0000,0000,0000,,我摸到了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got it.
+Dialogue: 0,0:34:18.73,0:34:20.00,*Default,NTP,0000,0000,0000,,我抱出来了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got her!
+Dialogue: 0,0:34:25.43,0:34:27.25,*Default,NTP,0000,0000,0000,,小丫头漂亮极了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's so beautiful!
+Dialogue: 0,0:34:28.28,0:34:30.19,*Default,NTP,0000,0000,0000,,我抱出来了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, I got her.
+Dialogue: 0,0:34:31.05,0:34:32.39,*Default,NTP,0000,0000,0000,,我的天哪\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oh, my Gosh.
+Dialogue: 0,0:34:47.92,0:34:50.39,*Default,NTP,0000,0000,0000,,好了孩子们  手术室空出一间\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, kids, we got one open in O.R.
+Dialogue: 0,0:34:50.82,0:34:52.35,*Default,NTP,0000,0000,0000,,我这边稳定了  你去吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Mine's stable. You should go.
+Dialogue: 0,0:34:54.15,0:34:55.31,*Default,NTP,0000,0000,0000,,好  转移吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}All right, let's move him.
+Dialogue: 0,0:34:55.57,0:34:56.46,*Default,NTP,0000,0000,0000,,轮床\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Gurney.
+Dialogue: 0,0:34:57.21,0:34:58.13,*Default,NTP,0000,0000,0000,,送他上楼\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Get him up.
+Dialogue: 0,0:34:58.19,0:34:59.35,*Default,NTP,0000,0000,0000,,伙计们  走吧  快快快\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Okay, guys, let's go! Go, go!
+Dialogue: 0,0:35:01.07,0:35:02.76,*Default,NTP,0000,0000,0000,,借过  借过  让一下\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Move it, move it. Move aside.
+Dialogue: 0,0:35:15.79,0:35:18.64,*Default,NTP,0000,0000,0000,,你以为洛里斯医生无视你是因为她不信任你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You think Dr. Rorish ignores you because she doesn't trust you?
+Dialogue: 0,0:35:20.09,0:35:22.69,*Default,NTP,0000,0000,0000,,其实恰恰相反  她知道你很优秀\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's just the opposite. She knows you're good.
+Dialogue: 0,0:35:23.41,0:35:25.52,*Default,NTP,0000,0000,0000,,她是在考验我们这几个人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}She's testing the rest of us.
+Dialogue: 0,0:35:26.85,0:35:29.24,*Default,NTP,0000,0000,0000,,我觉得我肯定通不过了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And I don't think I'm gonna pass that test.
+Dialogue: 0,0:35:29.68,0:35:30.98,*Default,NTP,0000,0000,0000,,你在说什么啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What are you talking about?
+Dialogue: 0,0:35:31.93,0:35:33.50,*Default,NTP,0000,0000,0000,,你其实掌握得很不错了  哥们\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You know your stuff, dude.
+Dialogue: 0,0:35:33.50,0:35:37.09,*Default,NTP,0000,0000,0000,,你只是需要一点...自信\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You just... need confidence.
+Dialogue: 0,0:35:44.52,0:35:46.40,*Default,NTP,0000,0000,0000,,你之前问我怎么进来的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You asked how I got in.
+Dialogue: 0,0:35:46.99,0:35:49.03,*Default,NTP,0000,0000,0000,,我爸在医院董事会里\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Our dad is on the hospital board.
+Dialogue: 0,0:35:50.69,0:35:51.73,*Default,NTP,0000,0000,0000,,我哥从来没告诉过别人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}My brother never told anyone.
+Dialogue: 0,0:35:51.73,0:35:54.41,*Default,NTP,0000,0000,0000,,他觉得如果大家知道了  就不会认真对待他\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He thought people wouldn't take him seriously.
+Dialogue: 0,0:35:56.19,0:35:57.08,*Default,NTP,0000,0000,0000,,其实根本就没什么关系\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Wouldn't matter anyway.
+Dialogue: 0,0:35:57.08,0:35:58.44,*Default,NTP,0000,0000,0000,,他天生就是吃这行饭的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}He was born for this.
+Dialogue: 0,0:36:00.31,0:36:02.28,*Default,NTP,0000,0000,0000,,我却跟他不一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I am not like him, though.
+Dialogue: 0,0:36:04.10,0:36:05.91,*Default,NTP,0000,0000,0000,,那你干吗来这里\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Then what are you doing here?
+Dialogue: 0,0:36:06.17,0:36:07.43,*Default,NTP,0000,0000,0000,,我讨厌精神科\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I hated psych.
+Dialogue: 0,0:36:08.25,0:36:09.19,*Default,NTP,0000,0000,0000,,讨厌死了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hated it.
+Dialogue: 0,0:36:10.04,0:36:11.61,*Default,NTP,0000,0000,0000,,我想做点更刺激的事情\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I wanted something more exciting.
+Dialogue: 0,0:36:13.41,0:36:14.95,*Default,NTP,0000,0000,0000,,我想象迈克一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I wanted what Mike had.
+Dialogue: 0,0:36:15.92,0:36:18.69,*Default,NTP,0000,0000,0000,,我爸说他能把我弄进这里  我立马同意了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So when my dad said he could get me in here, I jumped at it.
+Dialogue: 0,0:36:20.13,0:36:22.10,*Default,NTP,0000,0000,0000,,大错特错啊\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Big mistake.
+Dialogue: 0,0:36:24.47,0:36:27.86,*Default,NTP,0000,0000,0000,,你知道这个地方是于1932年开始经营的吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Did you know that they opened this place up in 1932?
+Dialogue: 0,0:36:28.82,0:36:30.67,*Default,NTP,0000,0000,0000,,当年电灯还没那么明亮\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Light bulbs weren't bright enough back then,
+Dialogue: 0,0:36:30.67,0:36:32.32,*Default,NTP,0000,0000,0000,,所以他们开了这么大的窗户\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}so they put in all these big windows
+Dialogue: 0,0:36:32.32,0:36:34.28,*Default,NTP,0000,0000,0000,,这样就能清楚地看到自己在做什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}so they could see what they were doing.
+Dialogue: 0,0:36:35.53,0:36:36.58,*Default,NTP,0000,0000,0000,,想象一下吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Imagine that.
+Dialogue: 0,0:36:38.94,0:36:40.45,*Default,NTP,0000,0000,0000,,你俩今晚过得都不容易\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hell of a night for you two.
+Dialogue: 0,0:36:41.11,0:36:44.69,*Default,NTP,0000,0000,0000,,从拯救某人生命开始  以差点害死某人结束\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Started off saving a life, ended up almost killing someone.
+Dialogue: 0,0:36:44.69,0:36:46.64,*Default,NTP,0000,0000,0000,,其实是差点害死两个人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Two people, actually.
+Dialogue: 0,0:36:46.78,0:36:48.58,*Default,NTP,0000,0000,0000,,我还忽视了一例硬脑膜外血肿\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I missed an epidural hematoma.
+Dialogue: 0,0:36:48.88,0:36:50.27,*Default,NTP,0000,0000,0000,,我也没注意到\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I missed it, too.
+Dialogue: 0,0:36:52.55,0:36:54.27,*Default,NTP,0000,0000,0000,,你知道在我听起来像什么吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Know what that sounds like to me?
+Dialogue: 0,0:36:55.35,0:36:57.00,*Default,NTP,0000,0000,0000,,这个地方很正常的一夜\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}A typical night in this joint.
+Dialogue: 0,0:37:14.28,0:37:15.22,*Default,NTP,0000,0000,0000,,你做的不错\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You did good.
+Dialogue: 0,0:37:17.54,0:37:18.58,*Default,NTP,0000,0000,0000,,你也一样\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So did you.
+Dialogue: 0,0:37:20.88,0:37:22.24,*Default,NTP,0000,0000,0000,,妈妈已经被送入高压氧舱了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}We've got her mom in the hyperbaric chamber,
+Dialogue: 0,0:37:22.24,0:37:24.21,*Default,NTP,0000,0000,0000,,正在吸氧  她应该没什么事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Oxygenated her. She's gonna make it.
+Dialogue: 0,0:37:24.59,0:37:25.54,*Default,NTP,0000,0000,0000,,感谢上帝\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank God.
+Dialogue: 0,0:37:26.60,0:37:28.25,*Default,NTP,0000,0000,0000,,能问你个私人问题吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can I ask you something personal?
+Dialogue: 0,0:37:30.07,0:37:31.27,*Default,NTP,0000,0000,0000,,你为什么来这里\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Why are you here?
+Dialogue: 0,0:37:32.96,0:37:33.72,*Default,NTP,0000,0000,0000,,什么\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Pardon?
+Dialogue: 0,0:37:34.75,0:37:36.24,*Default,NTP,0000,0000,0000,,上医学院  做实习医\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Med school, internship,
+Dialogue: 0,0:37:36.24,0:37:38.52,*Default,NTP,0000,0000,0000,,现在又要干全国最苦逼的住院医\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}and now the most punishing residency in the country.
+Dialogue: 0,0:37:38.52,0:37:40.12,*Default,NTP,0000,0000,0000,,大部分人都是二十几岁做这些事\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Most people do that in their 20s.
+Dialogue: 0,0:37:40.12,0:37:40.70,*Default,NTP,0000,0000,0000,,是什么让你决定...\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}What made you decide --
+Dialogue: 0,0:37:40.70,0:37:41.94,*Default,NTP,0000,0000,0000,,我儿子死了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}My son died.
+Dialogue: 0,0:37:43.05,0:37:44.45,*Default,NTP,0000,0000,0000,,脑胶质瘤四期\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Stage 4 glio.
+Dialogue: 0,0:37:46.77,0:37:48.79,*Default,NTP,0000,0000,0000,,当你孩子生了病  你会学习到很多医疗知识\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You learn a lot when your kid gets sick.
+Dialogue: 0,0:37:50.46,0:37:52.43,*Default,NTP,0000,0000,0000,,所以我想着不如正式学起来好了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So I thought maybe - I should make it official.
+Dialogue: 0,0:37:53.09,0:37:54.49,*Default,NTP,0000,0000,0000,,我进了医学院\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I got into med school...
+Dialogue: 0,0:37:56.00,0:37:57.08,*Default,NTP,0000,0000,0000,,来到了这里\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}...and here I am.
+Dialogue: 0,0:37:59.87,0:38:00.59,*Default,NTP,0000,0000,0000,,在我看来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}In my experience,
+Dialogue: 0,0:38:00.59,0:38:03.72,*Default,NTP,0000,0000,0000,,悲剧之事要么会让你变得温和要么会变得强硬\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}tragedy either softens you or hardens you.
+Dialogue: 0,0:38:05.15,0:38:06.57,*Default,NTP,0000,0000,0000,,对于我来说  是前者\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For me, it was the former.
+Dialogue: 0,0:38:09.07,0:38:13.02,*Default,NTP,0000,0000,0000,,对于你  我想应该是后者吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}For you, I suspect... it was the latter.
+Dialogue: 0,0:38:14.92,0:38:17.22,*Default,NTP,0000,0000,0000,,你长时间地驻守在群体治疗中\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You spend enough time in group therapy sessions,
+Dialogue: 0,0:38:18.32,0:38:20.41,*Default,NTP,0000,0000,0000,,你开始有所意识\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}you start to recognize it.
+Dialogue: 0,0:38:23.42,0:38:24.63,*Default,NTP,0000,0000,0000,,你失去了谁\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Who'd you lose?
+Dialogue: 0,0:38:30.34,0:38:31.36,*Default,NTP,0000,0000,0000,,所有人\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Everyone.
+Dialogue: 0,0:38:39.08,0:38:40.77,*Default,NTP,0000,0000,0000,,你最好回家睡一觉\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You better go home and get some sleep.
+Dialogue: 0,0:38:42.11,0:38:43.65,*Default,NTP,0000,0000,0000,,今晚你还要值班\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You've got a shift tonight.
+Dialogue: 0,0:38:45.65,0:38:46.51,*Default,NTP,0000,0000,0000,,真的吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I do?
+Dialogue: 0,0:39:14.75,0:39:15.66,*Default,NTP,0000,0000,0000,,嗨  艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hi, Ariel.
+Dialogue: 0,0:39:16.02,0:39:16.72,*Default,NTP,0000,0000,0000,,嗨\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Hi.
+Dialogue: 0,0:39:17.88,0:39:19.50,*Default,NTP,0000,0000,0000,,这位肯定是琳达阿姨吧\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}And you must be aunt Linda.
+Dialogue: 0,0:39:19.93,0:39:21.47,*Default,NTP,0000,0000,0000,,很高兴能见到你\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}So nice to meet you in person.
+Dialogue: 0,0:39:21.67,0:39:22.75,*Default,NTP,0000,0000,0000,,感谢你能来\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you for this.
+Dialogue: 0,0:39:25.35,0:39:26.13,*Default,NTP,0000,0000,0000,,准备好了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You ready?
+Dialogue: 0,0:39:29.97,0:39:31.16,*Default,NTP,0000,0000,0000,,我就在这里等你哦\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'll wait for you right here.
+Dialogue: 0,0:39:54.16,0:39:54.91,*Default,NTP,0000,0000,0000,,谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thank you.
+Dialogue: 0,0:40:02.37,0:40:03.43,*Default,NTP,0000,0000,0000,,我叫瓦妮莎\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm Vanessa.
+Dialogue: 0,0:40:04.21,0:40:05.21,*Default,NTP,0000,0000,0000,,我是艾瑞尔\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I'm Ariel.
+Dialogue: 0,0:40:08.35,0:40:09.38,*Default,NTP,0000,0000,0000,,我喜欢你的房间\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I like your room.
+Dialogue: 0,0:40:10.46,0:40:11.30,*Default,NTP,0000,0000,0000,,谢谢\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Thanks.
+Dialogue: 0,0:40:15.83,0:40:17.83,*Default,NTP,0000,0000,0000,,你愿意的话可以再靠近一点\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You can come closer if you want.
+Dialogue: 0,0:40:31.91,0:40:32.97,*Default,NTP,0000,0000,0000,,没关系的\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}It's okay.
+Dialogue: 0,0:40:56.88,0:40:57.75,*Default,NTP,0000,0000,0000,,你听到了吗\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Can you hear it?
+Dialogue: 0,0:41:00.64,0:41:01.40,*Default,NTP,0000,0000,0000,,嗯\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah.
+Dialogue: 0,0:41:03.52,0:41:04.35,*Default,NTP,0000,0000,0000,,我听到了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I can hear it.
+Dialogue: 0,0:41:09.68,0:41:10.88,*Default,NTP,0000,0000,0000,,我听到你了  爸爸\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I hear you, daddy.
+Dialogue: 0,0:41:13.25,0:41:14.16,*Default,NTP,0000,0000,0000,,我听到你了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}I hear you.
+Dialogue: 0,0:41:37.04,0:41:38.12,*Default,NTP,0000,0000,0000,,开什么玩笑\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}You got to be kidding me.
+Dialogue: 0,0:41:42.05,0:41:44.18,*Default,NTP,0000,0000,0000,,所有重症监护室多出来的呼吸机\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Every ventilator I.C.U. can spare.
+Dialogue: 0,0:41:45.04,0:41:47.71,*Default,NTP,0000,0000,0000,,一栋公寓着火  目前有22人受伤\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Got an apartment fire. We got 22 in so far.
+Dialogue: 0,0:41:47.71,0:41:49.68,*Default,NTP,0000,0000,0000,,有烧伤  浓烟吸入  骨折\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Burns, smoke inhalation, broken bones,
+Dialogue: 0,0:41:49.68,0:41:51.48,*Default,NTP,0000,0000,0000,,-还有一例心脏病发 -明白\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}- and a heart attack. - Got it.
+Dialogue: 0,0:41:51.48,0:41:53.29,*Default,NTP,0000,0000,0000,,我们得需要一大桶吗啡了\N{}{\fs14}{\b0}{\c&HFFFFFF&&}{\3c&000000&}{\4c&H000000&}Yeah, we're gonna need a barrel of morphine.
+
