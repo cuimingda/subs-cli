@@ -360,6 +360,57 @@ func BuildRemoveFFmpegArgs(sourceFile string, stream StreamInfo) []string {
 	}
 }
 
+func StreamDefaultSubtitleIndex(allStreams []StreamInfo, targetID string) (int, error) {
+	subtitleIndex := 0
+	for _, stream := range allStreams {
+		if stream.Type != "Subtitle" {
+			continue
+		}
+		if StreamIDMatch(stream.ID, targetID) {
+			return subtitleIndex, nil
+		}
+		subtitleIndex++
+	}
+	return -1, fmt.Errorf("subtitle stream %s not found", targetID)
+}
+
+func BuildDefaultToggleFFmpegArgs(sourceFile string, allStreams []StreamInfo, target StreamInfo) []string {
+	targetIndex, err := StreamDefaultSubtitleIndex(allStreams, target.ID)
+	if err != nil {
+		return nil
+	}
+
+	ffmpegArgs := []string{
+		"-hide_banner",
+		"-y",
+		"-i",
+		sourceFile,
+		"-map",
+		"0",
+		"-c",
+		"copy",
+	}
+
+	if target.IsDefault {
+		ffmpegArgs = append(ffmpegArgs, "-disposition:s:"+strconv.Itoa(targetIndex), "0")
+		return ffmpegArgs
+	}
+
+	subtitleIndex := 0
+	for _, stream := range allStreams {
+		if stream.Type != "Subtitle" {
+			continue
+		}
+		value := "0"
+		if stream.ID == target.ID {
+			value = "default"
+		}
+		ffmpegArgs = append(ffmpegArgs, "-disposition:s:"+strconv.Itoa(subtitleIndex), value)
+		subtitleIndex++
+	}
+	return ffmpegArgs
+}
+
 func RunFFmpeg(args ...string) ([]byte, error) {
 	return ffmpegRunner.Run(args...)
 }

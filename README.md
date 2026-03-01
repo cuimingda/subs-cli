@@ -46,6 +46,7 @@ Use `--help` on any command to view its subcommands.
 - `extract`
 - `merge`
 - `remove`
+- `default`
 - `dialogue`
   - `font`
     - `list`
@@ -361,6 +362,29 @@ Example:
 subs remove low_quality_with_subtitles_5s.mkv --id 4
 ```
 
+### `subs default <mkv_filename> --id <stream_id>`
+
+Toggle default disposition for a subtitle stream in an mkv file.
+
+Validation:
+
+- mkv file must exist and end with `.mkv`
+- `--id` is required, must be numeric, and must point to an existing subtitle stream
+- `ffmpeg` must be installed
+- the command shows current stream metadata (id/type/language/format/title) and asks for confirmation before toggling
+- default is no; only `y`/`yes` proceeds.
+
+Behavior:
+
+- if the target subtitle stream is not default, it becomes default and other subtitle streams are set to non-default
+- if the target subtitle stream is already default, its default disposition is removed.
+
+Example:
+
+```bash
+subs default low_quality_with_subtitles_5s.mkv --id 4
+```
+
 ## Behavior Rules
 
 - `subs list` and `subs encoding` commands are always available without UTF-8 preconditions.
@@ -370,6 +394,7 @@ subs remove low_quality_with_subtitles_5s.mkv --id 4
 - mkv-related commands (`info`, `extract`, `merge`, `remove`) require `ffmpeg` in `PATH`.
 - mkv-related commands check filename suffixes and stream-type constraints:
   - `extract/remove` only operate on subtitle streams.
+  - `default` only accepts subtitle stream ids.
   - `merge` only accepts `.srt` or `.ass` subtitle inputs.
   - `remove` validates stream id is numeric before attempting removal.
 - Running commands with parent-only arguments (for example `subs dialogue`, `subs dialogue font`, `subs style`, `subs style font`) shows help.

@@ -70,3 +70,7 @@ func validLanguageTag(language string) bool {
 func findStreamForSubtitleRemoval(allStreams []mkvStreamInfo, targetID string) (mkvStreamInfo, error) {
 	return mkv.FindStreamForSubtitleRemoval(allStreams, targetID)
 }
+
+func mkvDefaultToggleFFmpegArgs(sourceFile string, allStreams []mkvStreamInfo, targetStream mkvStreamInfo) []string {
+	return mkv.BuildDefaultToggleFFmpegArgs(sourceFile, allStreams, targetStream)
+}

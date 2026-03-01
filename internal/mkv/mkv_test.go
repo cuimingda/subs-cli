@@ -98,6 +98,59 @@ func TestParseMKVStreams_DefaultFlag(t *testing.T) {
 	}
 }
 
+func TestStreamDefaultSubtitleIndex(t *testing.T) {
+	streams := []StreamInfo{
+		{ID: "0:0", Type: "Video"},
+		{ID: "0:1", Type: "Subtitle"},
+		{ID: "0:2", Type: "Audio"},
+		{ID: "0:3", Type: "Subtitle"},
+	}
+	index, err := StreamDefaultSubtitleIndex(streams, "3")
+	if err != nil {
+		t.Fatalf("StreamDefaultSubtitleIndex() error = %v", err)
+	}
+	if index != 1 {
+		t.Fatalf("StreamDefaultSubtitleIndex() = %d, want 1", index)
+	}
+}
+
+func TestBuildDefaultToggleFFmpegArgs(t *testing.T) {
+	streams := []StreamInfo{
+		{ID: "0:0", Type: "Video"},
+		{ID: "0:1", Type: "Subtitle"},
+		{ID: "0:2", Type: "Subtitle", IsDefault: true},
+		{ID: "0:3", Type: "Audio"},
+		{ID: "0:4", Type: "Subtitle"},
+	}
+
+	offTarget := StreamInfo{ID: "0:2", Type: "Subtitle", IsDefault: true}
+	offArgs := BuildDefaultToggleFFmpegArgs("target.mkv", streams, offTarget)
+	if len(offArgs) == 0 || !containsArgPair(offArgs, "-disposition:s:1", "0") {
+		t.Fatalf("unexpected off args: %#v", offArgs)
+	}
+
+	onTarget := StreamInfo{ID: "0:1", Type: "Subtitle", IsDefault: false}
+	onArgs := BuildDefaultToggleFFmpegArgs("target.mkv", streams, onTarget)
+	if len(onArgs) == 0 {
+		t.Fatalf("BuildDefaultToggleFFmpegArgs() for enable returned empty")
+	}
+	if !containsArgPair(onArgs, "-disposition:s:0", "default") {
+		t.Fatalf("expected enable target to be set as default: %#v", onArgs)
+	}
+	if !containsArgPair(onArgs, "-disposition:s:1", "0") {
+		t.Fatalf("expected other subtitle to be unset: %#v", onArgs)
+	}
+}
+
+func containsArgPair(args []string, key string, value string) bool {
+	for i := 0; i+1 < len(args); i++ {
+		if args[i] == key && args[i+1] == value {
+			return true
+		}
+	}
+	return false
+}
+
 func TestFindStreamForSubtitleRemoval(t *testing.T) {
 	streams := []StreamInfo{
 		{ID: "0:0", Type: "Video"},
