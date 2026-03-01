@@ -15,6 +15,7 @@ var (
 	titleLineRE        = regexp.MustCompile(`^\s*title\s*:\s*(.+)$`)
 	streamIDSplitterRE = regexp.MustCompile(`[\\/:*?"<>|]`)
 	languageTagRE      = regexp.MustCompile(`^[a-z]{3}$`)
+	streamDefaultRE     = regexp.MustCompile(`(?i)\bdefault\b`)
 )
 
 type StreamInfo struct {
@@ -23,6 +24,7 @@ type StreamInfo struct {
 	Language       string
 	SubtitleFormat string
 	Title          string
+	IsDefault      bool
 }
 
 type FFmpegRunner interface {
@@ -82,6 +84,7 @@ func ParseMKVStreams(output string) ([]StreamInfo, error) {
 				ID:       streamID,
 				Type:     streamType,
 				Language: language,
+				IsDefault: isSubtitleDefault(streamDesc),
 			}
 			if streamType == "Subtitle" {
 				stream.SubtitleFormat = ParseSubtitleFormat(streamDesc)
@@ -136,7 +139,16 @@ func ParseStreamIDAndLanguage(rawID string) (streamID, language string) {
 	return streamID, strings.TrimSpace(rest[:close])
 }
 
+func isSubtitleDefault(description string) bool {
+	return streamDefaultRE.MatchString(strings.ToLower(description))
+}
+
 func ParseSubtitleFormat(description string) string {
+	description = strings.TrimSpace(description)
+	if comma := strings.Index(description, ","); comma >= 0 {
+		description = strings.TrimSpace(description[:comma])
+	}
+
 	open := strings.Index(description, "(")
 	if open >= 0 {
 		rest := description[open+1:]
@@ -147,15 +159,24 @@ func ParseSubtitleFormat(description string) string {
 				return strings.TrimSpace(description[:open+close+2])
 			}
 
-			return strings.TrimSpace(rest[:close])
+			formatValue := strings.TrimSpace(rest[:close])
+			if isSubtitleMetadataKeyword(formatValue) {
+				return formatPrefix
+			}
+			return formatValue
 		}
 	}
 
-	if comma := strings.Index(description, ","); comma >= 0 {
-		description = description[:comma]
-	}
-
 	return strings.TrimSpace(description)
+}
+
+func isSubtitleMetadataKeyword(keyword string) bool {
+	switch strings.ToLower(strings.TrimSpace(keyword)) {
+	case "default", "forced", "hearing_impaired", "visual_impaired":
+		return true
+	default:
+		return false
+	}
 }
 
 func SubtitleFileExtension(subtitleFormat string) string {

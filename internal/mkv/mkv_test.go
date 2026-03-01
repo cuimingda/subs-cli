@@ -30,6 +30,14 @@ func TestParseSubtitleFormat(t *testing.T) {
 	if got := ParseSubtitleFormat("ass (ssa)"); got != "ass (ssa)" {
 		t.Fatalf("ParseSubtitleFormat() for ass/ssa = %q, want %q", got, "ass (ssa)")
 	}
+
+	if got := ParseSubtitleFormat("SubRip (default)"); got != "SubRip" {
+		t.Fatalf("ParseSubtitleFormat() with default flag = %q, want %q", got, "SubRip")
+	}
+
+	if got := ParseSubtitleFormat("SubRip (default) (forced)"); got != "SubRip" {
+		t.Fatalf("ParseSubtitleFormat() with multiple flags = %q, want %q", got, "SubRip")
+	}
 }
 
 func TestStreamIDMatch(t *testing.T) {
@@ -65,6 +73,28 @@ func TestSelectSubtitleStreams(t *testing.T) {
 	}
 	if len(found) != 1 || found[0].ID != "0:1" {
 		t.Fatalf("unexpected result %+v", found)
+	}
+}
+
+func TestParseMKVStreams_DefaultFlag(t *testing.T) {
+	output := strings.Join([]string{
+		"Stream #0:0: Video: h264",
+		"Stream #0:1(eng): Subtitle: SubRip (default)",
+		"Stream #0:2: Audio: aac",
+	}, "\n")
+
+	streams, err := ParseMKVStreams(output)
+	if err != nil {
+		t.Fatalf("ParseMKVStreams() error = %v", err)
+	}
+	if len(streams) != 3 {
+		t.Fatalf("stream count = %d, want 3", len(streams))
+	}
+	if !streams[1].IsDefault {
+		t.Fatalf("expected subtitle stream to be default")
+	}
+	if streams[1].SubtitleFormat != "SubRip" {
+		t.Fatalf("subtitle format = %q, want SubRip", streams[1].SubtitleFormat)
 	}
 }
 

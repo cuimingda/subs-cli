@@ -53,15 +53,20 @@ func NewInfoCmd() *cobra.Command {
 					if subtitleFormat == "" {
 						subtitleFormat = "(EMPTY)"
 					}
+					defaultMark := ""
+					if stream.IsDefault {
+						defaultMark = " (default)"
+					}
 
 					if _, err := fmt.Fprintf(
 						cmd.OutOrStdout(),
-						"%s %s %s %s %s\n",
+						"%s %s %s %s %s%s\n",
 						stream.ID,
 						stream.Type,
 						language,
 						subtitleFormat,
 						title,
+						defaultMark,
 					); err != nil {
 						return err
 					}
