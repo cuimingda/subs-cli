@@ -1,6 +1,10 @@
 package mkv
 
-import "testing"
+import (
+	"errors"
+	"strings"
+	"testing"
+)
 
 func TestParseStreamIDAndLanguage(t *testing.T) {
 	streamID, language := ParseStreamIDAndLanguage("0:2(eng)")
@@ -110,5 +114,59 @@ func TestBuildMergeFFmpegArgs(t *testing.T) {
 	args := BuildMergeFFmpegArgs("target.mkv", "sub.srt", 2, "eng", "title")
 	if len(args) == 0 {
 		t.Fatal("BuildMergeFFmpegArgs() expected non-empty args")
+	}
+}
+
+type fakeFFmpegRunner struct {
+	installed bool
+	args      []string
+	output    string
+	runErr    error
+}
+
+func (f *fakeFFmpegRunner) IsInstalled() error {
+	if f.installed {
+		return nil
+	}
+	return errors.New("ffmpeg not found")
+}
+
+func (f *fakeFFmpegRunner) Run(args ...string) ([]byte, error) {
+	f.args = append(f.args, strings.Join(args, "|"))
+	return []byte(f.output), f.runErr
+}
+
+func TestFFmpegRunnerIntegration(t *testing.T) {
+	old := ffmpegRunner
+	t.Cleanup(func() {
+		ffmpegRunner = old
+	})
+
+	runner := &fakeFFmpegRunner{
+		installed: true,
+		output:    "Stream #0:0: Video: h264\nStream #0:1: Subtitle: SubRip\n",
+	}
+	SetFFmpegRunner(runner)
+	streams, err := ListStreams("sample.mkv")
+	if err != nil {
+		t.Fatalf("ListStreams() error = %v", err)
+	}
+	if len(streams) != 2 || streams[0].ID != "0:0" || streams[1].Type != "Subtitle" {
+		t.Fatalf("unexpected streams %+v", streams)
+	}
+
+	if len(runner.args) != 1 {
+		t.Fatalf("runner args call count = %d, want 1", len(runner.args))
+	}
+}
+
+func TestFFmpegRunnerErrorPath(t *testing.T) {
+	old := ffmpegRunner
+	t.Cleanup(func() { ffmpegRunner = old })
+
+	runner := &fakeFFmpegRunner{installed: false}
+	SetFFmpegRunner(runner)
+	if err := RequireFFmpegInstalled(); err == nil {
+		t.Fatal("expected ffmpeg installed error")
 	}
 }

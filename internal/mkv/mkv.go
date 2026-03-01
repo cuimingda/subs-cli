@@ -25,9 +25,38 @@ type StreamInfo struct {
 	Title          string
 }
 
-func RequireFFmpegInstalled() error {
+type FFmpegRunner interface {
+	IsInstalled() error
+	Run(args ...string) ([]byte, error)
+}
+
+type commandFFmpegRunner struct{}
+
+func (commandFFmpegRunner) IsInstalled() error {
 	if _, err := exec.LookPath("ffmpeg"); err != nil {
 		return fmt.Errorf("ffmpeg is not installed or not in PATH, please install ffmpeg")
+	}
+	return nil
+}
+
+func (commandFFmpegRunner) Run(args ...string) ([]byte, error) {
+	cmd := exec.Command("ffmpeg", args...)
+	return cmd.CombinedOutput()
+}
+
+var ffmpegRunner FFmpegRunner = commandFFmpegRunner{}
+
+func SetFFmpegRunner(runner FFmpegRunner) {
+	if runner == nil {
+		ffmpegRunner = commandFFmpegRunner{}
+		return
+	}
+	ffmpegRunner = runner
+}
+
+func RequireFFmpegInstalled() error {
+	if err := ffmpegRunner.IsInstalled(); err != nil {
+		return err
 	}
 	return nil
 }
@@ -80,8 +109,7 @@ func ParseMKVStreams(output string) ([]StreamInfo, error) {
 }
 
 func ListStreams(fileName string) ([]StreamInfo, error) {
-	cmd := exec.Command("ffmpeg", "-hide_banner", "-i", fileName)
-	output, err := cmd.CombinedOutput()
+	output, err := RunFFmpeg("-hide_banner", "-i", fileName)
 	streams, parseErr := ParseMKVStreams(string(output))
 	if parseErr != nil {
 		return nil, parseErr
@@ -297,6 +325,5 @@ func BuildRemoveFFmpegArgs(sourceFile string, stream StreamInfo) []string {
 }
 
 func RunFFmpeg(args ...string) ([]byte, error) {
-	cmd := exec.Command("ffmpeg", args...)
-	return cmd.CombinedOutput()
+	return ffmpegRunner.Run(args...)
 }
