@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"os/exec"
@@ -87,8 +88,9 @@ func NewMergeCmd() *cobra.Command {
 			ffmpegArgs = append(ffmpegArgs, outputFile)
 
 			mergeCmd := exec.Command("ffmpeg", ffmpegArgs...)
-			if err := mergeCmd.Run(); err != nil {
-				return fmt.Errorf("failed to merge subtitle: %w", err)
+			mergeOutput, err := mergeCmd.CombinedOutput()
+			if err != nil {
+				return fmt.Errorf("failed to merge subtitle: %w: %s", err, bytes.TrimSpace(mergeOutput))
 			}
 
 			if _, err := cmd.OutOrStdout().Write([]byte(fmt.Sprintf("Exported subtitle stream to %s\n", outputFile))); err != nil {
@@ -107,7 +109,7 @@ func NewMergeCmd() *cobra.Command {
 }
 
 func mkvMergeOutputPath(targetFile string) string {
-	return targetFile + ".tmp_subs"
+	return targetFile + ".tmp_subs.mkv"
 }
 
 func validLanguageTag(language string) bool {
