@@ -48,31 +48,6 @@ func NewDefaultCmd() *cobra.Command {
 				return err
 			}
 
-			action := "enable"
-			if targetStream.IsDefault {
-				action = "disable"
-			}
-
-			confirmed, err := confirmAction(
-				cobraCmd.InOrStdin(),
-				cobraCmd.ErrOrStderr(),
-				fmt.Sprintf(
-					"This will %s default for stream id=%s, type=%s, language=%s, format=%s, title=%s",
-					action,
-					targetStream.ID,
-					targetStream.Type,
-					displayOrEmpty(targetStream.Language),
-					displayOrEmpty(targetStream.SubtitleFormat),
-					displayOrEmpty(targetStream.Title),
-				),
-			)
-			if err != nil {
-				return err
-			}
-			if !confirmed {
-				return nil
-			}
-
 			outputFile := mkvMergeOutputPath(targetFile)
 			if err := mkv.RemoveTempOutputIfExists(outputFile); err != nil {
 				return err

@@ -47,7 +47,6 @@ func TestDefaultCommand_TogglesNonDefaultToDefault(t *testing.T) {
 	var out bytes.Buffer
 	cmd.SetOut(&out)
 	cmd.SetErr(&bytes.Buffer{})
-	cmd.SetIn(strings.NewReader("y\n"))
 	cmd.SetArgs([]string{"default", filepath.Base(target), "--id", "3"})
 
 	if err := cmd.Execute(); err != nil {
@@ -114,7 +113,6 @@ func TestDefaultCommand_TogglesDefaultToNonDefault(t *testing.T) {
 
 	cmd.SetOut(&bytes.Buffer{})
 	cmd.SetErr(&bytes.Buffer{})
-	cmd.SetIn(strings.NewReader("y\n"))
 	cmd.SetArgs([]string{"default", filepath.Base(target), "--id", "2"})
 
 	if err := cmd.Execute(); err != nil {
@@ -133,7 +131,7 @@ func TestDefaultCommand_TogglesDefaultToNonDefault(t *testing.T) {
 	}
 }
 
-func TestDefaultCommand_RequiresConfirm(t *testing.T) {
+func TestDefaultCommand_ExecutesWithoutConfirmPrompt(t *testing.T) {
 	if _, err := exec.LookPath("ffmpeg"); err != nil {
 		t.Skip("skip default command test: ffmpeg is not available")
 	}
@@ -158,10 +156,9 @@ func TestDefaultCommand_RequiresConfirm(t *testing.T) {
 		t.Fatalf("getMKVStreams() before error = %v", err)
 	}
 
-	var errOut bytes.Buffer
-	cmd.SetOut(&bytes.Buffer{})
-	cmd.SetErr(&errOut)
-	cmd.SetIn(strings.NewReader("\n"))
+	var out bytes.Buffer
+	cmd.SetOut(&out)
+	cmd.SetErr(&bytes.Buffer{})
 	cmd.SetArgs([]string{"default", filepath.Base(target), "--id", "3"})
 
 	if err := cmd.Execute(); err != nil {
@@ -176,8 +173,8 @@ func TestDefaultCommand_RequiresConfirm(t *testing.T) {
 	if len(beforeStreams) != len(afterStreams) {
 		t.Fatalf("stream count changed without confirm: before=%d after=%d", len(beforeStreams), len(afterStreams))
 	}
-	if !strings.Contains(errOut.String(), "This will enable default for stream id=3") {
-		t.Fatalf("prompt missing, err=%q", errOut.String())
+	if !strings.Contains(out.String(), "Toggled default for stream 0:3") {
+		t.Fatalf("output = %q, want toggle success message", out.String())
 	}
 }
 

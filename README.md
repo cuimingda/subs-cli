@@ -371,8 +371,7 @@ Validation:
 - mkv file must exist and end with `.mkv`
 - `--id` is required, must be numeric, and must point to an existing subtitle stream
 - `ffmpeg` must be installed
-- the command shows current stream metadata (id/type/language/format/title) and asks for confirmation before toggling
-- default is no; only `y`/`yes` proceeds.
+- the command applies the toggle directly after validation.
 
 Behavior:
 
