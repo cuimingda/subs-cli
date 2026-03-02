@@ -15,7 +15,8 @@ var (
 	titleLineRE        = regexp.MustCompile(`^\s*title\s*:\s*(.+)$`)
 	streamIDSplitterRE = regexp.MustCompile(`[\\/:*?"<>|]`)
 	languageTagRE      = regexp.MustCompile(`^[a-z]{3}$`)
-	streamDefaultRE     = regexp.MustCompile(`(?i)\bdefault\b`)
+	streamDefaultRE    = regexp.MustCompile(`(?i)\bdefault\b`)
+	streamForcedRE     = regexp.MustCompile(`(?i)\bforced\b`)
 )
 
 type StreamInfo struct {
@@ -25,6 +26,7 @@ type StreamInfo struct {
 	SubtitleFormat string
 	Title          string
 	IsDefault      bool
+	IsForced       bool
 }
 
 type FFmpegRunner interface {
@@ -85,6 +87,7 @@ func ParseMKVStreams(output string) ([]StreamInfo, error) {
 				Type:     streamType,
 				Language: language,
 				IsDefault: isSubtitleDefault(streamDesc),
+				IsForced:  isSubtitleForced(streamDesc),
 			}
 			if streamType == "Subtitle" {
 				stream.SubtitleFormat = ParseSubtitleFormat(streamDesc)
@@ -141,6 +144,10 @@ func ParseStreamIDAndLanguage(rawID string) (streamID, language string) {
 
 func isSubtitleDefault(description string) bool {
 	return streamDefaultRE.MatchString(strings.ToLower(description))
+}
+
+func isSubtitleForced(description string) bool {
+	return streamForcedRE.MatchString(strings.ToLower(description))
 }
 
 func ParseSubtitleFormat(description string) string {

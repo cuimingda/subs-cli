@@ -57,16 +57,21 @@ func NewInfoCmd() *cobra.Command {
 					if stream.IsDefault {
 						defaultMark = " (default)"
 					}
+					forcedMark := ""
+					if stream.IsForced {
+						forcedMark = " (forced)"
+					}
 
 					if _, err := fmt.Fprintf(
 						cmd.OutOrStdout(),
-						"%s %s %s %s %s%s\n",
+						"%s %s %s %s %s%s%s\n",
 						stream.ID,
 						stream.Type,
 						language,
 						subtitleFormat,
 						title,
 						defaultMark,
+						forcedMark,
 					); err != nil {
 						return err
 					}

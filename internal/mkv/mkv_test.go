@@ -76,10 +76,10 @@ func TestSelectSubtitleStreams(t *testing.T) {
 	}
 }
 
-func TestParseMKVStreams_DefaultFlag(t *testing.T) {
+func TestParseMKVStreams_DefaultAndForcedFlags(t *testing.T) {
 	output := strings.Join([]string{
 		"Stream #0:0: Video: h264",
-		"Stream #0:1(eng): Subtitle: SubRip (default)",
+		"Stream #0:1(eng): Subtitle: SubRip (default) (forced)",
 		"Stream #0:2: Audio: aac",
 	}, "\n")
 
@@ -92,6 +92,9 @@ func TestParseMKVStreams_DefaultFlag(t *testing.T) {
 	}
 	if !streams[1].IsDefault {
 		t.Fatalf("expected subtitle stream to be default")
+	}
+	if !streams[1].IsForced {
+		t.Fatalf("expected subtitle stream to be forced")
 	}
 	if streams[1].SubtitleFormat != "SubRip" {
 		t.Fatalf("subtitle format = %q, want SubRip", streams[1].SubtitleFormat)
