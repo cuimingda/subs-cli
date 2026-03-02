@@ -36,6 +36,7 @@ to quickly create a Cobra application.`,
 	rootCmd.AddCommand(NewMergeCmd())
 	rootCmd.AddCommand(NewRemoveCmd())
 	rootCmd.AddCommand(NewDefaultCmd())
+	rootCmd.AddCommand(NewForceCmd())
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	return rootCmd

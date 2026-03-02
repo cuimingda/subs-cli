@@ -145,6 +145,34 @@ func TestBuildDefaultToggleFFmpegArgs(t *testing.T) {
 	}
 }
 
+func TestBuildForceToggleFFmpegArgs(t *testing.T) {
+	streams := []StreamInfo{
+		{ID: "0:0", Type: "Video"},
+		{ID: "0:1", Type: "Subtitle"},
+		{ID: "0:2", Type: "Subtitle", IsForced: true},
+		{ID: "0:3", Type: "Audio"},
+		{ID: "0:4", Type: "Subtitle"},
+	}
+
+	offTarget := StreamInfo{ID: "0:2", Type: "Subtitle", IsForced: true}
+	offArgs := BuildForceToggleFFmpegArgs("target.mkv", streams, offTarget)
+	if len(offArgs) == 0 || !containsArgPair(offArgs, "-disposition:s:1", "0") {
+		t.Fatalf("unexpected off args: %#v", offArgs)
+	}
+
+	onTarget := StreamInfo{ID: "0:1", Type: "Subtitle", IsForced: false}
+	onArgs := BuildForceToggleFFmpegArgs("target.mkv", streams, onTarget)
+	if len(onArgs) == 0 {
+		t.Fatalf("BuildForceToggleFFmpegArgs() for enable returned empty")
+	}
+	if !containsArgPair(onArgs, "-disposition:s:0", "forced") {
+		t.Fatalf("expected enable target to be set as forced: %#v", onArgs)
+	}
+	if !containsArgPair(onArgs, "-disposition:s:1", "0") {
+		t.Fatalf("expected existing forced stream to be unset: %#v", onArgs)
+	}
+}
+
 func containsArgPair(args []string, key string, value string) bool {
 	for i := 0; i+1 < len(args); i++ {
 		if args[i] == key && args[i+1] == value {

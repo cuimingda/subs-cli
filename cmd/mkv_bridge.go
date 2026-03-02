@@ -74,3 +74,7 @@ func findStreamForSubtitleRemoval(allStreams []mkvStreamInfo, targetID string) (
 func mkvDefaultToggleFFmpegArgs(sourceFile string, allStreams []mkvStreamInfo, targetStream mkvStreamInfo) []string {
 	return mkv.BuildDefaultToggleFFmpegArgs(sourceFile, allStreams, targetStream)
 }
+
+func mkvForceToggleFFmpegArgs(sourceFile string, allStreams []mkvStreamInfo, targetStream mkvStreamInfo) []string {
+	return mkv.BuildForceToggleFFmpegArgs(sourceFile, allStreams, targetStream)
+}
