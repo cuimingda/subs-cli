@@ -83,9 +83,9 @@ func ParseMKVStreams(output string) ([]StreamInfo, error) {
 			streamDesc := strings.TrimSpace(match[3])
 
 			stream := StreamInfo{
-				ID:       streamID,
-				Type:     streamType,
-				Language: language,
+				ID:        streamID,
+				Type:      streamType,
+				Language:  language,
 				IsDefault: isSubtitleDefault(streamDesc),
 				IsForced:  isSubtitleForced(streamDesc),
 			}
@@ -269,7 +269,7 @@ func SubtitleOutputPath(fileName, outputBaseDir string, stream StreamInfo) (stri
 		parts = append(parts, stream.Language)
 	}
 	if stream.Title != "" {
-	parts = append(parts, SanitizeStreamTitle(stream.Title))
+		parts = append(parts, SanitizeStreamTitle(stream.Title))
 	}
 
 	filename := strings.Join(parts, "_")
@@ -327,13 +327,17 @@ func BuildMergeFFmpegArgs(targetFile, subtitleFile string, targetSubtitleCount i
 		"-map",
 		"1",
 	}
+	for subtitleIndex := 0; subtitleIndex < targetSubtitleCount; subtitleIndex++ {
+		ffmpegArgs = append(ffmpegArgs, "-disposition:s:"+strconv.Itoa(subtitleIndex), "-default")
+	}
+	newSubtitleIndex := strconv.Itoa(targetSubtitleCount)
+	ffmpegArgs = append(ffmpegArgs, "-disposition:s:"+newSubtitleIndex, "default")
 	if languageTag != "" || subtitleTitle != "" {
-		targetMetadata := strconv.Itoa(targetSubtitleCount)
 		if languageTag != "" {
-			ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+targetMetadata, "language="+languageTag)
+			ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+newSubtitleIndex, "language="+languageTag)
 		}
 		if subtitleTitle != "" {
-			ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+targetMetadata, "title="+subtitleTitle)
+			ffmpegArgs = append(ffmpegArgs, "-metadata:s:s:"+newSubtitleIndex, "title="+subtitleTitle)
 		}
 	}
 	return ffmpegArgs

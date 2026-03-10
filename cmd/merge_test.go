@@ -64,6 +64,24 @@ func TestMergeCommand_SrtSuccess(t *testing.T) {
 	if afterStreams[len(afterStreams)-1].Title != "Subtitle From srt" {
 		t.Fatalf("last stream title = %q, want Subtitle From srt", afterStreams[len(afterStreams)-1].Title)
 	}
+	if !afterStreams[len(afterStreams)-1].IsDefault {
+		t.Fatalf("last stream should be default")
+	}
+	defaultSubtitleCount := 0
+	for _, stream := range afterStreams {
+		if stream.Type != "Subtitle" {
+			continue
+		}
+		if stream.IsDefault {
+			defaultSubtitleCount++
+		}
+		if stream.ID == "0:2" && stream.IsDefault {
+			t.Fatalf("previous default subtitle 0:2 should be cleared")
+		}
+	}
+	if defaultSubtitleCount != 1 {
+		t.Fatalf("default subtitle count = %d, want 1", defaultSubtitleCount)
+	}
 
 	output := strings.TrimSpace(out.String())
 	if !strings.Contains(output, "Found") {

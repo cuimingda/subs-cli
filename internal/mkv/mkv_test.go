@@ -245,6 +245,21 @@ func TestBuildMergeFFmpegArgs(t *testing.T) {
 	if len(args) == 0 {
 		t.Fatal("BuildMergeFFmpegArgs() expected non-empty args")
 	}
+	if !containsArgPair(args, "-disposition:s:0", "-default") {
+		t.Fatalf("expected previous subtitle 0 default to be cleared: %#v", args)
+	}
+	if !containsArgPair(args, "-disposition:s:1", "-default") {
+		t.Fatalf("expected previous subtitle 1 default to be cleared: %#v", args)
+	}
+	if !containsArgPair(args, "-disposition:s:2", "default") {
+		t.Fatalf("expected new subtitle to be default: %#v", args)
+	}
+	if !containsArgPair(args, "-metadata:s:s:2", "language=eng") {
+		t.Fatalf("expected new subtitle language metadata: %#v", args)
+	}
+	if !containsArgPair(args, "-metadata:s:s:2", "title=title") {
+		t.Fatalf("expected new subtitle title metadata: %#v", args)
+	}
 }
 
 type fakeFFmpegRunner struct {
