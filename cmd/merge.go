@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/cuimingda/subs-cli/internal/mkv"
+	"github.com/cuimingda/subs-cli/internal/subtitles"
 
 	"github.com/spf13/cobra"
 )
@@ -39,6 +40,15 @@ func NewMergeCmd() *cobra.Command {
 
 			if _, err := os.Stat(targetFile); err != nil {
 				return err
+			}
+
+			if subtitles.IsLikelyChineseEnglishBilingual(subtitleFile) {
+				if subtitleTitle == "" {
+					subtitleTitle = "Chinese-English"
+				}
+				if languageTag == "" {
+					languageTag = "eng"
+				}
 			}
 
 			if languageTag != "" && !validLanguageTag(languageTag) {
