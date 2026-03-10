@@ -47,7 +47,7 @@ func NewMergeCmd() *cobra.Command {
 					subtitleTitle = "Chinese-English"
 				}
 				if languageTag == "" {
-					languageTag = "eng"
+					languageTag = "zho"
 				}
 			}
 

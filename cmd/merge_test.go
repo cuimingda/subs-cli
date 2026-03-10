@@ -58,8 +58,8 @@ func TestMergeCommand_SrtSuccess(t *testing.T) {
 	if afterStreams[len(afterStreams)-1].Type != "Subtitle" {
 		t.Fatalf("last stream type = %q, want Subtitle", afterStreams[len(afterStreams)-1].Type)
 	}
-	if afterStreams[len(afterStreams)-1].Language != "eng" {
-		t.Fatalf("last stream language = %q, want eng", afterStreams[len(afterStreams)-1].Language)
+	if afterStreams[len(afterStreams)-1].Language != "zho" {
+		t.Fatalf("last stream language = %q, want zho", afterStreams[len(afterStreams)-1].Language)
 	}
 	if afterStreams[len(afterStreams)-1].Title != "Subtitle From srt" {
 		t.Fatalf("last stream title = %q, want Subtitle From srt", afterStreams[len(afterStreams)-1].Title)
@@ -136,8 +136,8 @@ func TestMergeCommand_AssSuccessWithoutOptions(t *testing.T) {
 	if afterStreams[len(afterStreams)-1].Type != "Subtitle" {
 		t.Fatalf("last stream type = %q, want Subtitle", afterStreams[len(afterStreams)-1].Type)
 	}
-	if afterStreams[len(afterStreams)-1].Language != "eng" {
-		t.Fatalf("last stream language = %q, want eng", afterStreams[len(afterStreams)-1].Language)
+	if afterStreams[len(afterStreams)-1].Language != "zho" {
+		t.Fatalf("last stream language = %q, want zho", afterStreams[len(afterStreams)-1].Language)
 	}
 	if afterStreams[len(afterStreams)-1].Title != "Chinese-English" {
 		t.Fatalf("last stream title = %q, want Chinese-English", afterStreams[len(afterStreams)-1].Title)
@@ -188,8 +188,8 @@ func TestMergeCommand_SsaSuccessWithoutOptions(t *testing.T) {
 	if len(afterStreams)-len(beforeStreams) != 1 {
 		t.Fatalf("stream count diff = %d, want 1", len(afterStreams)-len(beforeStreams))
 	}
-	if afterStreams[len(afterStreams)-1].Language != "eng" {
-		t.Fatalf("last stream language = %q, want eng", afterStreams[len(afterStreams)-1].Language)
+	if afterStreams[len(afterStreams)-1].Language != "zho" {
+		t.Fatalf("last stream language = %q, want zho", afterStreams[len(afterStreams)-1].Language)
 	}
 	if afterStreams[len(afterStreams)-1].Title != "Chinese-English" {
 		t.Fatalf("last stream title = %q, want Chinese-English", afterStreams[len(afterStreams)-1].Title)
